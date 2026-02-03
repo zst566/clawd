@@ -2,16 +2,20 @@
 
 ## 项目目录
 
-### 茂名交投文旅平台 (别名: 文旅)
+### 茂名交投文旅平台 (别名: 文旅、信宜文旅)
 - **路径**: `/Volumes/SanDisk2T/dv-codeBase/茂名·交投-文旅平台/`
 - **描述**: 包含PC管理后台、后端API、小程序端、移动端H5
-- **别名关键词**: 茂名、文旅、maoming
+- **别名关键词**: 茂名、文旅、信宜、maoming
 - **子目录**:
   - `apps/pc-admin` - PC端管理后台 (Vue3 + Element Plus)
   - `apps/backend` - 后端API (Node.js + Prisma + MySQL)
   - `apps/miniprogram` - 小程序端
   - `apps/mobile-h5` - 移动端H5
 - **技术栈**: Vue3, Element Plus, Node.js, Prisma, MySQL
+- **开发环境访问** (必须通过Nginx):
+  - 移动端H5: `http://localhost`
+  - PC管理端: `http://localhost/pc-admin/`
+  - 后端API: `http://localhost/api/mobile`
 
 ---
 
@@ -35,9 +39,116 @@
 
 ---
 
+### 商场促销项目 (别名: Golden Coast Mall)
+- **路径**: `/Volumes/SanDisk2T/dv-codeBase/Golden_Coast_Mall`
+- **描述**: 商场促销管理系统
+- **别名关键词**: 商场促销、Golden Coast Mall、Golden_Coast_Mall
+
+---
+
+### 鹿状元 (别名: lzy)
+- **路径**: `/Volumes/SanDisk2T/dv-codeBase/鹿状元`
+- **描述**: 鹿状元教育培训管理系统
+- **别名关键词**: 鹿状元、lzy
+- **技术栈**: Node.js, Vue3, MySQL
+- **开发环境MySQL**:
+  - 端口: `13306`
+  - Root用户: `root` / `root123456`
+  - 普通用户: `dev_user` / `dev_password`
+  - 数据库: `lzy_Dev`
+- **主要服务端口**:
+  - 前端(PC管理端): `8081`
+  - 后端API: `9099`
+  - Nginx: `80` (HTTP), `1212`
+
+---
+
+### 商场促销项目 (别名: Golden Coast Mall)
+- **路径**: `/Volumes/SanDisk2T/dv-codeBase/Golden_Coast_Mall`
+- **描述**: 商场促销管理系统
+- **别名关键词**: 商场促销、Golden Coast Mall、Golden_Coast_Mall
+- **群组**: 商场促销项目群 (Telegram id:-5039017209)
+  - 群组讨论默认项目: 商场促销项目
+- **工作记录**: `WORKLOG.md` - 记录项目操作和变更
+
+#### 🚀 启动命令
+
+**启动开发环境：**
+```bash
+cd /Volumes/SanDisk2T/dv-codeBase/Golden_Coast_Mall
+./start-dev.sh
+```
+
+**停止开发环境：**
+```bash
+./stop-dev.sh
+```
+
+**服务访问地址（启动后）：**
+| 服务 | 地址 | 容器端口 |
+|------|------|---------|
+| 移动端 H5 | http://localhost:18080 | 1300 |
+| PC 管理端 | http://localhost:1314/pc-admin/ | 4000 |
+| 后端 API | http://localhost:18080/api | 5001 |
+| MySQL | localhost:13306 | 3306 |
+
+**端口占用说明：**
+- mall-vue-dev: 1300（原3000，与润德项目3001避免混淆）
+- mall-pc-dev: 4000（保持不变）
+- mall-node-dev: 5001（保持不变）
+- mall-nginx-dev: 18080/1314/8443（PC端口从1213改为1314，避免与茂名文旅1212混淆）
+- mysql_db: 13306（原3306，与茂名文旅3306避免混淆）
+
+#### 📁 项目结构
+
+| 目录/文件 | 说明 |
+|----------|------|
+| `mall-node/` | 后端API服务 (Node.js + TypeScript + Prisma + MySQL) |
+| `mall-pc/` | PC管理后台 (Vue3 + TypeScript + Vite) |
+| `mall-vue/` | 移动端H5 (Vue3 + TypeScript) |
+| `mall-miniprogram/` | 微信小程序端 |
+| `mall-nginx/` | Nginx配置目录 |
+| `gz-shopping-mall/` | 广州商场相关配置 |
+| `scripts/` | 自动化脚本 |
+| `docs/` | 文档目录 |
+| `tests/` | 测试文件 |
+| `migrations/` | 数据库迁移文件 |
+| `shared/` | 共享代码/类型定义 |
+| `docker-compose.dev.yml` | Docker开发环境配置 |
+| `start-dev.sh` | 启动开发环境脚本 |
+| `stop-dev.sh` | 停止开发环境脚本 |
+
+#### 🔧 技术栈
+
+| 模块 | 技术栈 |
+|------|--------|
+| 后端 (mall-node) | Node.js + TypeScript + Prisma ORM + MySQL + Redis |
+| PC管理端 (mall-pc) | Vue3 + TypeScript + Vite + Element Plus |
+| 移动端H5 (mall-vue) | Vue3 + TypeScript + Vite |
+| 小程序 (mall-miniprogram) | 微信原生开发 |
+
+#### 📦 主要依赖
+
+- **UI框架**: Vue3, Element Plus
+- **ORM**: Prisma
+- **构建工具**: Vite
+- **测试**: Playwright, Vitest, Jest
+- **代码规范**: ESLint, TypeScript, Husky
+
+---
+
 ## 🔀 项目切换规则
 
 > **重要**：为了避免项目之间搞混，请遵守以下规则
+
+### 📦 Docker 开发环境规范
+
+**MySQL 容器统一配置**:
+- **用户名**: `root`
+- **密码**: `root123456`
+- **说明**: 所有项目的本地开发环境 MySQL 容器必须统一使用此账号密码，便于记忆和管理
+
+---
 
 ### 规则1：说话带项目前缀
 | 格式 | 例子 |
@@ -53,21 +164,48 @@
 - 每次会话开始，我会记录"当前进行中的项目"到 TASKS.md
 - 默认延续上一个项目，但每次说话最好带上前缀
 
+### 规则4：群组默认项目
+- **茂名文旅讨论群 (Telegram id:-5157029269)** → 默认项目: 文旅
+  - 群组名称明确指向文旅项目，无需每次带前缀
+  - 如群内讨论转向其他项目，需明确说明
+
+---
+
+## 📱 群组默认项目配置
+| 群组名称 | 群组ID | 默认项目 |
+|---------|--------|---------|
+| 茂名文旅讨论群 | -5157029269 | 文旅 |
+| 润德教育讨论群 | -1003531397239 | 润德教育 |
+| 商场促销项目群 | -5039017209 | 商场促销项目 |
+| 商场促销项目群 | -5039017209 | 商场促销项目 |
+
+---
+
+> **说明**：
+> - **润德教育讨论群**：群内讨论的所有需求和工作均默认针对润德教育项目，无需每次带前缀
+> - **茂名文旅讨论群**：群内讨论的所有需求和工作均默认针对文旅项目，无需每次带前缀
+> - **商场促销项目群**：群内讨论的所有需求和工作均默认针对商场促销项目，无需每次带前缀
+> - 群组讨论内容如涉及其他项目，需明确说明
+
 ---
 
 ## 🚨 警告
 > **禁止自动推断**：在没有明确项目信息的情况下，我**不能**自己猜是哪个项目，必须先确认！
 
-### 茂名交投文旅平台 (别名: 文旅)
+### 茂名交投文旅平台 (别名: 文旅、信宜文旅)
 - **路径**: `/Volumes/SanDisk2T/dv-codeBase/茂名·交投-文旅平台/`
 - **描述**: 包含PC管理后台、后端API、小程序端、移动端H5
-- **别名关键词**: 茂名、文旅、maoming
+- **别名关键词**: 茂名、文旅、信宜、maoming
 - **子目录**:
   - `apps/pc-admin` - PC端管理后台 (Vue3 + Element Plus)
   - `apps/backend` - 后端API (Node.js + Prisma + MySQL)
   - `apps/miniprogram` - 小程序端
   - `apps/mobile-h5` - 移动端H5
 - **技术栈**: Vue3, Element Plus, Node.js, Prisma, MySQL
+- **开发环境访问** (必须通过Nginx):
+  - 移动端H5: `http://localhost`
+  - PC管理端: `http://localhost/pc-admin/`
+  - 后端API: `http://localhost/api/mobile`
 
 ---
 
