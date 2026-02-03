@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1770078299653,
+      "updatedAtMs": 1770130800217,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,11 +21,10 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1770130800000,
-        "lastError": "model not allowed: minimax/MiniMax-M1",
-        "lastRunAtMs": 1770044400013,
-        "lastStatus": "error",
-        "lastDurationMs": 25
+        "nextRunAtMs": 1770217200000,
+        "lastRunAtMs": 1770130800219,
+        "lastStatus": "ok",
+        "lastDurationMs": 16116
       }
     }
   ]
