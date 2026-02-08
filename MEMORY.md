@@ -259,6 +259,59 @@ cd /Volumes/SanDisk2T/dv-codeBase/Golden_Coast_Mall
 
 ---
 
+## 🕐 时间处理规范（所有项目通用）
+
+### 核心原则
+- **时区标准**: 统一使用北京时间 (Asia/Shanghai, UTC+8)
+- **后端职责**: 生成和存储时间全部为北京时间
+- **前端职责**: 直接使用后端返回的时间，**禁止进行任何时区转换**
+- **数据库**: 时间字段使用 `DATETIME` 类型，时区设为 `+8:00`
+
+### 各端规范
+
+#### 后端 (Node.js)
+```javascript
+// ✅ 正确：生成北京时间
+const dayjs = require('dayjs')
+const now = dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss')
+
+// ✅ 正确：返回北京时间给前端
+res.json({
+  created_at: "2024-02-08 14:30:00"  // 北京时间
+})
+```
+
+#### 前端 (Vue3)
+```vue
+<!-- ✅ 正确：直接使用后端返回的时间，不转换 -->
+<span>{{ item.created_at }}</span>
+
+<!-- ✅ 正确：仅做格式转换，不做时区转换 -->
+<span>{{ dayjs(item.created_at).format('YYYY-MM-DD HH:mm') }}</span>
+```
+
+#### 数据库 (MySQL)
+```sql
+-- 时区配置
+SET GLOBAL time_zone = '+8:00';
+
+-- 字段类型
+CREATE TABLE example (
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP  -- 存储北京时间
+);
+```
+
+### ❌ 禁止事项
+- 前端不要 `new Date(utcTime).toLocaleString(...)` 转换时间
+- 后端不要返回 `toISOString()` 格式的 UTC 时间
+- 不要在业务逻辑里进行时区加减操作
+
+### 📄 详细文档
+- 茂名文旅平台: `docs/TIMEZONE.md`
+- 其他项目参照此规范执行
+
+---
+
 ## 🏠 家居设备维护记录
 
 ### 保险箱电池
@@ -279,7 +332,24 @@ cd /Volumes/SanDisk2T/dv-codeBase/Golden_Coast_Mall
 
 ---
 
-## 2026年1月31日 - 润德教育财务数据核对
+## AI 模型配置
+
+### Kimi Coding (当前默认)
+- **提供商**: kimi-coding
+- **Base URL**: https://api.kimi.com/coding
+- **默认模型**: k2p5 (Kimi K2.5 Coding)
+- **API Key**: `sk-kimi-697YICu32QZFOg0W9SNaNf24Uquf43qSMfhlYrVQ6XSnVdCqqNZ4ksyVL8BSpm8u`
+- **更新日期**: 2026-02-06
+
+### 其他可用模型
+- **minimax/MiniMax-M2.1** - Minimax 模型
+- **moonshot/kimi-k2.5** - Kimi K2.5 (Moonshot 国内)
+- **moonshot/kimi-k2-0905-preview** - Kimi K2 (Moonshot 国内)
+- **kimi-coding/kimi-k2-thinking** - Kimi K2 Thinking (Coding)
+
+### 配置位置
+- OpenClaw 配置: `~/.openclaw/openclaw.json`
+- 详细记录: `memory/2026-02-06.md`
 
 ### 完成的工作
 

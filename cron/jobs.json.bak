@@ -21,10 +21,45 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1770217200000,
+        "nextRunAtMs": 1770562800000,
         "lastRunAtMs": 1770130800219,
         "lastStatus": "ok",
-        "lastDurationMs": 16116
+        "lastDurationMs": 16116,
+        "runningAtMs": 1770562800000
+      },
+      "delivery": {
+        "mode": "announce"
+      }
+    },
+    {
+      "id": "bc1a073c-5795-4105-b508-1a5a638dcc42",
+      "agentId": "main",
+      "name": "茂名文旅小程序认证结果检查",
+      "enabled": true,
+      "deleteAfterRun": true,
+      "createdAtMs": 1770387100350,
+      "updatedAtMs": 1770562799997,
+      "schedule": {
+        "at": "2026-02-07T01:00:00.000Z",
+        "kind": "at"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "⏰ 提醒：检查茂名文旅小程序（第三次申请）的认证结果！\n\n申请主体：信宜市文化广电旅游体育局\n提交时间：2026-02-06\n当前状态：认证中\n\n请登录微信小程序后台查看认证结果。",
+        "model": "kimi-coding/k2p5",
+        "thinking": "low"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1770426000000,
+        "lastRunAtMs": 1770562799996,
+        "lastStatus": "error",
+        "lastDurationMs": 1,
+        "runningAtMs": 1770562800000
       }
     }
   ]
