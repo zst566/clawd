@@ -312,6 +312,47 @@ CREATE TABLE example (
 
 ---
 
+### ⚠️ 数据库时间写入注意事项
+
+**问题描述**: 数据库容易把上传的原始时间自动转换为 UTC 时间，导致客户发起的拼车时间、订单创建时间等全部不正确。
+
+**影响范围**:
+- 客户拼车订单时间
+- 订单创建时间
+- 所有涉及时间的业务数据
+
+**解决方案**:
+1. **数据库层面**:
+   ```sql
+   -- 确保 MySQL 时区设置为北京时间
+   SET GLOBAL time_zone = '+8:00';
+   SET SESSION time_zone = '+8:00';
+   ```
+
+2. **后端代码层面**:
+   ```javascript
+   // 写入前确保是北京时间
+   const dayjs = require('dayjs')
+   const utc = require('dayjs/plugin/utc')
+   const timezone = require('dayjs/plugin/timezone')
+   dayjs.extend(utc)
+   dayjs.extend(timezone)
+   
+   // 强制使用北京时间写入
+   const beijingTime = dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss')
+   ```
+
+3. **Prisma ORM 配置**:
+   - 检查数据库连接配置中的时区设置
+   - 确保连接字符串包含 `timezone=+8:00` 参数
+
+**验证方法**:
+- 写入数据后立即查询验证时间是否正确
+- 对比数据库原始时间和业务显示时间
+- 定期检查订单时间、创建时间等关键字段
+
+---
+
 ## 🏠 家居设备维护记录
 
 ### 保险箱电池

@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1770130800217,
+      "updatedAtMs": 1770562831035,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,11 +21,11 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1770562800000,
-        "lastRunAtMs": 1770130800219,
+        "nextRunAtMs": 1770822000000,
+        "lastRunAtMs": 1770562800002,
         "lastStatus": "ok",
-        "lastDurationMs": 16116,
-        "runningAtMs": 1770562800000
+        "lastDurationMs": 31033,
+        "runningAtMs": 1770822000002
       },
       "delivery": {
         "mode": "announce"
@@ -38,7 +38,7 @@
       "enabled": true,
       "deleteAfterRun": true,
       "createdAtMs": 1770387100350,
-      "updatedAtMs": 1770562799997,
+      "updatedAtMs": 1770821999971,
       "schedule": {
         "at": "2026-02-07T01:00:00.000Z",
         "kind": "at"
@@ -56,10 +56,10 @@
       },
       "state": {
         "nextRunAtMs": 1770426000000,
-        "lastRunAtMs": 1770562799996,
+        "lastRunAtMs": 1770821999969,
         "lastStatus": "error",
-        "lastDurationMs": 1,
-        "runningAtMs": 1770562800000
+        "lastDurationMs": 2,
+        "runningAtMs": 1770822000002
       }
     }
   ]
