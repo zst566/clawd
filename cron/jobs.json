@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1770822021307,
+      "updatedAtMs": 1770908615591,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,11 +21,11 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1770908400000,
-        "lastRunAtMs": 1770822000008,
+        "nextRunAtMs": 1770994800000,
+        "lastRunAtMs": 1770908400002,
         "lastStatus": "ok",
-        "lastDurationMs": 21299,
-        "runningAtMs": 1770908400001
+        "lastDurationMs": 215589,
+        "runningAtMs": 1770994800006
       },
       "delivery": {
         "mode": "announce"
@@ -35,10 +35,10 @@
       "id": "bc1a073c-5795-4105-b508-1a5a638dcc42",
       "agentId": "main",
       "name": "茂名文旅小程序认证结果检查",
-      "enabled": true,
+      "enabled": false,
       "deleteAfterRun": true,
       "createdAtMs": 1770387100350,
-      "updatedAtMs": 1770908399998,
+      "updatedAtMs": 1770946206253,
       "schedule": {
         "at": "2026-02-07T01:00:00.000Z",
         "kind": "at"
@@ -55,11 +55,11 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1770426000000,
-        "lastRunAtMs": 1770908399997,
+        "lastRunAtMs": 1770946206141,
         "lastStatus": "error",
-        "lastDurationMs": 1,
-        "runningAtMs": 1770908400001
+        "lastDurationMs": 112,
+        "lastError": "model not allowed: kimi-coding/k2p5",
+        "consecutiveErrors": 1
       }
     }
   ]
