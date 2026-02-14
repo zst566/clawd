@@ -1,0 +1,11 @@
+# Playwright 全局配置
+# 添加到 ~/.zshrc 或 ~/.bash_profile
+
+# Playwright 浏览器路径（全局安装时自动设置）
+export PLAYWRIGHT_BROWSERS_PATH="$HOME/Library/Caches/ms-playwright"
+
+# 可选：设置 Playwright 调试模式
+# export PWDEBUG=1
+
+# 可选：设置 headed 模式（有界面）
+# export HEADED=1

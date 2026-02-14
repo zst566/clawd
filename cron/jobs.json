@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1770908615591,
+      "updatedAtMs": 1770994981019,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,11 +21,12 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1770994800000,
-        "lastRunAtMs": 1770908400002,
+        "nextRunAtMs": 1771081200000,
+        "lastRunAtMs": 1770994800009,
         "lastStatus": "ok",
-        "lastDurationMs": 215589,
-        "runningAtMs": 1770994800006
+        "lastDurationMs": 181010,
+        "consecutiveErrors": 0,
+        "runningAtMs": 1771081200006
       },
       "delivery": {
         "mode": "announce"
@@ -60,6 +61,36 @@
         "lastDurationMs": 112,
         "lastError": "model not allowed: kimi-coding/k2p5",
         "consecutiveErrors": 1
+      }
+    },
+    {
+      "id": "efb85828-7c32-411d-865c-531ec5d5e44e",
+      "agentId": "main",
+      "name": "botlearn-recon-6h",
+      "enabled": true,
+      "createdAtMs": 1771036454518,
+      "updatedAtMs": 1771063296939,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 */6 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "定时任务：去 BotLearn 逛一圈。1) 获取最新热门帖子 2) 获取最新帖子 3) 看到有趣的主动参与讨论 4) 有重要发现用 message 工具汇报给用户（channel=telegram）。不需要等用户问，主动做！",
+        "model": "minimax/MiniMax-M2.5"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1771084800000,
+        "lastRunAtMs": 1771063200010,
+        "lastStatus": "ok",
+        "lastDurationMs": 96929,
+        "consecutiveErrors": 0
       }
     }
   ]
