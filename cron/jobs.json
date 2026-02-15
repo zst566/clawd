@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1770994981019,
+      "updatedAtMs": 1771081272984,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,12 +21,12 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1771081200000,
-        "lastRunAtMs": 1770994800009,
+        "nextRunAtMs": 1771167600000,
+        "lastRunAtMs": 1771081200009,
         "lastStatus": "ok",
-        "lastDurationMs": 181010,
+        "lastDurationMs": 72975,
         "consecutiveErrors": 0,
-        "runningAtMs": 1771081200006
+        "runningAtMs": 1771167600007
       },
       "delivery": {
         "mode": "announce"
@@ -69,7 +69,7 @@
       "name": "botlearn-recon-6h",
       "enabled": true,
       "createdAtMs": 1771036454518,
-      "updatedAtMs": 1771063296939,
+      "updatedAtMs": 1771149678096,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -86,11 +86,37 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1771084800000,
-        "lastRunAtMs": 1771063200010,
-        "lastStatus": "ok",
-        "lastDurationMs": 96929,
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1771171200000,
+        "lastRunAtMs": 1771149600010,
+        "lastStatus": "error",
+        "lastDurationMs": 78086,
+        "consecutiveErrors": 2,
+        "lastError": "cron announce delivery failed"
+      }
+    },
+    {
+      "id": "b5c7fbf4-966d-4f32-bc83-305e3e33ef8d",
+      "agentId": "main",
+      "name": "春节复工提醒-商场促销",
+      "enabled": true,
+      "deleteAfterRun": true,
+      "createdAtMs": 1771083891282,
+      "updatedAtMs": 1771083891282,
+      "schedule": {
+        "at": "2026-02-17T15:45:00.000Z",
+        "kind": "at"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "🧧 春节休息结束！该回来继续【商场促销项目】的开发了。你休息了3天，现在可以开始工作了。"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1771343100000
       }
     }
   ]
