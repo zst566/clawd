@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1771167675931,
+      "updatedAtMs": 1771254105784,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,12 +21,12 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1771254000000,
-        "lastRunAtMs": 1771167600009,
+        "nextRunAtMs": 1771340400000,
+        "lastRunAtMs": 1771254000010,
         "lastStatus": "error",
-        "lastDurationMs": 75922,
-        "consecutiveErrors": 1,
-        "runningAtMs": 1771254000008
+        "lastDurationMs": 105774,
+        "consecutiveErrors": 2,
+        "runningAtMs": 1771340400006
       },
       "delivery": {
         "mode": "announce"
@@ -69,7 +69,7 @@
       "name": "botlearn-recon-6h",
       "enabled": true,
       "createdAtMs": 1771036454518,
-      "updatedAtMs": 1771236249921,
+      "updatedAtMs": 1771322625123,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -86,10 +86,10 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1771257600000,
-        "lastRunAtMs": 1771236000011,
+        "nextRunAtMs": 1771344000000,
+        "lastRunAtMs": 1771322400010,
         "lastStatus": "error",
-        "lastDurationMs": 249910,
+        "lastDurationMs": 225113,
         "consecutiveErrors": 2,
         "lastError": "cron announce delivery failed"
       }
