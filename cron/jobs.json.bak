@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1771254105784,
+      "updatedAtMs": 1771340535312,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,12 +21,12 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1771340400000,
-        "lastRunAtMs": 1771254000010,
+        "nextRunAtMs": 1771426800000,
+        "lastRunAtMs": 1771340400008,
         "lastStatus": "error",
-        "lastDurationMs": 105774,
-        "consecutiveErrors": 2,
-        "runningAtMs": 1771340400006
+        "lastDurationMs": 135304,
+        "consecutiveErrors": 3,
+        "runningAtMs": 1771426800006
       },
       "delivery": {
         "mode": "announce"
@@ -69,11 +69,12 @@
       "name": "botlearn-recon-6h",
       "enabled": true,
       "createdAtMs": 1771036454518,
-      "updatedAtMs": 1771322625123,
+      "updatedAtMs": 1771408850166,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
-        "tz": "Asia/Shanghai"
+        "tz": "Asia/Shanghai",
+        "staggerMs": 300000
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -86,11 +87,11 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1771344000000,
-        "lastRunAtMs": 1771322400010,
+        "nextRunAtMs": 1771430404923,
+        "lastRunAtMs": 1771408800003,
         "lastStatus": "error",
-        "lastDurationMs": 225113,
-        "consecutiveErrors": 2,
+        "lastDurationMs": 50163,
+        "consecutiveErrors": 1,
         "lastError": "cron announce delivery failed"
       }
     },
@@ -98,10 +99,10 @@
       "id": "b5c7fbf4-966d-4f32-bc83-305e3e33ef8d",
       "agentId": "main",
       "name": "春节复工提醒-商场促销",
-      "enabled": true,
+      "enabled": false,
       "deleteAfterRun": true,
       "createdAtMs": 1771083891282,
-      "updatedAtMs": 1771083891282,
+      "updatedAtMs": 1771343176308,
       "schedule": {
         "at": "2026-02-17T15:45:00.000Z",
         "kind": "at"
@@ -116,7 +117,71 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1771343100000
+        "lastRunAtMs": 1771343100008,
+        "lastStatus": "error",
+        "lastDurationMs": 76300,
+        "lastError": "cron announce delivery failed",
+        "consecutiveErrors": 1
+      }
+    },
+    {
+      "id": "0f7b5635-87b8-42a0-888e-54f34f56b3b6",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:group:-5099457733",
+      "name": "DV项目-百度统计Token自动维护",
+      "enabled": true,
+      "createdAtMs": 1771407245588,
+      "updatedAtMs": 1771409657244,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 432000000,
+        "anchorMs": 1771407245588
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行 DV 项目百度统计 Token 自动维护检查：\n\n**执行步骤：**\n1. 先执行检查脚本：`node scripts/checkBaiduToken.js`\n2. 如果 Token 剩余有效期 >= 7 天：\n   - 无需更新，记录当前状态\n3. 如果 Token 剩余有效期 < 7 天：\n   - 执行更新脚本：`node scripts/fetchBaiduToken.js --headless`\n   - 记录更新结果\n\n**执行后必须向用户报告：**\n\n📊 **Token 检查报告**\n━━━━━━━━━━━━━━━━━━━━\n✅ 检查时间：[当前时间]\n\n🔍 检查结果：\n• Token 是否更新：[是/否]\n• 更新原因：[Token即将过期（剩余X天）/ Token状态正常，无需更新]\n\n📋 最终状态：\n• 过期时间：[YYYY-MM-DD HH:mm:ss]\n• 剩余天数：[X] 天\n• Token前30位：[eyJhbGci...]\n\n如果更新失败，说明具体错误原因。",
+        "model": "kimi-coding/kimi-for-coding",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "-5099457733"
+      },
+      "state": {
+        "nextRunAtMs": 1771839245588
+      }
+    },
+    {
+      "id": "4873b100-fdf1-45b1-b6f3-4c282d22df92",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:group:-5099457733",
+      "name": "DV项目-Balance重跑每日执行",
+      "enabled": true,
+      "createdAtMs": 1771409593921,
+      "updatedAtMs": 1771409593921,
+      "schedule": {
+        "expr": "0 7 * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行 DV 项目 Balance 重跑自动化脚本：/Volumes/SanDisk2T/dv-codeBase/dv_mall/DVMALL-NODE/scripts/balanceRerunAuto.js\n\n请：\n1. 执行该脚本\n2. 将执行结果报告到 dv项目运维群 (-5099457733)\n3. 包含以下信息：\n   - 执行日期范围\n   - 是否成功点击重跑按钮\n   - 截图保存路径\n\n如果执行失败，说明错误原因。",
+        "model": "kimi-coding/kimi-for-coding",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "channel": "telegram",
+        "mode": "announce",
+        "to": "-5099457733"
+      },
+      "state": {
+        "nextRunAtMs": 1771455600000
       }
     }
   ]
