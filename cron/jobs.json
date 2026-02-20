@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1771426831642,
+      "updatedAtMs": 1771513243187,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,12 +21,12 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1771513200000,
-        "lastRunAtMs": 1771426800007,
+        "nextRunAtMs": 1771599600000,
+        "lastRunAtMs": 1771513200013,
         "lastStatus": "error",
-        "lastDurationMs": 31635,
-        "consecutiveErrors": 4,
-        "runningAtMs": 1771513200010
+        "lastDurationMs": 43174,
+        "consecutiveErrors": 5,
+        "runningAtMs": 1771599600012
       },
       "delivery": {
         "mode": "announce"
@@ -69,7 +69,7 @@
       "name": "botlearn-recon-6h",
       "enabled": true,
       "createdAtMs": 1771036454518,
-      "updatedAtMs": 1771495242308,
+      "updatedAtMs": 1771581757236,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -87,11 +87,12 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1771516804923,
-        "lastRunAtMs": 1771495204928,
-        "lastStatus": "ok",
-        "lastDurationMs": 37380,
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1771603204923,
+        "lastRunAtMs": 1771581604931,
+        "lastStatus": "error",
+        "lastDurationMs": 152305,
+        "consecutiveErrors": 4,
+        "lastError": "cron announce delivery failed"
       }
     },
     {
@@ -160,7 +161,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1771409593921,
-      "updatedAtMs": 1771455645896,
+      "updatedAtMs": 1771542051512,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -180,12 +181,12 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1771542000000,
-        "lastRunAtMs": 1771455600020,
+        "nextRunAtMs": 1771628400000,
+        "lastRunAtMs": 1771542000056,
         "lastStatus": "error",
-        "lastDurationMs": 45876,
-        "lastError": "cron announce delivery failed",
-        "consecutiveErrors": 1
+        "lastDurationMs": 51456,
+        "consecutiveErrors": 2,
+        "lastError": "cron announce delivery failed"
       }
     }
   ]
