@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1771599690745,
+      "updatedAtMs": 1771686041722,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,12 +21,12 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1771686000000,
-        "lastRunAtMs": 1771599600015,
+        "nextRunAtMs": 1771772400000,
+        "lastRunAtMs": 1771686000010,
         "lastStatus": "error",
-        "lastDurationMs": 90730,
-        "consecutiveErrors": 6,
-        "runningAtMs": 1771686000008
+        "lastDurationMs": 41712,
+        "consecutiveErrors": 7,
+        "runningAtMs": 1771772400012
       },
       "delivery": {
         "mode": "announce"
@@ -69,7 +69,7 @@
       "name": "botlearn-recon-6h",
       "enabled": true,
       "createdAtMs": 1771036454518,
-      "updatedAtMs": 1771668108069,
+      "updatedAtMs": 1771754426362,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -87,11 +87,11 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1771689604923,
-        "lastRunAtMs": 1771668004936,
+        "nextRunAtMs": 1771776004923,
+        "lastRunAtMs": 1771754404949,
         "lastStatus": "error",
-        "lastDurationMs": 103133,
-        "consecutiveErrors": 8,
+        "lastDurationMs": 21413,
+        "consecutiveErrors": 12,
         "lastError": "cron announce delivery failed"
       }
     },
@@ -161,7 +161,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1771409593921,
-      "updatedAtMs": 1771628520086,
+      "updatedAtMs": 1771734219829,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -181,12 +181,45 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1771714800000,
-        "lastRunAtMs": 1771628400017,
-        "lastStatus": "error",
-        "lastDurationMs": 120069,
-        "consecutiveErrors": 3,
-        "lastError": "Error: cron: job execution timed out"
+        "nextRunAtMs": 1771801200000,
+        "lastRunAtMs": 1771734182788,
+        "lastStatus": "ok",
+        "lastDurationMs": 37041,
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "4589e3f9-5471-4c67-ab36-4e2c188d3898",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "AI-Daily-Digest-8AM",
+      "enabled": true,
+      "createdAtMs": 1771734466678,
+      "updatedAtMs": 1771744159237,
+      "schedule": {
+        "expr": "0 8 * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行 AI Daily Digest 任务：\n\n1. 进入目录：cd /Users/asura.zhou/clawd/skills/ai-daily-digest\n2. 运行日报生成脚本（使用 MiniMax）：\n   MINIMAX_API_KEY=\"sk-cp-Hc1TAwgAKReSZdzDCIBPGFAe535l3eD-TIvrASr2vflS1Mc01fn6NgM6uQaCVdUSplPHlw7UoV2HjBuo3aQP4DRP2Ep4OWdbri40UZgk1RmpHkWsuNN7T_Y\" \\\n   MINIMAX_MODEL=\"MiniMax-M2.5\" \\\n   npx -y bun scripts/digest.ts --hours 24 --top-n 15 --lang zh --output /tmp/ai-digest-$(date +%Y%m%d).md\n3. 读取生成的 markdown 文件内容\n4. 用 message 工具将完整日报发送到 Telegram 当前对话框（channel=telegram, target=5947526755）\n\n如果执行失败，说明错误原因。",
+        "model": "minimax/MiniMax-M2.5",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "5947526755"
+      },
+      "state": {
+        "nextRunAtMs": 1771804800000,
+        "lastRunAtMs": 1771734526593,
+        "lastStatus": "ok",
+        "lastDurationMs": 19839,
+        "consecutiveErrors": 0
       }
     }
   ]
