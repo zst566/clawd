@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1771772515950,
+      "updatedAtMs": 1771945292494,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -22,11 +22,13 @@
       },
       "state": {
         "nextRunAtMs": 1772031600000,
-        "lastRunAtMs": 1771772400013,
+        "lastRunAtMs": 1771945200026,
         "lastStatus": "error",
-        "lastDurationMs": 115937,
-        "consecutiveErrors": 8,
-        "runningAtMs": 1772031600019
+        "lastDurationMs": 92468,
+        "consecutiveErrors": 1,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "unknown",
+        "lastError": "cron announce delivery failed"
       },
       "delivery": {
         "mode": "announce"
@@ -69,7 +71,7 @@
       "name": "botlearn-recon-6h",
       "enabled": true,
       "createdAtMs": 1771036454518,
-      "updatedAtMs": 1772013776635,
+      "updatedAtMs": 1771905692735,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -87,14 +89,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1772035204923,
-        "lastRunAtMs": 1772013604935,
+        "nextRunAtMs": 1771948804923,
+        "lastRunAtMs": 1771905604932,
         "lastStatus": "ok",
-        "lastDurationMs": 171700,
+        "lastDurationMs": 87803,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
-        "lastDeliveryStatus": "not-delivered",
-        "lastDelivered": false
+        "lastDeliveryStatus": "delivered",
+        "lastDelivered": true
       }
     },
     {
@@ -133,11 +135,11 @@
       "name": "DV项目-百度统计Token自动维护",
       "enabled": true,
       "createdAtMs": 1771407245588,
-      "updatedAtMs": 1771983889287,
+      "updatedAtMs": 1771902596503,
       "schedule": {
-        "kind": "cron",
-        "expr": "0 0 */5 * *",
-        "tz": "Asia/Shanghai"
+        "kind": "every",
+        "everyMs": 432000000,
+        "anchorMs": 1771407245588
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -153,14 +155,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772035200000,
-        "lastRunAtMs": 1771983717774,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 109780,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "nextRunAtMs": 1772271245602,
+        "lastRunAtMs": 1771839245602,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 33,
+        "lastError": "model not allowed: kimi-coding/kimi-for-coding",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
       }
     },
     {
@@ -170,7 +172,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1771409593921,
-      "updatedAtMs": 1771983717735,
+      "updatedAtMs": 1771902596494,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -190,14 +192,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772060400000,
-        "lastRunAtMs": 1771983684747,
-        "lastStatus": "ok",
-        "lastDurationMs": 32988,
-        "consecutiveErrors": 0,
-        "lastRunStatus": "ok",
-        "lastDeliveryStatus": "delivered",
-        "lastDelivered": true
+        "nextRunAtMs": 1771974000000,
+        "lastRunAtMs": 1771887600020,
+        "lastStatus": "error",
+        "lastDurationMs": 70,
+        "consecutiveErrors": 2,
+        "lastRunStatus": "error",
+        "lastError": "model not allowed: kimi-coding/kimi-for-coding",
+        "lastDeliveryStatus": "unknown"
       }
     }
   ]

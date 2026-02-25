@@ -21,12 +21,12 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1771858800000,
+        "nextRunAtMs": 1772031600000,
         "lastRunAtMs": 1771772400013,
         "lastStatus": "error",
         "lastDurationMs": 115937,
         "consecutiveErrors": 8,
-        "runningAtMs": 1771858800008
+        "runningAtMs": 1772031600019
       },
       "delivery": {
         "mode": "announce"
@@ -69,7 +69,7 @@
       "name": "botlearn-recon-6h",
       "enabled": true,
       "createdAtMs": 1771036454518,
-      "updatedAtMs": 1771841027353,
+      "updatedAtMs": 1772013776635,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -87,14 +87,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1771862404923,
-        "lastRunAtMs": 1771840804933,
-        "lastStatus": "error",
-        "lastDurationMs": 222420,
-        "consecutiveErrors": 16,
-        "lastRunStatus": "error",
-        "lastError": "cron announce delivery failed",
-        "lastDeliveryStatus": "unknown"
+        "nextRunAtMs": 1772035204923,
+        "lastRunAtMs": 1772013604935,
+        "lastStatus": "ok",
+        "lastDurationMs": 171700,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "not-delivered",
+        "lastDelivered": false
       }
     },
     {
@@ -133,18 +133,18 @@
       "name": "DV项目-百度统计Token自动维护",
       "enabled": true,
       "createdAtMs": 1771407245588,
-      "updatedAtMs": 1771839245635,
+      "updatedAtMs": 1771983889287,
       "schedule": {
-        "kind": "every",
-        "everyMs": 432000000,
-        "anchorMs": 1771407245588
+        "kind": "cron",
+        "expr": "0 0 */5 * *",
+        "tz": "Asia/Shanghai"
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
         "message": "执行 DV 项目百度统计 Token 自动维护检查：\n\n**执行步骤：**\n1. 先执行检查脚本：`node scripts/checkBaiduToken.js`\n2. 如果 Token 剩余有效期 >= 7 天：\n   - 无需更新，记录当前状态\n3. 如果 Token 剩余有效期 < 7 天：\n   - 执行更新脚本：`node scripts/fetchBaiduToken.js --headless`\n   - 记录更新结果\n\n**执行后必须向用户报告：**\n\n📊 **Token 检查报告**\n━━━━━━━━━━━━━━━━━━━━\n✅ 检查时间：[当前时间]\n\n🔍 检查结果：\n• Token 是否更新：[是/否]\n• 更新原因：[Token即将过期（剩余X天）/ Token状态正常，无需更新]\n\n📋 最终状态：\n• 过期时间：[YYYY-MM-DD HH:mm:ss]\n• 剩余天数：[X] 天\n• Token前30位：[eyJhbGci...]\n\n如果更新失败，说明具体错误原因。",
-        "model": "kimi-coding/kimi-for-coding",
+        "model": "kimi-coding/k2p5",
         "timeoutSeconds": 180
       },
       "delivery": {
@@ -153,14 +153,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772271245602,
-        "lastRunAtMs": 1771839245602,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 33,
-        "lastError": "model not allowed: kimi-coding/kimi-for-coding",
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1
+        "nextRunAtMs": 1772035200000,
+        "lastRunAtMs": 1771983717774,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 109780,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -170,7 +170,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1771409593921,
-      "updatedAtMs": 1771801200109,
+      "updatedAtMs": 1771983717735,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -181,7 +181,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "执行 DV 项目 Balance 重跑自动化脚本：/Volumes/SanDisk2T/dv-codeBase/dv_mall/DVMALL-NODE/scripts/balanceRerunAuto.js\n\n请：\n1. 执行该脚本\n2. 将执行结果报告到 dv项目运维群 (-5099457733)\n3. 包含以下信息：\n   - 执行日期范围\n   - 是否成功点击重跑按钮\n   - 截图保存路径\n\n如果执行失败，说明错误原因。",
-        "model": "kimi-coding/kimi-for-coding",
+        "model": "kimi-coding/k2p5",
         "timeoutSeconds": 120
       },
       "delivery": {
@@ -190,47 +190,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1771887600000,
-        "lastRunAtMs": 1771801200019,
-        "lastStatus": "error",
-        "lastDurationMs": 90,
-        "consecutiveErrors": 1,
-        "lastError": "model not allowed: kimi-coding/kimi-for-coding"
-      }
-    },
-    {
-      "id": "4589e3f9-5471-4c67-ab36-4e2c188d3898",
-      "agentId": "main",
-      "sessionKey": "agent:main:main",
-      "name": "AI-Daily-Digest-8AM",
-      "enabled": true,
-      "createdAtMs": 1771734466678,
-      "updatedAtMs": 1771805100085,
-      "schedule": {
-        "expr": "0 8 * * *",
-        "kind": "cron",
-        "tz": "Asia/Shanghai"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "执行 AI Daily Digest 任务：\n\n1. 进入目录：cd /Users/asura.zhou/clawd/skills/ai-daily-digest\n2. 运行日报生成脚本（使用 MiniMax）：\n   MINIMAX_API_KEY=\"sk-cp-Hc1TAwgAKReSZdzDCIBPGFAe535l3eD-TIvrASr2vflS1Mc01fn6NgM6uQaCVdUSplPHlw7UoV2HjBuo3aQP4DRP2Ep4OWdbri40UZgk1RmpHkWsuNN7T_Y\" \\\n   MINIMAX_MODEL=\"MiniMax-M2.5\" \\\n   npx -y bun scripts/digest.ts --hours 24 --top-n 15 --lang zh --output /tmp/ai-digest-$(date +%Y%m%d).md\n3. 读取生成的 markdown 文件内容\n4. 用 message 工具将完整日报发送到 Telegram 当前对话框（channel=telegram, target=5947526755）\n\n如果执行失败，说明错误原因。",
-        "model": "minimax/MiniMax-M2.5",
-        "timeoutSeconds": 300
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "telegram",
-        "to": "5947526755"
-      },
-      "state": {
-        "nextRunAtMs": 1771891200000,
-        "lastRunAtMs": 1771804800025,
-        "lastStatus": "error",
-        "lastDurationMs": 300060,
-        "consecutiveErrors": 1,
-        "lastError": "Error: cron: job execution timed out"
+        "nextRunAtMs": 1772060400000,
+        "lastRunAtMs": 1771983684747,
+        "lastStatus": "ok",
+        "lastDurationMs": 32988,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "delivered",
+        "lastDelivered": true
       }
     }
   ]
