@@ -106,3 +106,26 @@ sessions_send(
 **总结**：
 - 后台任务 → 使用 `sessions_send`
 - 需要在群里展示结果的任务 → 直接 @zhou_data_bot
+
+### sessions_send 正确使用方式
+
+如果要让 data_bot 回复到 Telegram 群组，必须使用**已有的群组 session key**：
+
+```
+sessions_send(
+  sessionKey="agent:data_bot:telegram:group:-1003531397239",
+  message="请分析这个文件",
+  timeoutSeconds=60
+)
+```
+
+**不要**使用简写的 `"data_bot"`，因为这会让 Openclaw 创建一个新的内部 session（channel=webchat），导致无法发送到 Telegram。
+
+#### 查看可用的 session keys
+
+使用 `sessions_list` 查看 data_bot 的所有 session：
+```
+/sessions_list --kinds group
+```
+
+找到 `agent:data_bot:telegram:group:-1003531397239` 这个 key，用它发送消息。
