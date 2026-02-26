@@ -294,7 +294,206 @@ git push origin main
 
 ---
 
+## 七、Agent 间通信（ sessions_send / sessions_spawn ）
+
+Openclaw 提供了 **Session 工具** 让多个 Agent 之间可以互相通信和协作。
+
+### 7.1 核心工具
+
+| 工具 | 功能 | 用途 |
+|------|------|------|
+| `sessions_list` | 列出所有会话 | 发现其他 Agent 的会话 |
+| `sessions_history` | 获取会话历史 | 查看其他 Agent 的对话记录 |
+| `sessions_send` | 发送消息到另一个会话 | **Agent 间直接通信** |
+| `sessions_spawn` | 生成子代理 | 创建临时 Agent 执行任务 |
+
+### 7.2 sessions_send - Agent 间发送消息
+
+让小d 给数据助理发送消息：
+
+```bash
+# 在会话中执行
+/sessions_send --to data_bot --message "帮我分析一下昨天的销售数据"
+```
+
+参数说明：
+- `sessionKey`: 目标会话 ID（可以用 `sessions_list` 查看）
+- `message`: 要发送的消息
+- `timeoutSeconds`: 
+  - `0` = 发送后不等待回复（fire-and-forget）
+  - `>0` = 等待 N 秒，获取回复
+
+#### 使用场景示例
+
+**场景 1：主 Agent 分配任务给数据助理**
+```
+用户: @小d 帮我做个数据分析
+小d: 好的，我让数据助理来处理
+    ↓ (调用 sessions_send)
+数据助理: 收到，正在分析...
+    ↓ (完成后回复)
+小d: 数据助理已完成分析，结果是...
+```
+
+**场景 2：并行处理**
+```
+用户: @小d 同时做两件事：写代码 + 查资料
+小d: 收到
+    ↓ (sessions_spawn 或 sessions_send)
+Dev Agent: 开始写代码...
+Research Agent: 开始查资料...
+    ↓ (都完成后)
+小d: 代码已完成，资料已查到...
+```
+
+### 7.3 sessions_spawn - 生成子代理
+
+创建一个临时子 Agent 执行特定任务：
+
+```bash
+# 示例：生成一个专门写 Python 代码的子 Agent
+/sessions_spawn \
+  --task "写一个 Python 脚本，统计 CSV 文件中的数据" \
+  --label "csv-analysis" \
+  --thinking high
+```
+
+参数说明：
+- `task` (必需): 任务描述
+- `label`: 任务标签（用于日志显示）
+- `agentId`: 指定使用哪个 Agent（默认当前 Agent）
+- `model`: 覆盖模型（如使用更强的模型）
+- `thinking`: 思考级别
+- `runTimeoutSeconds`: 超时时间（0 = 不限制）
+- `mode`: 
+  - `run` = 单次运行（默认）
+  - `session` = 保持会话（需要 thread=true）
+
+#### 子 Agent 特性
+
+1. **隔离运行**：子 Agent 在独立的 session 中运行
+2. **工具限制**：子 Agent 默认**不能**使用 session 工具（防止无限递归）
+3. **自动归档**：子 Agent 会话在 `archiveAfterMinutes` 后自动归档（默认 60 分钟）
+4. **结果通知**：子 Agent 完成后，会自动向父 Agent 发送结果
+
+### 7.4 Session Key 格式
+
+不同类型的会话有不同的 key 格式：
+
+| 类型 | Key 格式 | 示例 |
+|------|---------|------|
+| 私聊 | `main` | `"main"` |
+| 群组 | `agent:<agentId>:<channel>:group:<id>` | `agent:data_bot:telegram:group:-1003531397239` |
+| 定时任务 | `cron:<job.id>` | `cron:daily-report` |
+| 子 Agent | `agent:<agentId>:subagent:<uuid>` | `agent:main:subagent:abc-123` |
+
+### 7.5 配置权限控制
+
+限制 Agent 间的通信权限：
+
+```json
+{
+  "session": {
+    "sendPolicy": {
+      "rules": [
+        {
+          "match": { "channel": "discord", "chatType": "group" },
+          "action": "deny"
+        }
+      ],
+      "default": "allow"
+    }
+  }
+}
+```
+
+子 Agent 允许列表：
+
+```json
+{
+  "agents": {
+    "list": [
+      {
+        "id": "main",
+        "subagents": {
+          "allowAgents": ["data_bot", "dev_agent"],
+          "maxConcurrent": 4
+        }
+      }
+    ]
+  }
+}
+```
+
+### 7.6 共享内存模式
+
+除了 Session 工具，还可以通过**共享文件**实现 Agent 间通信：
+
+```
+~/clawd/
+├── shared/                    # 共享目录（所有 Agent 可读写）
+│   ├── GOALS.md              # 共同目标
+│   ├── DECISIONS.md          # 决策日志
+│   └── TASKS.md              # 任务分配
+│
+├── agents/
+│   ├── main/                 # 小d 的私有目录
+│   └── data_bot/             # 数据助理的私有目录
+```
+
+每个 Agent 的 `AGENTS.md` 中说明共享目录的使用规则：
+
+```markdown
+## 共享内存
+- 共享目录: ~/clawd/shared/
+- 读取 GOALS.md 了解当前目标
+- 完成重要任务后，在 DECISIONS.md 追加记录
+```
+
+### 7.7 实战示例
+
+**目标**：让小d 协调数据助理完成数据分析任务
+
+**步骤 1**：在小d 的 `SOUL.md` 中添加协调能力
+
+```markdown
+## 协调能力
+- 使用 sessions_list 查看数据助理是否在线
+- 使用 sessions_send 分配任务给数据助理
+- 使用 sessions_spawn 创建临时分析 Agent
+- 汇总结果后向用户汇报
+```
+
+**步骤 2**：用户请求
+```
+用户: @小d 分析一下上个月的销售数据
+```
+
+**步骤 3**：小d 执行协调
+```
+小d: 
+1. sessions_list → 发现 data_bot 在线
+2. sessions_send → 发送任务给 data_bot
+   "请分析 ~/clawd/data/sales_2024.csv，关注趋势和异常"
+3. 等待 data_bot 回复...
+4. 收到 data_bot 回复后，汇总结果
+5. 向用户汇报
+```
+
+**步骤 4**：数据助理执行
+```
+data_bot:
+1. 读取 CSV 文件
+2. 使用 Python 分析数据
+3. 生成图表和报告
+4. sessions_send → 回复小d
+   "分析完成，发现以下趋势：..."
+```
+
+---
+
 ## 参考
 
 - Openclaw 官方文档：https://docs.openclaw.ai/concepts/multi-agent
 - Telegram Bot 隐私模式：https://core.telegram.org/bots#privacy-mode
+- Session Tools 文档：https://docs.openclaw.ai/concepts/session-tool
