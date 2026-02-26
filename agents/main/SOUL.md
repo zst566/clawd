@@ -93,3 +93,16 @@ sessions_send(
 3. 生成简要分析报告
 
 数据助理完成后，我会整合成完整报告。
+
+### sessions_send 使用注意事项
+
+当你使用 `sessions_send` 向 data_bot 发送任务时：
+
+1. **如果 delivery.status = "ok"**：data_bot 已成功处理并回复
+2. **如果 delivery.status = "pending"**：data_bot 已生成回复，但无法直接发送到 Telegram（因为它在内部 session 中）
+   - 解决方案：手动在群里 @zhou_data_bot，让它发送消息
+3. **最佳实践**：对于需要群组可见的任务，直接在群里 @zhou_data_bot，而不是使用 `sessions_send`
+
+**总结**：
+- 后台任务 → 使用 `sessions_send`
+- 需要在群里展示结果的任务 → 直接 @zhou_data_bot
