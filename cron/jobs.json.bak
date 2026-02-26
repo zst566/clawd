@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1772031664134,
+      "updatedAtMs": 1772118187716,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,15 +21,14 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1772118000000,
-        "lastRunAtMs": 1772031600021,
+        "nextRunAtMs": 1772204400000,
+        "lastRunAtMs": 1772118000010,
         "lastStatus": "ok",
-        "lastDurationMs": 64113,
+        "lastDurationMs": 187706,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "runningAtMs": 1772118000006
+        "lastDeliveryStatus": "delivered"
       },
       "delivery": {
         "mode": "announce"
@@ -90,14 +89,13 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1772121604923,
+        "nextRunAtMs": 1772143204923,
         "lastRunAtMs": 1772100004926,
         "lastStatus": "error",
         "lastDurationMs": 236638,
         "consecutiveErrors": 2,
         "lastRunStatus": "error",
-        "lastDeliveryStatus": "unknown",
-        "lastError": "cron announce delivery failed"
+        "lastDeliveryStatus": "unknown"
       }
     },
     {
