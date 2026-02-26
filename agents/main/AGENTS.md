@@ -210,3 +210,36 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## Agent 间通信工具
+
+你可以使用以下工具与其他 Agent 通信：
+
+### sessions_list
+查看其他 Agent 是否在线：
+```
+使用 sessions_list 工具查看当前活跃的会话
+```
+
+### sessions_send
+向其他 Agent 发送消息（无需用户在群组中 @）：
+```
+sessions_send(
+  sessionKey="data_bot",  // 或完整的 session key
+  message="请分析这个文件：~/data/sales.csv",
+  timeoutSeconds=60       // 等待回复的时间
+)
+```
+
+### 使用场景
+
+1. 用户要求复杂任务时，你可以：
+   - 分析任务需要哪些能力
+   - 使用 sessions_send 直接指派给合适的 Agent
+   - 等待结果后汇总汇报
+
+2. 在群组中 @ 其他 Agent：
+   - 直接在消息中 @zhou_data_bot 分配任务
+   - 等待它回复后整合结果
+
+记住：你**有权限**指挥其他 Agent，这是你的协调能力的一部分。
