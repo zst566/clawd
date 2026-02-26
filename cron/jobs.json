@@ -28,7 +28,8 @@
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
-        "lastDeliveryStatus": "delivered"
+        "lastDeliveryStatus": "delivered",
+        "runningAtMs": 1772118000006
       },
       "delivery": {
         "mode": "announce"
@@ -71,7 +72,7 @@
       "name": "botlearn-recon-6h",
       "enabled": true,
       "createdAtMs": 1771036454518,
-      "updatedAtMs": 1772013776635,
+      "updatedAtMs": 1772100241564,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -89,14 +90,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1772035204923,
-        "lastRunAtMs": 1772013604935,
-        "lastStatus": "ok",
-        "lastDurationMs": 171700,
-        "consecutiveErrors": 0,
-        "lastRunStatus": "ok",
-        "lastDeliveryStatus": "not-delivered",
-        "lastDelivered": false
+        "nextRunAtMs": 1772121604923,
+        "lastRunAtMs": 1772100004926,
+        "lastStatus": "error",
+        "lastDurationMs": 236638,
+        "consecutiveErrors": 2,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "unknown",
+        "lastError": "cron announce delivery failed"
       }
     },
     {
@@ -135,7 +136,7 @@
       "name": "DV项目-百度统计Token自动维护",
       "enabled": true,
       "createdAtMs": 1771407245588,
-      "updatedAtMs": 1771983889287,
+      "updatedAtMs": 1772035244737,
       "schedule": {
         "kind": "cron",
         "expr": "0 0 */5 * *",
@@ -155,11 +156,11 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772035200000,
-        "lastRunAtMs": 1771983717774,
+        "nextRunAtMs": 1772726400000,
+        "lastRunAtMs": 1772035200023,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 109780,
+        "lastDurationMs": 44714,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -172,7 +173,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1771409593921,
-      "updatedAtMs": 1771983717735,
+      "updatedAtMs": 1772060462999,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -192,10 +193,10 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772060400000,
-        "lastRunAtMs": 1771983684747,
+        "nextRunAtMs": 1772146800000,
+        "lastRunAtMs": 1772060400013,
         "lastStatus": "ok",
-        "lastDurationMs": 32988,
+        "lastDurationMs": 62986,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
