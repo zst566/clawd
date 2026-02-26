@@ -34,3 +34,34 @@
 
 - 长期记忆：`~/clawd/agents/zhou_data_bot/workspace/MEMORY.md`
 - 每日记忆：`~/clawd/agents/zhou_data_bot/workspace/memory/`
+
+## 在 sessions_send 中回复到 Telegram
+
+当你通过 `sessions_send` 收到任务时，你的执行环境是 `channel=webchat`，无法直接发送消息到 Telegram。
+
+### 解决方案：使用 chat.send 工具
+
+使用 `chat.send` 工具，明确指定发送到 Telegram 群组：
+
+```
+chat.send(
+  channel="telegram",
+  to="-1003531397239",
+  message="你的回复内容"
+)
+```
+
+### 或者使用 sessions_send 回复
+
+直接回复给主 agent（小d），让它在群里展示结果：
+
+```
+sessions_send(
+  sessionKey="main",
+  message="任务完成，结果是：..."
+)
+```
+
+### 或者让调用者处理
+
+如果以上都失败，生成回复内容，让调用者（小d）帮你转发到群里。
