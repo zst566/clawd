@@ -1,0 +1,328 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.23",
+    "lastTouchedAt": "2026-02-26T15:54:15.128Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-19T13:25:11.663Z",
+    "lastRunVersion": "2026.2.17",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "update": {
+    "checkOnStart": true
+  },
+  "auth": {
+    "profiles": {
+      "minimax:default": {
+        "provider": "minimax",
+        "mode": "api_key"
+      },
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      },
+      "minimax-portal:default": {
+        "provider": "minimax-portal",
+        "mode": "oauth"
+      },
+      "kimi-coding:default": {
+        "provider": "kimi-coding",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "minimax": {
+        "baseUrl": "https://api.minimaxi.com/anthropic",
+        "apiKey": "sk-cp-Hc1TAwgAKReSZdzDCIBPGFAe535l3eD-TIvrASr2vflS1Mc01fn6NgM6uQaCVdUSplPHlw7UoV2HjBuo3aQP4DRP2Ep4OWdbri40UZgk1RmpHkWsuNN7T_Y",
+        "auth": "oauth",
+        "api": "anthropic-messages",
+        "authHeader": true,
+        "models": [
+          {
+            "id": "MiniMax-M2.1",
+            "name": "MiniMax M2.1",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 15,
+              "output": 60,
+              "cacheRead": 2,
+              "cacheWrite": 10
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax M2.5",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 20,
+              "output": 80,
+              "cacheRead": 3,
+              "cacheWrite": 15
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "minimax-portal": {
+        "baseUrl": "https://api.minimaxi.com/anthropic",
+        "apiKey": "minimax-oauth",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "MiniMax-M2.1",
+            "name": "MiniMax M2.1",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "MiniMax-M2.1-lightning",
+            "name": "MiniMax M2.1 Lightning",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "kimi-coding": {
+        "baseUrl": "https://api.kimi.com/coding/",
+        "apiKey": "sk-kimi-697YICu32QZFOg0W9SNaNf24Uquf43qSMfhlYrVQ6XSnVdCqqNZ4ksyVL8BSpm8u",
+        "auth": "api-key",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "k2p5",
+            "name": "Kimi K2.5",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "kimi-coding/k2p5"
+      },
+      "models": {
+        "minimax/MiniMax-M2.1": {
+          "alias": "Minimax"
+        },
+        "minimax/MiniMax-M2.5": {
+          "alias": "Minimax M2.5"
+        },
+        "moonshot/kimi-k2.5": {
+          "alias": "Kimi K2.5 (Moonshot 国内)"
+        },
+        "moonshot/kimi-k2-0905-preview": {
+          "alias": "Kimi K2 (Moonshot 国内)"
+        },
+        "minimax-portal/MiniMax-M2.1": {
+          "alias": "minimax-m2.1"
+        },
+        "minimax-portal/MiniMax-M2.1-lightning": {
+          "alias": "minimax-m2.1-lightning"
+        },
+        "kimi-coding/k2.5": {},
+        "kimi-coding/k2p5": {
+          "alias": "Kimi K2.5"
+        }
+      },
+      "workspace": "/Users/asura.zhou/clawd",
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "name": "小d",
+        "workspace": "/Users/asura.zhou/.openclaw/workspace",
+        "agentDir": "/Users/asura.zhou/.openclaw/agents/main/agent"
+      },
+      {
+        "id": "data_bot",
+        "name": "数据助理",
+        "workspace": "/Users/asura.zhou/clawd/agents/zhou_data_bot/workspace",
+        "agentDir": "/Users/asura.zhou/.openclaw/agents/data_bot/agent"
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "telegram",
+        "accountId": "main"
+      }
+    },
+    {
+      "agentId": "data_bot",
+      "match": {
+        "channel": "telegram",
+        "accountId": "data_bot"
+      }
+    },
+    {
+      "agentId": "data_bot",
+      "match": {
+        "channel": "telegram",
+        "accountId": "data_bot",
+        "peer": {
+          "kind": "group",
+          "id": "-1003531397239"
+        }
+      }
+    }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions",
+    "tts": {
+      "auto": "off"
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "cron": {
+    "enabled": true,
+    "store": "/Users/asura.zhou/clawd/cron/jobs.json"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "proxy": "http://127.0.0.1:33210",
+      "accounts": {
+        "main": {
+          "dmPolicy": "pairing",
+          "botToken": "8382004551:AAF5VTkxGturq7-MhHReGV4gkdcRIrK_J-s",
+          "groups": {
+            "-1003531397239": {
+              "requireMention": true
+            },
+            "-5157029269": {
+              "requireMention": false
+            },
+            "-5039017209": {
+              "requireMention": false
+            },
+            "-5099457733": {
+              "requireMention": false
+            },
+            "-5187551770": {
+              "requireMention": false
+            }
+          },
+          "allowFrom": [
+            "5947526755"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        },
+        "data_bot": {
+          "dmPolicy": "pairing",
+          "botToken": "8704648490:AAFpZutXahmYX6b0BPSSRHpCmw2_7oZKWfI",
+          "groups": {
+            "-1003531397239": {
+              "requireMention": true
+            }
+          },
+          "allowFrom": [
+            "5947526755"
+          ]
+        }
+      },
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "2caea6caed015e279a18e9bb9f4dc85d43ee2cf28ede2d3039072dae31438942",
+      "allowTailscale": true
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "minimax-portal-auth": {
+        "enabled": true
+      }
+    }
+  }
+}
