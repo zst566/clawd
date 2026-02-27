@@ -1,0 +1,19 @@
+{
+  "id": "17f9e81d-6848-4e75-923b-1045228d4f4a",
+  "enqueuedAt": 1772146853831,
+  "channel": "telegram",
+  "to": "-5099457733",
+  "accountId": "default",
+  "payloads": [
+    {
+      "text": "⚠️ **DV项目 Balance 重跑日报 - 发送失败**\n\nBalance 重跑任务已于今天 07:00 执行完成，但**消息推送失败了**。\n\n可能原因：\n• Telegram 发送超时\n• 网络问题\n• 群组权限问题\n\n需要我手动重新执行并推送报告吗？",
+      "mediaUrls": []
+    }
+  ],
+  "threadId": null,
+  "replyToId": null,
+  "bestEffort": false,
+  "retryCount": 5,
+  "lastError": "Telegram bot token missing for account \"default\" (set channels.telegram.accounts.default.botToken/tokenFile or TELEGRAM_BOT_TOKEN for default).",
+  "lastAttemptAt": 1772175438508
+}

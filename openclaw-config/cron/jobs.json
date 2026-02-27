@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "safe-battery-reminder-2026-06-01",
+      "name": "保险箱电池更换提醒",
+      "schedule": {
+        "type": "at",
+        "at": "2026-06-01T09:00:00+08:00"
+      },
+      "payload": {
+        "text": "🔋 保险箱电池更换提醒"
+      },
+      "sessionTarget": "main",
+      "enabled": true
+    }
+  ]
+}

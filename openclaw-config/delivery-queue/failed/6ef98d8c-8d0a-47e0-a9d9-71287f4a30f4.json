@@ -1,0 +1,20 @@
+{
+  "id": "6ef98d8c-8d0a-47e0-a9d9-71287f4a30f4",
+  "enqueuedAt": 1772162710539,
+  "channel": "telegram",
+  "to": "group:-1003531397239",
+  "payloads": [
+    {
+      "text": "在呢在呢！👋\n\n我是码匠（CodeCraft），写代码、做工具、搞自动化都能找我。数据助理和麻将我也喊出来了，以后群里各司其职：\n\n- 📊 **数据助理** → 数据相关\n- 🀄 **麻将** → 娱乐陪聊  \n- 🔧 **码匠（我）** → 代码/工具/技术\n\n有事直接@对应的人就行～"
+    }
+  ],
+  "threadId": null,
+  "mirror": {
+    "sessionKey": "agent:main:main",
+    "agentId": "main",
+    "text": "在呢在呢！👋\n\n我是码匠（CodeCraft），写代码、做工具、搞自动化都能找我。数据助理和麻将我也喊出来了，以后群里各司其职：\n\n- 📊 **数据助理** → 数据相关\n- 🀄 **麻将** → 娱乐陪聊  \n- 🔧 **码匠（我）** → 代码/工具/技术\n\n有事直接@对应的人就行～"
+  },
+  "retryCount": 5,
+  "lastError": "Telegram recipient must be a numeric chat ID",
+  "lastAttemptAt": 1772175702517
+}

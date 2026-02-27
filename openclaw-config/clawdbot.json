@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.1.24-3",
+    "lastTouchedAt": "2026-01-31T05:32:50.588Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-01-29T15:41:47.808Z",
+    "lastRunVersion": "2026.1.24-3",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "update": {
+    "checkOnStart": true
+  },
+  "auth": {
+    "profiles": {
+      "minimax:default": {
+        "provider": "minimax",
+        "mode": "api_key"
+      },
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "minimax": {
+        "baseUrl": "https://api.minimaxi.com/anthropic",
+        "apiKey": "sk-cp-Hc1TAwgAKReSZdzDCIBPGFAe535l3eD-TIvrASr2vflS1Mc01fn6NgM6uQaCVdUSplPHlw7UoV2HjBuo3aQP4DRP2Ep4OWdbri40UZgk1RmpHkWsuNN7T_Y",
+        "auth": "api-key",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "MiniMax-M2.1",
+            "name": "MiniMax M2.1",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 15,
+              "output": 60,
+              "cacheRead": 2,
+              "cacheWrite": 10
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "kimi-code": {
+        "baseUrl": "https://api.kimi.com/coding/v1",
+        "apiKey": "sk-kimi-yEEJoelMZyKfPPnLglag3zzjxyRblIMsyJBz0MlbTLBU1LF7GwiZU56h2aUBNKhm",
+        "auth": "api-key",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "k2.5",
+            "name": "Kimi K2.5 (Coding)",
+            "reasoning": true,
+            "input": ["text", "image"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          },
+          {
+            "id": "kimi-k2-thinking",
+            "name": "Kimi K2 Thinking (Coding)",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 256000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "kimi-code/k2.5"
+      },
+      "models": {
+        "kimi-code/k2.5": {
+          "alias": "Kimi K2.5 (Coding)"
+        },
+        "kimi-code/kimi-k2-thinking": {
+          "alias": "Kimi K2 Thinking (Coding)"
+        },
+        "minimax/MiniMax-M2.1": {
+          "alias": "Minimax"
+        }
+      },
+      "workspace": "/Users/asura.zhou/clawd",
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions",
+    "tts": {
+      "auto": "off"
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "cron": {
+    "enabled": true,
+    "store": "/Users/asura.zhou/clawd/cron/jobs.json"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8382004551:AAF5VTkxGturq7-MhHReGV4gkdcRIrK_J-s",
+      "allowFrom": [
+        "5947526755"
+      ],
+      "groupPolicy": "allowlist",
+      "streamMode": "partial",
+      "proxy": "http://127.0.0.1:33210"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "2caea6caed015e279a18e9bb9f4dc85d43ee2cf28ede2d3039072dae31438942",
+      "allowTailscale": true
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}

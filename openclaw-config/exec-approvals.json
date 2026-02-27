@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "socket": {
+    "path": "/Users/asura.zhou/.clawdbot/exec-approvals.sock",
+    "token": "1B6rc6DCVRwWcVyHDNVf47-EPQcaiF1u"
+  },
+  "defaults": {},
+  "agents": {}
+}

@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.23",
+    "lastTouchedAt": "2026-02-24T13:08:46.599Z"
+  },
+  "update": {
+    "checkOnStart": false
+  },
+  "auth": {
+    "profiles": {
+      "kimi-coding:default": {
+        "provider": "kimi-coding",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "kimi-coding": {
+        "baseUrl": "https://api.kimi.com/coding/",
+        "apiKey": "sk-kimi-697YICu32QZFOg0W9SNaNf24Uquf43qSMfhlYrVQ6XSnVdCqqNZ4ksyVL8BSpm8u",
+        "auth": "api-key",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "k2p5",
+            "name": "Kimi K2.5",
+            "reasoning": true,
+            "input": ["text", "image"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "kimi-coding/k2p5"
+      },
+      "models": {
+        "kimi-coding/k2p5": {
+          "alias": "Kimi K2.5"
+        }
+      },
+      "workspace": "/Users/asura.zhou/clawd-data",
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 4
+      }
+    },
+    "list": [
+      {
+        "id": "main"
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "telegram",
+        "accountId": "main"
+      }
+    }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions",
+    "tts": {
+      "auto": "off"
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "cron": {
+    "enabled": true,
+    "store": "/Users/asura.zhou/clawd-data/cron/jobs.json"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8704648490:AAFpZutXahmYX6b0BPSSRHpCmw2_7oZKWfI",
+      "groupPolicy": "allowlist",
+      "streaming": "partial",
+      "allowFrom": ["5947526755"],
+      "accounts": {
+        "main": {
+          "dmPolicy": "pairing",
+          "botToken": "8704648490:AAFpZutXahmYX6b0BPSSRHpCmw2_7oZKWfI",
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18790,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "2caea6caed015e279a18e9bb9f4dc85d43ee2cf28ede2d3039072dae31438942",
+      "allowTailscale": true
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}

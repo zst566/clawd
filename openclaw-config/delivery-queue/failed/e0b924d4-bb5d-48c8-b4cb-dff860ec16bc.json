@@ -1,0 +1,20 @@
+{
+  "id": "e0b924d4-bb5d-48c8-b4cb-dff860ec16bc",
+  "enqueuedAt": 1772162547897,
+  "channel": "telegram",
+  "to": "group:-1003531397239",
+  "payloads": [
+    {
+      "text": "已派出\"麻将\" agent 去打招呼，稍等片刻 🀄"
+    }
+  ],
+  "threadId": null,
+  "mirror": {
+    "sessionKey": "agent:main:main",
+    "agentId": "main",
+    "text": "已派出\"麻将\" agent 去打招呼，稍等片刻 🀄"
+  },
+  "retryCount": 5,
+  "lastError": "Telegram recipient must be a numeric chat ID",
+  "lastAttemptAt": 1772175702515
+}
