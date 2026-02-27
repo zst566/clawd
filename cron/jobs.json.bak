@@ -89,14 +89,13 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1772164804923,
+        "nextRunAtMs": 1772186404923,
         "lastRunAtMs": 1772143204941,
         "lastStatus": "error",
         "lastDurationMs": 261587,
         "consecutiveErrors": 3,
         "lastRunStatus": "error",
         "lastDeliveryStatus": "delivered",
-        "lastError": "⚠️ ✉️ Message failed",
         "lastDelivered": true
       }
     },
