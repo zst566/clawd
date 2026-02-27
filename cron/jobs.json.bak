@@ -71,7 +71,7 @@
       "name": "botlearn-recon-6h",
       "enabled": true,
       "createdAtMs": 1771036454518,
-      "updatedAtMs": 1772143466528,
+      "updatedAtMs": 1772186941179,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -89,14 +89,15 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1772186404923,
-        "lastRunAtMs": 1772143204941,
+        "nextRunAtMs": 1772208004923,
+        "lastRunAtMs": 1772186404931,
         "lastStatus": "error",
-        "lastDurationMs": 261587,
-        "consecutiveErrors": 3,
+        "lastDurationMs": 536248,
+        "consecutiveErrors": 4,
         "lastRunStatus": "error",
         "lastDeliveryStatus": "delivered",
-        "lastDelivered": true
+        "lastDelivered": true,
+        "lastError": "⚠️ ✉️ Message failed"
       }
     },
     {

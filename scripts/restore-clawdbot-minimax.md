@@ -10,14 +10,14 @@
 ## 使用
 
 ```bash
-cd /path/to/clawd   # 本工作区目录
+cd /path/to/clawd/scripts   # 进入脚本目录
 ./restore-clawdbot-minimax.sh
 ```
 
 脚本会：
 
 1. 给 clawdbot 的 `model.js` 打补丁（让 minimax-portal 的 model 带上 `api` 字段，避免 `Unhandled API in mapOptionsForApi: undefined`）
-2. 从当前目录安装 `minimax-portal-auth` 插件（需与脚本同目录）
+2. 从 `clawd/` 根目录安装 `minimax-portal-auth` 插件
 3. 在 `~/.clawdbot/clawdbot.json` 中启用该插件
 
 ## 之后需手动执行
@@ -33,9 +33,10 @@ clawdbot gateway restart
 
 ```
 clawd/
-├── restore-clawdbot-minimax.sh   # 恢复脚本
-├── restore-clawdbot-minimax.md   # 本说明
-└── minimax-portal-auth/          # 插件（与脚本同目录便于安装）
+├── scripts/
+│   ├── restore-clawdbot-minimax.sh   # 恢复脚本
+│   └── restore-clawdbot-minimax.md   # 本说明
+└── minimax-portal-auth/              # 插件目录
     ├── clawdbot.plugin.json
     ├── package.json
     ├── index.ts
