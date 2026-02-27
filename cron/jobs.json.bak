@@ -28,7 +28,8 @@
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
-        "lastDeliveryStatus": "delivered"
+        "lastDeliveryStatus": "delivered",
+        "runningAtMs": 1772204400009
       },
       "delivery": {
         "mode": "announce"
@@ -201,6 +202,80 @@
         "lastRunStatus": "error",
         "lastDeliveryStatus": "unknown",
         "lastError": "cron announce delivery failed"
+      }
+    },
+    {
+      "id": "26059c99-553b-490a-8b6d-c04c7e583a29",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "pipeline-monitor-5min",
+      "enabled": true,
+      "createdAtMs": 1772200548836,
+      "updatedAtMs": 1772204220872,
+      "schedule": {
+        "everyMs": 300000,
+        "kind": "every",
+        "anchorMs": 1772200548836
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "检查 /Users/asura.zhou/clawd/agents/main/workspace/CURRENT_PIPELINE.json 中的 Pipeline 状态：\n\n1. 如果 status 不是 idle：\n   - 计算当前阶段已耗时\n   - 如果超过 5 分钟：\n     * 用 sessions_send 提醒 currentAgent\n     * 回复：\"[Agent] 在 [任务] 上已停留 X 分钟，请更新进度\"\n\n2. 如果所有 Agent 都响应正常：\n   - 回复：HEARTBEAT_OK\n\n注意：只检查，不执行实际操作。",
+        "model": "kimi-coding/k2p5",
+        "timeoutSeconds": 60
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "telegram:5947526755"
+      },
+      "state": {
+        "nextRunAtMs": 1772204508949,
+        "lastRunAtMs": 1772204208949,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 11923,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "4ee05bd0-364f-4102-ae5f-2b9423dd7f14",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:group:-1003531397239",
+      "name": "dashboard-optimization-status-check",
+      "enabled": true,
+      "createdAtMs": 1772201509213,
+      "updatedAtMs": 1772204369246,
+      "schedule": {
+        "everyMs": 300000,
+        "kind": "every",
+        "anchorMs": 1772201656640
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "润德教育 Dashboard 优化项目 - 定时状态检查\n\n**指令**：使用 read 工具重新读取 TASKS.md，不要依赖缓存。\n\n```javascript\nread({\n  file_path: \"/Users/asura.zhou/clawd/agents/main/workspace/TASKS.md\"\n})\n```\n\n基于 TASKS.md 的实际内容汇报：\n1. 当前项目阶段\n2. 各 Agent 任务完成情况\n3. 是否有阻塞问题\n\n⚠️ 如果读取失败或内容明显过时，请报告\"无法获取最新状态\"。",
+        "model": "kimi-coding/k2p5",
+        "thinking": "off",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "telegram:-1003531397239"
+      },
+      "state": {
+        "nextRunAtMs": 1772204656723,
+        "lastRunAtMs": 1772204356723,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 12523,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
       }
     }
   ]

@@ -40,6 +40,56 @@
 | **主要脚本** | `batch_order_chain_query.py`, `extract_full_order_chain.py` |
 | **远程仓库** | `git@github.com:zst566/RunDeEDU.RevenueRecognition.git` |
 
+### 润德教育 Dashboard 优化项目 🆕
+
+| 项目 | 信息 |
+|------|------|
+| **项目路径** | `/Volumes/SanDisk2T/dv-codeBase/RunDeEdu/revenue-recognition-management/` |
+| **前端路径** | `frontend-pc/src/views/Dashboard.vue` (1540行，待拆分) |
+| **后端路径** | `backend-node/src/services/dashboardService.js` (1310行，待拆分) |
+| **项目文档** | `~/clawd/agents/main/workspace/rundeedu-dashboard-optimization/` |
+| **启动时间** | 2026-02-27 21:21 |
+| **当前阶段** | **阶段3 - 后端代码审查** |
+| **状态** | 🟡 进行中 |
+
+**项目目标**：
+1. 前端 Dashboard.vue 模块化拆分 (1540行 → 多个小组件)
+2. 后端 dashboardService.js 模块化拆分 (1310行 → 多个Service)
+3. 性能优化、安全加固、最佳实践
+
+**团队配置**：
+| 角色 | Agent | 当前任务 | 状态 |
+|------|-------|----------|------|
+| 项目经理 | 小d | 协调、验收 | ✅ 活跃 |
+| 后端/前端开发 | @码匠 | **P2-P4 后端实现** | **✅ 已完成** |
+| 数据顾问 | @zhou_data_bot | 数据模型评审 | ✅ 已完成 |
+| 安全审查 | @guardian | **后端代码安全审查** | **⏳ 阶段3进行中** |
+| 质量审查 | @inspector | **后端代码质量审查** | **⏳ 阶段3进行中** |
+
+**定时检查机制**：
+- **频率**: 每5分钟（有明确任务时）
+- **Cron ID**: `dashboard-optimization-status-check`
+- **任务**: 检查 Agent 状态、阻塞问题
+- **状态文件**: `rundeedu-dashboard-optimization/STATUS.md`
+
+**项目流程** (10阶段)：
+1. ✅ 方案评审 - @zhou_data_bot 已完成
+2. ✅ **后端实现 - @码匠 已完成 (P2-P4)**
+3. 🔄 **后端代码审查 [当前] - @guardian/@inspector 进行中**
+4. ⏳ 前端设计细化
+5. ⏳ 前端实现 (@码匠)
+6. ⏳ 前端代码审查
+7. ⏳ 测试设计
+8. ⏳ 测试执行
+9. ⏳ 集成测试
+10. ⏳ 最终验收
+
+**关键文档**：
+- `DESIGN.md` - 架构设计
+- `PROJECT_PLAN.md` - 完整项目流程
+- `STATUS.md` - 实时状态跟踪
+- `constants/dashboard.js` - 前端常量
+
 ---
 
 ## 三、🔴 紧急任务（本周完成）
@@ -237,6 +287,7 @@ src/views/
 | 2026-02-02 | 越秀区市监局投诉处理完成 | 小d |
 | 2026-02-02 | 润德教育僵尸订单检查功能已完成 | 小d |
 | 2026-02-27 | 整合根目录TASKS.md，更新任务状态 | 小d |
+| 2026-02-27 | **新增：润德教育 Dashboard 优化项目** - 前后端模块化拆分，5个Agent协作，每5分钟定时检查 | 小d |
 
 ---
 

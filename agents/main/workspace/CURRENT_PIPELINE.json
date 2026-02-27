@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "pipelineId": "demo-pipeline-20260227",
+  "status": "blocked",
+  "currentAgent": "codecraft",
+  "blockReason": "Agent无响应",
+  "startedAt": "2026-02-27T21:50:00+08:00",
+  "blockedAt": "2026-02-27T22:36:00+08:00",
+  "blockedDuration": "45分钟",
+  "task": {
+    "project": "润德教育",
+    "description": "收入报表导出功能"
+  },
+  "history": [
+    {"stage": "planning", "agent": "xiaod", "time": "2026-02-27T21:45:00+08:00", "status": "done"},
+    {"stage": "coding", "agent": "codecraft", "time": "2026-02-27T21:50:00+08:00", "status": "done"},
+    {"stage": "reviewing", "agent": "guardian", "time": "2026-02-27T21:50:00+08:00", "status": "done", "result": "拒绝，需修复2个问题"},
+    {"stage": "blocked", "agent": "codecraft", "time": "2026-02-27T22:36:00+08:00", "status": "blocked", "reason": "Agent无响应"}
+  ],
+  "escalation": {
+    "level": "严重",
+    "contactAttempts": 6,
+    "lastContact": "2026-02-27T22:31:00+08:00",
+    "recommendedAction": "人工介入"
+  }
+}

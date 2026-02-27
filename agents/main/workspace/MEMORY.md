@@ -1,5 +1,47 @@
 # MEMORY.md - 长期记忆
 
+## Agent 联系方式 (重要)
+
+### 核心团队成员
+
+| Agent | 正式名称 | 群组 @ | Session Key (内部) | 用途 |
+|-------|----------|--------|-------------------|------|
+| **我** | 小d / main | - | `agent:main:telegram:group:-1003531397239` | 项目经理 |
+| **数据助理** | @zhou_data_bot | @zhou_data_bot | `agent:data_bot:telegram:group:-1003531397239` | 数据分析 |
+| **码匠** | @码匠 / codecraft | @码匠 | `agent:codecraft:telegram:group:-1003531397239` | 前后端开发 |
+| **安全审查** | @guardian | @guardian | `agent:guardian:main` | 安全扫描 |
+| **质量审查** | @inspector | @inspector | `agent:inspector:main` | 代码审查 |
+
+### 联系规则
+
+1. **群组 @ 优先**: 在 Telegram 群组中使用 `@名称` 直接联系
+2. **Session 备用**: 使用 `sessions_send` 工具，传入正确的 session key
+3. **避免混淆**: 不要使用 `agent:xxx:main` 联系需要群组可见的 Agent
+
+### 示例
+
+```javascript
+// 正确：在群组中 @ 码匠
+message.send({
+  action: "send",
+  message: "@码匠 请完成任务..."
+})
+
+// 正确：使用 sessions_send 到群组 session
+sessions_send({
+  sessionKey: "agent:codecraft:telegram:group:-1003531397239",
+  message: "任务分配..."
+})
+
+// 错误：使用 main session（不会发送到群组）
+sessions_send({
+  sessionKey: "agent:codecraft:main",  // ❌ 错
+  message: "..."
+})
+```
+
+---
+
 ## 项目目录
 
 ### 茂名交投文旅平台 (别名: 文旅、信宜文旅)
@@ -475,6 +517,100 @@ CREATE TABLE example (
 - **状态**: 尚未找到有效的核对方法
 - **需要**: 进一步分析数据差异来源，设计针对性的核对方案
 - **核对脚本**: 详见 `workspace/rundeedu_scripts.md`
+
+---
+
+## 2026年2月27日 - 润德教育 Dashboard 优化项目
+
+### 项目概述
+- **项目名称**: 润德教育 Dashboard 全栈优化
+- **启动时间**: 2026-02-27 21:21
+- **状态**: 🟡 进行中 (阶段0 - 方案评审)
+- **负责人**: 我 (小d) - 项目经理
+
+### 项目目标
+1. **模块化**: 前端 Dashboard.vue (1540行) 拆分，后端 dashboardService.js (1310行) 拆分
+2. **最佳实践**: Vue 3 + Node.js 规范
+3. **性能优化**: 加载速度、缓存策略
+4. **安全加固**: 参数校验、权限控制
+
+### 团队配置
+| 角色 | Agent | 状态 |
+|------|-------|------|
+| 项目经理 | 我 (小d) | ✅ 活跃 |
+| 后端/前端开发 | @码匠 | ⏳ 等待阶段1 |
+| 数据顾问 | @zhou_data_bot | ⏳ 评审中 |
+| 安全审查 | @guardian | ⏳ 评审中 |
+| 质量审查 | @inspector | ⏳ 评审中 |
+
+### 项目文档位置
+`~/clawd/agents/main/workspace/rundeedu-dashboard-optimization/`
+- `DESIGN.md` - 架构设计
+- `PROJECT_PLAN.md` - 完整项目流程
+- `STATUS.md` - 实时状态跟踪
+- `constants/dashboard.js` - 前端常量
+
+### 定时检查机制
+**Cron Job**: `dashboard-optimization-status-check`
+- **频率**: 每5分钟（有明确任务时）
+- **任务ID**: 4ee05bd0-364f-4102-ae5f-2b9423dd7f14
+- **动作**: 检查各 Agent 任务状态、阻塞问题
+- **输出**: 自动发送到润德教育讨论群
+- **最佳方案**: ✅ **方案1+2组合** (强制read工具 + 提示)
+  - 实施时间: 2026-02-27 22:52
+  - 验证时间: 2026-02-27 22:54
+  - 效果: **成功**，报告准确性100%
+
+**测试记录**:
+| 时间 | 方案 | 结果 |
+|------|------|------|
+| 22:44 | 原方案 | ❌ 滞后 |
+| 22:49 | 原方案 | ❌ 滞后 |
+| 22:54 | 方案1+2 | ✅ **成功** |
+
+**提醒规则**:
+- 每5分钟: 自动汇报状态
+- 20分钟无响应: @ 提醒对应 Agent
+- 40分钟无响应: 标记阻塞，升级处理
+
+### 当前阶段任务
+- [x] @zhou_data_bot: 数据模型评审 ✅ 已完成
+- [x] @guardian: 安全预审 ✅ 已完成
+- [x] @inspector: 架构预审 ✅ 已完成
+- [ ] @guardian: 后端代码安全审查 ⏳ 进行中
+- [ ] @inspector: 后端代码质量审查 ⏳ 进行中
+
+### 项目流程 (10阶段)
+1. ✅ 方案评审 - 已完成
+2. ✅ 后端设计细化 - 已完成
+3. ✅ 后端实现 - @码匠 已完成
+4. 🔄 **后端代码审查 [当前]** - @guardian/@inspector 进行中
+5. ⏳ 前端设计细化
+6. ⏳ 前端实现 (@码匠)
+7. ⏳ 前端代码审查
+8. ⏳ 测试设计
+9. ⏳ 测试执行
+10. ⏳ 最终验收
+2. 后端设计细化
+3. 后端实现 (@码匠)
+4. 后端代码审查 (@guardian + @inspector)
+5. 前端设计细化
+6. 前端实现 (@码匠)
+7. 前端代码审查 (@guardian + @inspector)
+8. 测试设计
+9. 测试执行
+10. 最终验收
+
+### 关键跟踪点
+- **上次检查**: 2026-02-27 22:54 (方案1+2验证成功)
+- **下次检查**: 每5分钟
+- **阻塞问题**: 无
+- **Agent 响应率**: 100% (4/4)
+
+### 重要提醒
+> **项目跟踪机制**: 本项目设置了定时 cron 检查，每小时自动检查 Agent 状态。即使 Agent 超时无响应，我也会记住任务并在适当时候跟进。项目状态保存在 `STATUS.md` 和本长期记忆中。
+>
+> **最佳实践已确定**: 方案1+2组合（强制read工具 + 提示）能有效解决缓存滞后问题。
 
 ---
 
