@@ -71,7 +71,7 @@
       "name": "botlearn-recon-6h",
       "enabled": true,
       "createdAtMs": 1771036454518,
-      "updatedAtMs": 1772100241564,
+      "updatedAtMs": 1772143466528,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -89,13 +89,15 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1772143204923,
-        "lastRunAtMs": 1772100004926,
+        "nextRunAtMs": 1772164804923,
+        "lastRunAtMs": 1772143204941,
         "lastStatus": "error",
-        "lastDurationMs": 236638,
-        "consecutiveErrors": 2,
+        "lastDurationMs": 261587,
+        "consecutiveErrors": 3,
         "lastRunStatus": "error",
-        "lastDeliveryStatus": "unknown"
+        "lastDeliveryStatus": "delivered",
+        "lastError": "⚠️ ✉️ Message failed",
+        "lastDelivered": true
       }
     },
     {
@@ -171,7 +173,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1771409593921,
-      "updatedAtMs": 1772060462999,
+      "updatedAtMs": 1772158378608,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -181,9 +183,9 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "执行 DV 项目 Balance 重跑自动化脚本：/Volumes/SanDisk2T/dv-codeBase/dv_mall/DVMALL-NODE/scripts/balanceRerunAuto.js\n\n请：\n1. 执行该脚本\n2. 将执行结果报告到 dv项目运维群 (-5099457733)\n3. 包含以下信息：\n   - 执行日期范围\n   - 是否成功点击重跑按钮\n   - 截图保存路径\n\n如果执行失败，说明错误原因。",
+        "message": "执行 DV 项目 Balance 重跑自动化脚本：/Volumes/SanDisk2T/dv-codeBase/dv_mall/DVMALL-NODE/scripts/balanceRerunAuto.js\n\n请：\n1. 执行该脚本\n2. 获取执行结果（日期范围、截图路径、是否成功）\n3. **优先使用 message 工具推送报告到 Telegram 群组 (-5099457733)**\n4. **如果 Telegram 推送失败，立即发送邮件到：asura.zhou@qq.com**\n\n报告必须包含：\n- 执行日期范围\n- 是否成功点击重跑按钮\n- 截图保存路径\n- 执行时间\n\n邮件标题格式：[DV项目] Balance重跑日报 - YYYY-MM-DD",
         "model": "kimi-coding/k2p5",
-        "timeoutSeconds": 120
+        "timeoutSeconds": 180
       },
       "delivery": {
         "channel": "telegram",
@@ -191,14 +193,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772146800000,
-        "lastRunAtMs": 1772060400013,
-        "lastStatus": "ok",
-        "lastDurationMs": 62986,
-        "consecutiveErrors": 0,
-        "lastRunStatus": "ok",
-        "lastDeliveryStatus": "delivered",
-        "lastDelivered": true
+        "nextRunAtMs": 1772233200000,
+        "lastRunAtMs": 1772146800015,
+        "lastStatus": "error",
+        "lastDurationMs": 53822,
+        "consecutiveErrors": 1,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "unknown",
+        "lastError": "cron announce delivery failed"
       }
     }
   ]

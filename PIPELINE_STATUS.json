@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "description": "多 Agent DevOps Pipeline 状态管理",
+  "lastUpdated": "2026-02-27T10:25:00+08:00",
+  "agents": {
+    "xiaod": {
+      "name": "小d",
+      "role": "主控架构师",
+      "status": "idle",
+      "workspace": "/Users/asura.zhou/clawd/agents/main"
+    },
+    "codecraft": {
+      "name": "CodeCraft",
+      "role": "开发工程师",
+      "status": "idle",
+      "workspace": "/Users/asura.zhou/clawd/agents/codecraft"
+    },
+    "guardian": {
+      "name": "Guardian",
+      "role": "代码审核",
+      "status": "idle",
+      "workspace": "/Users/asura.zhou/clawd/agents/guardian"
+    },
+    "inspector": {
+      "name": "Inspector",
+      "role": "测试工程师",
+      "status": "idle",
+      "workspace": "/Users/asura.zhou/clawd/agents/inspector"
+    },
+    "deployer": {
+      "name": "Deployer",
+      "role": "运维工程师",
+      "status": "idle",
+      "workspace": "/Users/asura.zhou/clawd/agents/deployer"
+    }
+  },
+  "pipelines": [],
+  "workflow": {
+    "stages": [
+      "planning",
+      "coding",
+      "reviewing",
+      "testing",
+      "deploying_local",
+      "waiting_confirm",
+      "deploying_prod",
+      "done"
+    ],
+    "transitions": {
+      "planning": "codecraft",
+      "coding": "guardian",
+      "reviewing": "inspector",
+      "testing": "deployer",
+      "deploying_local": "xiaod",
+      "waiting_confirm": "deployer",
+      "deploying_prod": "done"
+    }
+  }
+}
