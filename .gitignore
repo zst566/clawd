@@ -1,1 +1,8 @@
-agents/*/workspace/
+# Agent workspace 动态内容（不跟踪）
+agents/*/workspace/memory/
+agents/*/workspace/.openclaw/
+agents/*/workspace/*.jsonl
+agents/*/workspace/sessions/
+
+# 但跟踪配置文件（使用 ! 取消忽略）
+!agents/*/workspace/*.md
