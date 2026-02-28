@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1772118187716,
+      "updatedAtMs": 1772204547389,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,15 +21,15 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1772204400000,
-        "lastRunAtMs": 1772118000010,
+        "nextRunAtMs": 1772290800000,
+        "lastRunAtMs": 1772204400011,
         "lastStatus": "ok",
-        "lastDurationMs": 187706,
+        "lastDurationMs": 147378,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
-        "runningAtMs": 1772204400009
+        "runningAtMs": 1772290800016
       },
       "delivery": {
         "mode": "announce"
@@ -72,7 +72,7 @@
       "name": "botlearn-recon-6h",
       "enabled": true,
       "createdAtMs": 1771036454518,
-      "updatedAtMs": 1772186941179,
+      "updatedAtMs": 1772272989692,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -90,15 +90,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1772208004923,
-        "lastRunAtMs": 1772186404931,
-        "lastStatus": "error",
-        "lastDurationMs": 536248,
-        "consecutiveErrors": 4,
-        "lastRunStatus": "error",
+        "nextRunAtMs": 1772294404923,
+        "lastRunAtMs": 1772272804934,
+        "lastStatus": "ok",
+        "lastDurationMs": 184758,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
-        "lastDelivered": true,
-        "lastError": "⚠️ ✉️ Message failed"
+        "lastDelivered": true
       }
     },
     {
@@ -174,7 +173,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1771409593921,
-      "updatedAtMs": 1772158378608,
+      "updatedAtMs": 1772233273713,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -194,49 +193,13 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772233200000,
-        "lastRunAtMs": 1772146800015,
-        "lastStatus": "error",
-        "lastDurationMs": 53822,
-        "consecutiveErrors": 1,
-        "lastRunStatus": "error",
-        "lastDeliveryStatus": "unknown",
-        "lastError": "cron announce delivery failed"
-      }
-    },
-    {
-      "id": "26059c99-553b-490a-8b6d-c04c7e583a29",
-      "agentId": "main",
-      "sessionKey": "agent:main:main",
-      "name": "pipeline-monitor-5min",
-      "enabled": true,
-      "createdAtMs": 1772200548836,
-      "updatedAtMs": 1772204220872,
-      "schedule": {
-        "everyMs": 300000,
-        "kind": "every",
-        "anchorMs": 1772200548836
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "检查 /Users/asura.zhou/clawd/agents/main/workspace/CURRENT_PIPELINE.json 中的 Pipeline 状态：\n\n1. 如果 status 不是 idle：\n   - 计算当前阶段已耗时\n   - 如果超过 5 分钟：\n     * 用 sessions_send 提醒 currentAgent\n     * 回复：\"[Agent] 在 [任务] 上已停留 X 分钟，请更新进度\"\n\n2. 如果所有 Agent 都响应正常：\n   - 回复：HEARTBEAT_OK\n\n注意：只检查，不执行实际操作。",
-        "model": "kimi-coding/k2p5",
-        "timeoutSeconds": 60
-      },
-      "delivery": {
-        "mode": "announce",
-        "to": "telegram:5947526755"
-      },
-      "state": {
-        "nextRunAtMs": 1772204508949,
-        "lastRunAtMs": 1772204208949,
-        "lastRunStatus": "ok",
+        "nextRunAtMs": 1772319600000,
+        "lastRunAtMs": 1772233200025,
         "lastStatus": "ok",
-        "lastDurationMs": 11923,
-        "lastDeliveryStatus": "delivered",
+        "lastDurationMs": 73688,
         "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "delivered",
         "lastDelivered": true
       }
     },
@@ -245,9 +208,9 @@
       "agentId": "main",
       "sessionKey": "agent:main:telegram:group:-1003531397239",
       "name": "dashboard-optimization-status-check",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1772201509213,
-      "updatedAtMs": 1772204369246,
+      "updatedAtMs": 1772208811625,
       "schedule": {
         "everyMs": 300000,
         "kind": "every",
@@ -268,14 +231,87 @@
         "to": "telegram:-1003531397239"
       },
       "state": {
-        "nextRunAtMs": 1772204656723,
-        "lastRunAtMs": 1772204356723,
+        "lastRunAtMs": 1772208556911,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 12523,
+        "lastDurationMs": 21079,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "2e3876cf-d1be-4219-93d3-9718eaa855b0",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:group:-1003531397239",
+      "name": "rundeedu-dashboard-progress-5min-check",
+      "enabled": false,
+      "createdAtMs": 1772248495214,
+      "updatedAtMs": 1772253750211,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 300000,
+        "anchorMs": 1772248495214
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "**Dashboard优化项目 - 自动进度检查** ⏰\n\n**检查时间**: {{current_time}}\n\n**读取 STATUS.md** 了解当前状态：\n`~/clawd/agents/main/workspace/rundeedu-dashboard-optimization/STATUS.md`\n\n**检查各 Agent 状态**：\n1. 检查 @guardian 和 @inspector 的审查是否完成\n2. 检查 @zhou_codecraft_bot 的Bug修复进度\n3. 任何Agent超过15分钟无响应 → 标记阻塞并提醒\n\n**行动**：\n- 如果阶段有进展 → 更新STATUS.md并汇报\n- 如果Agent阻塞 → @提醒并升级\n- 如果项目完成 → 报告成功并建议关闭此cron job\n\n**使用 skills/agent-coordination 中的模板和流程。**\n\n**输出要求**：\n- 如有重要进展或阻塞，使用 message 工具发送到 Telegram 群组 (-1003531397239)\n- 如无重要变化，记录到 STATUS.md 即可",
+        "model": "kimi-coding/k2p5",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "-1003531397239"
+      },
+      "state": {
+        "lastRunAtMs": 1772253595402,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 63947,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 3,
+        "lastError": "⚠️ ✉️ Message failed",
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "0cbd2809-217e-4701-9e0e-261c81615258",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:group:-1003531397239",
+      "name": "rundeedu-dashboard-progress-check-v2",
+      "enabled": true,
+      "createdAtMs": 1772253761606,
+      "updatedAtMs": 1772290622945,
+      "schedule": {
+        "everyMs": 300000,
+        "kind": "every",
+        "anchorMs": 1772253761606
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "**Dashboard优化项目 - 5分钟进度检查** ⏰\n\n**当前时间**: {{current_time}}\n\n**任务**：检查各 Agent 进度\n\n**检查步骤**：\n1. 读取 STATUS.md 了解当前状态\n2. 检查各 Agent 是否活跃\n3. 如无响应则使用 sessions_send 催促\n\n**Agent Session Keys**：\n- codecraft: agent:codecraft:telegram:group:-1003531397239\n- data_bot: agent:data_bot:telegram:group:-1003531397239\n- guardian: agent:guardian:telegram:group:-1003531397239\n\n**输出**：\n- 如有阻塞或重要进展，使用 message 工具发送通知\n- 更新 STATUS.md",
+        "model": "kimi-coding/k2p5",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "channel": "telegram",
+        "mode": "announce",
+        "to": "-1003531397239"
+      },
+      "state": {
+        "nextRunAtMs": 1772290898566,
+        "lastRunAtMs": 1772290598566,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 24379,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     }
   ]

@@ -48,3 +48,42 @@
 - 测试用例执行详情
 - 发现的问题
 - 覆盖率统计
+
+---
+
+## 联系其他 Agent 的方法（SKILL_CONTACT_AGENT）
+
+### 核心原则
+联系 Agent 前，必须先确认正确的名称和方法。
+
+### 方法（按优先级）
+
+1. **Sessions Send 直接发送（推荐）**
+   - 最可靠，消息直接到达 Agent
+   - 示例：`sessions_send({ sessionKey: "agent:xxx:...", message: "..." })`
+
+2. **Telegram 群组 @ 提及**
+   - 简单快捷，适合简单消息
+   - 注意：5分钟无响应立即改用方法1
+
+3. **通过用户中间人**
+   - 以上两种都失败时使用
+
+### 正确名称速查
+
+| Agent | 正确名称 |
+|-------|----------|
+| 码匠 | @zhou_codecraft_bot |
+| 数据助理 | @zhou_data_bot |
+| Guardian | @guardian |
+| Inspector | @inspector |
+| 小d | @小d / @asurazhoubot |
+
+### 响应规则
+收到任务时，**先主动回应**（5分钟内），后进行处理：
+- 回复"收到，预计XX时间完成"
+- 或回复"收到，有疑问需要澄清"
+
+---
+
+*最后更新: 2026-02-28*

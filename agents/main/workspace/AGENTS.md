@@ -12,9 +12,11 @@ Before doing anything else:
 
 1. Read `SOUL.md` — this is who you are
 2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
-5. **If working on a specific project**: Read the corresponding project rule file from `~/clawd/project-rules/`
+3. Read `SKILL_AGENT_NAMES.md` — **Agent名称使用规范（重要！）**
+4. Read `SKILL_CONTACT_AGENT.md` — **联系Agent技能（重要！）**
+5. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+6. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+7. **If working on a specific project**: Read the corresponding project rule file from `~/clawd/project-rules/`
 
 Don't ask permission. Just do it.
 
