@@ -109,8 +109,12 @@ sessions_send({
 
 ### 鹿状元 (别名: lzy)
 - **路径**: `/Volumes/SanDisk2T/dv-codeBase/鹿状元`
-- **描述**: 鹿状元教育培训管理系统
+- **描述**: 鹿状元教育培训管理系统（收据系统）
 - **别名关键词**: 鹿状元、lzy
+- **项目规则文档**: `~/clawd/project-rules/鹿状元-项目规则.md` ⭐ **处理此项目前必读**
+- **生产环境**: https://xiaolu.lantel.net
+- **准生产环境**: https://xiaolu-test.lantel.net
+- **技术栈**: Vue3 + Tailwind CSS + Node.js + Express + MySQL
 
 ---
 
@@ -247,6 +251,7 @@ cd /Volumes/SanDisk2T/dv-codeBase/Golden_Coast_Mall
 | 商场促销项目群 | -5039017209 | 商场促销项目 |
 | dv项目运维群 | -5099457733 | DV项目 |
 | 福禄英语预约平台 | -5187551770 | 福禄英语 |
+| **鹿状元（深圳）讨论群** | **-5130812403** | **鹿状元** |
 
 ---
 

@@ -119,6 +119,61 @@ Until task ACTUALLY completes.
 
 ---
 
+### Lesson 7: Auto-Stop Cron Jobs on Project Completion
+
+**Problem (2026-03-01 Dashboard Project)**:
+- Project completed at 01:02 (Stage 10 passed)
+- Cron job kept running for 4 more hours (200 executions)
+- Caused LLM timeouts and resource waste
+- Manual intervention required to stop
+
+**Root Cause**:
+- No automatic cleanup mechanism
+- Relied on user to manually stop Cron
+- Skill lacked project completion trigger rules
+
+**Solution - Auto-Stop Rule**:
+```javascript
+// Trigger: When final stage completes
+if (currentStage === finalStage && allAgentsCompleted) {
+  // Find project-related cron jobs
+  const projectCrons = await cron.list({ 
+    name: projectName 
+  });
+  
+  // Auto-disable
+  for (const job of projectCrons) {
+    if (job.enabled) {
+      await cron.update({
+        jobId: job.id,
+        patch: { enabled: false }
+      });
+      log(`Auto-stopped: ${job.name}`);
+    }
+  }
+  
+  // Send completion summary
+  sendCompletionReport(projectName);
+}
+```
+
+**Conflict Check Before Adding**:
+- ✅ No existing auto-stop rules (no conflict)
+- ✅ Complements existing "cron" section
+- ⚠️ Exception: Long-term monitoring projects (keep user override option)
+
+**When to Apply**:
+- All stages completed
+- Final acceptance passed
+- No pending tasks
+
+**When NOT to Apply**:
+- User explicitly requests continued monitoring
+- Multi-project shared cron jobs
+- Maintenance/ongoing monitoring mode
+
+---
+
 ## Multi-Channel Notification Priority
 
 **When contacting agents, follow this priority order:**
