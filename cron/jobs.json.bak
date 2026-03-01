@@ -28,7 +28,8 @@
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
-        "lastDeliveryStatus": "delivered"
+        "lastDeliveryStatus": "delivered",
+        "runningAtMs": 1772377200015
       },
       "delivery": {
         "mode": "announce"
@@ -310,6 +311,33 @@
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
+      }
+    },
+    {
+      "id": "bb284f66-3545-469e-a881-a41b03987d66",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:group:-5130812403",
+      "name": "lzy-ssl-cert-check",
+      "enabled": true,
+      "createdAtMs": 1772368077181,
+      "updatedAtMs": 1772368077181,
+      "schedule": {
+        "expr": "0 9 * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "[SSL证书检查] 鹿状元SSL证书每日自动检查 - 请立即执行检查任务\n检查脚本: /Volumes/SanDisk2T/dv-codeBase/鹿状元/check-ssl-expiry.sh"
+      },
+      "delivery": {
+        "mode": "webhook",
+        "to": "http://127.0.0.1:18789/api/webhook/ssl-check"
+      },
+      "state": {
+        "nextRunAtMs": 1772413200000
       }
     }
   ]
