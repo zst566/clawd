@@ -52,21 +52,23 @@ sessions_send({
 
 ## 项目目录
 
-### 茂名交投文旅平台 (别名: 文旅、信宜文旅)
+### 茂名交投文旅平台 (别名: 文旅、信宜文旅) ✅ 已完成
 - **路径**: `/Volumes/SanDisk2T/dv-codeBase/茂名·交投-文旅平台/`
 - **描述**: 包含PC管理后台、后端API、小程序端、移动端H5
 - **别名关键词**: 茂名、文旅、信宜、maoming
-- **项目规则文档**: `~/clawd/project-rules/茂名文旅-项目规则.md` ⭐ **处理此项目前必读**
-- **子目录**:
-  - `apps/pc-admin` - PC端管理后台 (Vue3 + Element Plus)
-  - `apps/backend` - 后端API (Node.js + Prisma + MySQL)
-  - `apps/miniprogram` - 小程序端
-  - `apps/mobile-h5` - 移动端H5
+- **项目规则文档**: `~/clawd/project-rules/茂名文旅-项目规则.md`
 - **技术栈**: Vue3, Element Plus, Node.js, Prisma, MySQL
-- **开发环境访问** (必须通过Nginx):
-  - 移动端H5: `http://localhost`
-  - PC管理端: `http://localhost/pc-admin/`
-  - 后端API: `http://localhost/api/mobile`
+- **项目状态**: 🎉 **已完成并交付** (2026-03-02)
+  - ✅ 小程序注册备案
+  - ✅ 环境配置（服务器+数据库）
+  - ✅ 前端开发
+  - ✅ 后端API开发
+  - ✅ 图片上传功能
+  - ✅ PC端页面联调
+  - ✅ 功能测试与Bug修复
+  - ✅ 容器打包与预上线测试
+  - ✅ 2月14日正式上线
+- **当前阶段**: 提交交付文档并关闭项目
 
 ---
 
@@ -672,3 +674,43 @@ CREATE TABLE example (
 ---
 
 *更新时间: 2026-02-27*
+
+---
+
+## 🚨 运维故障排查记录
+
+### DV项目 - 优惠配置/活动专场页面无法打开
+
+**故障现象：**
+- 优惠配置页面无法访问
+- 活动专场页面无法访问
+
+**排查步骤：**
+
+1. **登录服务器**
+   - 服务器：阿里云 CMS01
+
+2. **检查 Node.js 服务状态**
+   ```bash
+   # 检查是否有 Node.js 进程在运行
+   ps aux | grep node
+   
+   # 或者使用 pm2 查看（如果使用 pm2 管理）
+   pm2 status
+   ```
+
+3. **启动服务（如未运行）**
+   ```bash
+   # 进入项目目录后启动
+   npm start
+   # 或
+   node server.js
+   # 或 pm2 方式
+   pm2 start app.js
+   ```
+
+**备注：** 这两个页面对应的后端是 Node.js 服务，如果页面打不开通常是服务未启动导致。
+
+---
+
+*更新时间: 2026-03-02*
