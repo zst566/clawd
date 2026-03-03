@@ -12,9 +12,22 @@
 
 ## 联系 Agent 的方法（按优先级排序）
 
-### 方法 1：Sessions Send 直接发送（推荐）
+### 场景区分（重要！）
 
-**适用场景**：所有需要确保消息送达的情况
+| 场景 | 使用工具 | 说明 |
+|------|----------|------|
+| **日常沟通** | `sessions_send` | 询问进度、获取结果、简单对话 |
+| **分配独立任务** | `sessions_spawn` | 让 Agent 独立执行一个完整任务 |
+
+---
+
+### 方法 1-A：Sessions Send - 日常沟通（推荐）
+
+**适用场景**：
+- 询问任务进度
+- 获取之前的结果
+- 简单问答
+- 不需要 Agent 开启新会话
 
 **优点**：
 - ✅ 最可靠，消息直接到达 Agent
@@ -25,7 +38,7 @@
 ```javascript
 sessions_send({
   sessionKey: "agent:codecraft:telegram:group:-1003531397239",
-  message: "任务分配...",
+  message: "上次的数据分析完成了吗？",
   timeoutSeconds: 60
 })
 ```
@@ -34,6 +47,36 @@ sessions_send({
 - `status: "ok"` + `reply` - 成功收到回复
 - `status: "timeout"` - 超时无响应
 - `delivery.status: "pending"` - 消息已发送，等待 Agent 响应
+
+---
+
+### 方法 1-B：Sessions Spawn - 分配独立任务
+
+**适用场景**：
+- 需要 Agent 独立执行一个完整任务
+- 任务可能需要较长时间
+- 需要 Agent 在隔离会话中工作
+
+**配置要求**：
+- 需要在 `agents.list[].subagents.allowAgents` 中配置允许的 Agent ID
+- 使用 `["*"]` 允许所有已定义的 Agent
+
+**示例**：
+```javascript
+sessions_spawn({
+  agentId: "data_bot",  // 必须是 agents.list 中定义的 ID
+  task: "分析这个CSV文件并生成统计报告",
+  label: "数据分析任务",
+  // runTimeoutSeconds: 300,  // 可选，默认使用 agents.defaults.subagents.runTimeoutSeconds
+  mode: "run"
+})
+```
+
+**返回值**：
+- `status: "accepted"` - 子 Agent 已启动
+- `childSessionKey` - 子会话 key
+- `runId` - 运行 ID
+- 任务完成后自动返回结果到当前频道
 
 ---
 
@@ -131,12 +174,17 @@ message.send({
 
 ## 最佳实践总结
 
-| 场景 | 推荐方法 | 备选方法 |
+| 场景 | 推荐工具 | 备选方法 |
 |------|----------|----------|
-| 任务分配 | Sessions Send | 群组 @ + Sessions Send |
-| 紧急催促 | Sessions Send | 用户中间人 |
-| 简单确认 | 群组 @ | Sessions Send |
-| 复杂沟通 | Sessions Send | 用户中间人 |
+| 询问进度/获取结果 | `sessions_send` | 群组 @ |
+| 分配独立任务 | `sessions_spawn` | - |
+| 紧急催促 | `sessions_send` | 用户中间人 |
+| 简单确认 | 群组 @ | `sessions_send` |
+| 复杂沟通 | `sessions_send` | 用户中间人 |
+
+**关键区别**：
+- `sessions_send` → 向 Agent 的**已有**会话发消息
+- `sessions_spawn` → **启动新会话**让 Agent 独立执行任务
 
 ---
 
@@ -174,6 +222,85 @@ sessions_send({ sessionKey: "agent:codecraft:telegram:group:-1003531397239", ...
 
 ---
 
+## 自动化通知协议
+
+### 审查完成 → 自动通知开发者
+
+当 Guardian 或 Inspector 完成代码审查后，必须**自动**通知相关开发者，无需等待项目经理中转。
+
+#### 通知流程
+
+```
+审查完成 → 自动发送结果给开发者 → 抄送项目经理 → 开发者开始修复
+```
+
+#### 实现方式
+
+**方式1：Guardian/Inspector 主动通知（推荐）**
+
+```javascript
+// Guardian 完成安全审查后
+sessions_send({
+  sessionKey: "agent:codecraft:telegram:group:-1003531397239",
+  message: "[安全审查完成] 🔒\n文件: src/utils/auth.js\n问题: 1个高危（SQL注入风险），2个警告\n详细报告: [见下方]\n@小d 已抄送"
+})
+
+// Inspector 完成质量审查后  
+sessions_send({
+  sessionKey: "agent:codecraft:telegram:group:-1003531397239",
+  message: "[质量审查完成] ✅\n文件: src/utils/auth.js\n问题: 3个代码风格问题，1个性能建议\n详细报告: [见下方]\n@小d 已抄送"
+})
+```
+
+**方式2：项目经理汇总通知（并行审查场景）**
+
+```javascript
+// 同时启动 Guardian 和 Inspector 审查
+const guardianTask = sessions_spawn({
+  agentId: "guardian",
+  task: "安全审查: ~/project/src/utils/auth.js",
+  label: "Guardian安全审查"
+});
+
+const inspectorTask = sessions_spawn({
+  agentId: "inspector", 
+  task: "质量审查: ~/project/src/utils/auth.js",
+  label: "Inspector质量审查"
+});
+
+// 等待两者都完成后，汇总通知
+// [等待两个任务完成...]
+
+sessions_send({
+  sessionKey: "agent:codecraft:telegram:group:-1003531397239",
+  message: "[审查汇总] 📋\nGuardian: 1高危 2警告\nInspector: 3风格 1建议\n请开始修复"
+});
+```
+
+#### 通知内容规范
+
+| 字段 | 说明 | 示例 |
+|------|------|------|
+| **审查类型** | 安全/质量/性能 | `[安全审查完成]` |
+| **文件路径** | 被审查的文件 | `src/utils/auth.js` |
+| **问题统计** | 按级别统计 | `1高危 2警告 3建议` |
+| **详细报告** | 具体问题描述 | `[见附件或下方]` |
+| **抄送** | 通知项目经理 | `@小d 已抄送` |
+
+#### 响应时间要求
+
+- **审查 Agent**：完成后立即通知（5分钟内）
+- **开发者**：收到通知后确认（5分钟内）
+- **阻塞处理**：20分钟无响应则升级提醒
+
+---
+
 **创建时间**: 2026-02-28 00:49
-**更新说明**: 包含所有联系方法、故障排查、最佳实践
+**更新时间**: 2026-03-03 19:46
+**更新说明**: 
+- 区分 `sessions_send`（日常沟通）和 `sessions_spawn`（分配独立任务）的使用场景
+- 添加 `sessions_spawn` 配置要求和示例
+- 更新最佳实践总结表
+- **新增**: 自动化通知协议章节，规范审查完成后的自动通知流程
+
 **重要提醒**: 所有 Agent 必须将此技能写入自己的长期记忆

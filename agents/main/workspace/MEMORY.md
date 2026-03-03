@@ -18,27 +18,73 @@
 1. `SKILL_AGENT_NAMES.md` - Agent 名称使用规范
 2. `SKILL_CONTACT_AGENT.md` - **联系 Agent 完整方法指南（重要！）**
 
-**联系方法（3种）**：
-1. **Sessions Send 直接发送**（推荐，最可靠）
-2. Telegram 群组 @ 提及（简单但可能丢失）
-3. 通过用户中间人（备用方案）
+**联系方法（4种）**：
+
+| 方法 | 工具 | 场景 | 优先级 |
+|------|------|------|--------|
+| **Sessions Send** | `sessions_send` | 日常沟通、询问进度、获取结果 | ⭐ 首选 |
+| **Sessions Spawn** | `sessions_spawn` | 分配独立任务、需要隔离执行 | ⭐ 任务分配 |
+| Telegram 群组 @ | `message.send` | 简单消息、Agent 在线时 | 备用 |
+| 用户中间人 | 人工转发 | 以上都失败时 | 最后手段 |
+
+**配置要求**：
+- `sessions_spawn` 需要在 `agents.list[].subagents.allowAgents` 中配置允许的 Agent ID
+- 当前配置：`allowAgents: ["*"]` 允许所有已定义的 Agent
+- 默认超时：`runTimeoutSeconds: 300`, `archiveAfterMinutes: 60`
 
 **响应规则**：
 - 收到任务 → 5分钟内主动回应 → 后处理 → 完成后汇报
 
+---
+
+### Agent 角色与职责矩阵
+
+| Agent | 主要职责 | 次要职责 | 协作对象 | 响应时间 |
+|-------|---------|---------|---------|---------|
+| **@zhou_codecraft_bot** (码匠) | 前后端开发 | 技术文档、单元测试 | 我, Guardian, Inspector | 5分钟内 |
+| **@zhou_data_bot** (数据助理) | 数据分析 | 数据核对、报表生成 | 我, 码匠 | 5分钟内 |
+| **@guardian** (安全审查) | 安全审查 | 合规检查、漏洞扫描 | 码匠, 我 | 即时 |
+| **@inspector** (质量审查) | 代码质量审查 | 最佳实践、性能优化 | 码匠, 我 | 即时 |
+| **@小d** (我/项目经理) | 项目管理 | 任务协调、进度跟踪 | 所有Agent | 即时 |
+
+### 自动化工作流
+
+**并行审查流程**：
+```
+代码提交 → Guardian审查(并行) ┐
+         → Inspector审查(并行) ┘
+                          ↓
+                    审查结果汇总
+                          ↓
+              自动通知码匠修复
+```
+
+**关键原则**：
+1. **自动化优先** - 审查完成后自动通知，无需项目经理中转
+2. **并行执行** - Guardian 和 Inspector 同时审查，节省时间
+3. **信息透明** - 所有结果抄送项目经理
+
 ### 示例
 
 ```javascript
-// 正确：在群组中 @ 码匠
-message.send({
-  action: "send",
-  message: "@码匠 请完成任务..."
+// 日常沟通：询问进度
+sessions_send({
+  sessionKey: "agent:data_bot:telegram:group:-1003531397239",
+  message: "上次的数据分析完成了吗？",
+  timeoutSeconds: 60
 })
 
-// 正确：使用 sessions_send 到群组 session
-sessions_send({
-  sessionKey: "agent:codecraft:telegram:group:-1003531397239",
-  message: "任务分配..."
+// 分配独立任务：让 data_bot 执行分析
+sessions_spawn({
+  agentId: "data_bot",
+  task: "分析这个CSV文件并生成报告",
+  label: "数据分析任务"
+})
+
+// 群组中 @ 码匠
+message.send({
+  action: "send",
+  message: "@zhou_codecraft_bot 请检查代码"
 })
 
 // 错误：使用 main session（不会发送到群组）
