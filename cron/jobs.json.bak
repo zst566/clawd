@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1772463666630,
+      "updatedAtMs": 1772550207938,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,15 +21,14 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1772550000000,
-        "lastRunAtMs": 1772463600019,
+        "nextRunAtMs": 1772636400000,
+        "lastRunAtMs": 1772550000014,
         "lastStatus": "ok",
-        "lastDurationMs": 66611,
+        "lastDurationMs": 207924,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
-        "lastDelivered": true,
-        "runningAtMs": 1772550000012
+        "lastDelivered": true
       },
       "delivery": {
         "mode": "announce"
@@ -139,7 +138,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1771409593921,
-      "updatedAtMs": 1772492505766,
+      "updatedAtMs": 1772578851439,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -159,10 +158,10 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772578800000,
-        "lastRunAtMs": 1772492400012,
+        "nextRunAtMs": 1772665200000,
+        "lastRunAtMs": 1772578800016,
         "lastStatus": "ok",
-        "lastDurationMs": 105754,
+        "lastDurationMs": 51423,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
@@ -286,7 +285,7 @@
       "name": "lzy-ssl-cert-check",
       "enabled": true,
       "createdAtMs": 1772368077181,
-      "updatedAtMs": 1772499654317,
+      "updatedAtMs": 1772586130004,
       "schedule": {
         "expr": "0 9 * * *",
         "kind": "cron",
@@ -303,11 +302,11 @@
         "to": "http://127.0.0.1:18789/api/webhook/ssl-check"
       },
       "state": {
-        "nextRunAtMs": 1772586000000,
-        "lastRunAtMs": 1772499600013,
+        "nextRunAtMs": 1772672400000,
+        "lastRunAtMs": 1772586000018,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 54304,
+        "lastDurationMs": 129986,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0
       }
