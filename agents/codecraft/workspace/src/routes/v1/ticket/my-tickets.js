@@ -138,7 +138,7 @@ router.get('/', async (req, res) => {
     if (expiredTickets.length > 0) {
       // 异步更新过期票根状态
       Promise.all(
-        expiredTickets.map(ticket =
+        expiredTickets.map(ticket =>
           prisma.ticket.update({
             where: { id: ticket.id },
             data: { status: TicketStatus.EXPIRED },

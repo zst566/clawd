@@ -22,22 +22,21 @@ description: Multi-agent project coordination, communication, and progress track
 ### Lesson 1: Single-Channel Notification Fails
 
 **What happened (2026-02-28 12:00-12:17)**:
-- Used only Telegram @mention for progress checks
-- Agents didn't respond in Telegram group
-- Assumed agents were not working
-- **Reality**: Agents were working but not posting to Telegram
+- Used only sessions_send for progress checks
+- Agent didn't respond in expected timeframe
+- Assumed agent was not working
+- **Reality**: Agent was working but session was delayed
 
 **Correct approach**:
 ```javascript
-// ❌ WRONG - Single channel
-message({ action: "send", message: "@agent check progress" })
+// ❌ WRONG - Single channel, no timeout
+sessions_send({ sessionKey: "...", message: "check progress" })
 // Wait... no response... mark blocked ❌
 
-// ✅ CORRECT - Multi-channel
-message({ action: "send", message: "@agent check progress" })
-sessions_send({ sessionKey: "agent:xxx:telegram:group:...", message: "...", timeoutSeconds: 30 })
+// ✅ CORRECT - Multi-channel with timeout
+sessions_send({ sessionKey: "...", message: "...", timeoutSeconds: 30 })
 exec("grep agent_name ~/.openclaw/logs/gateway.log | tail -20")
-sessions_spawn({ agentId: "main", task: "follow up with agent...", runTimeoutSeconds: 180 })
+sessions_spawn({ agentId: "main", task: "follow up...", runTimeoutSeconds: 180 })
 ```
 
 ### Lesson 2: No Response ≠ No Progress
@@ -47,7 +46,72 @@ sessions_spawn({ agentId: "main", task: "follow up with agent...", runTimeoutSec
 - Actually completed work at 11:24 (visible in gateway.log)
 - **Lesson**: Always check gateway.log before assuming blocked
 
-### Lesson 4: File Edit Failures Must Be Confirmed
+### Lesson 8: Big Data Query Requires Batching (2026-03-05)
+
+**What happened**:
+- Assigned data analysis task to @zhou_data_bot
+- Table: `revenue_recognition_child` with 522,709,877 records
+- Query: GROUP BY with COUNT(DISTINCT goods_price)
+- **Result**: Query timed out after 10+ minutes
+
+**Root Cause**:
+- Single GROUP BY on 500M+ records is too heavy
+- Database cannot complete within reasonable timeout
+- Agent kept trying same approach without success
+
+**Solution - Batching Strategy**:
+```python
+# ✅ CORRECT - Batch by primary key range
+import pymysql
+
+conn = pymysql.connect(..., read_timeout=300)
+cursor = conn.cursor()
+
+# Step 1: Get ID range
+cursor.execute("SELECT MIN(goods_id), MAX(goods_id) FROM table WHERE ...")
+min_id, max_id = cursor.fetchone()
+
+# Step 2: Process in batches
+batch_size = 10000
+all_results = []
+for batch_start in range(min_id, max_id + 1, batch_size):
+    batch_end = batch_start + batch_size - 1
+    cursor.execute("""
+        SELECT goods_id, goods_name,
+               COUNT(DISTINCT goods_price) as price_count,
+               MIN(goods_price) as min_price,
+               MAX(goods_price) as max_price
+        FROM revenue_recognition_child 
+        WHERE deleted = 0 
+          AND goods_id BETWEEN %s AND %s  # ← Batch filter
+        GROUP BY goods_id, goods_name
+        HAVING COUNT(DISTINCT goods_price) > 1
+    """, (batch_start, batch_end))
+    all_results.extend(cursor.fetchall())
+
+# Step 3: Sort and export
+all_results.sort(key=lambda x: x[4] - x[3], reverse=True)
+export_to_csv(all_results)
+```
+
+**Key Takeaways**:
+- **>100M records** → Must use batching
+- **Batch size** → 10,000 items (balance speed vs memory)
+- **Read timeout** → Set to 300s (5 minutes) minimum
+- **Primary key** → Use for range-based batching
+- **Self-solve** → Don't ask user for help, design batching yourself
+
+**When to Apply**:
+- Table has >100M records
+- Query involves GROUP BY or JOIN
+- Timeout occurs after 5+ minutes
+
+**When NOT to Apply**:
+- Simple COUNT(*) with indexes
+- Indexed lookups by primary key
+- Small tables (<10M records)
+
+---
 
 **What happened**: Multiple `edit()` calls failed silently  
 - `STATUS.md` edits failed with "Could not find exact text"  
@@ -183,12 +247,13 @@ if (currentStage === finalStage && allAgentsCompleted) {
 
 ```javascript
 sessions_spawn({
-  agentId: "main",
+  agentId: "data_bot",
   label: "task-coordinator",
   runTimeoutSeconds: 900,
   task: `
-    Coordinate with @agent_name.
-    Check progress every 5 minutes.
+    Execute data analysis task.
+    Connect to database and run queries.
+    Export results to Excel.
     Report back with results.
   `
 })
@@ -198,7 +263,7 @@ sessions_spawn({
 ---
 
 ### Priority 2: sessions_send (High Reliability ⭐️⭐️⭐️⭐️)
-**Use for**: Direct communication, quick checks
+**Use for**: Direct communication, quick checks, progress inquiries
 
 ```javascript
 sessions_send({
@@ -211,39 +276,25 @@ sessions_send({
 
 ---
 
-### Priority 3: Telegram @mention (Group Visibility ⭐️⭐️⭐️)
-**Use for**: Human awareness, transparency
+### Mandatory: Use Official Tools Only
 
-```javascript
-message({
-  action: "send",
-  message: "@agent_name Task assignment..."
-})
-```
-**Why**: Visible to all, human can see
+**Correct task assignment flow:**
+1. ✅ sessions_spawn - For independent task execution
+2. ✅ sessions_send - For direct communication and inquiries
 
----
-
-### Mandatory: Always Use 2+ Methods
-
-**Minimum combo for any task assignment:**
-1. ✅ sessions_send (direct to agent)
-2. ✅ Telegram @mention (group visibility)
-
-**For urgent/complex tasks, add:**
-3. ✅ sessions_spawn (monitoring subagent)
+**Never use Telegram @mention for task assignment!**
 
 ---
 
 ### Notification Checklist
 
 **Before marking "notification sent":**
-- [ ] Used sessions_send to agent's group session
-- [ ] Posted to Telegram group with @mention
+- [ ] Used sessions_spawn for task assignment (if independent task)
+- [ ] OR used sessions_send for direct communication
 - [ ] (Optional) Spawned follow-up subagent for tracking
 - [ ] Checked gateway.log after 5 minutes for hidden activity
 
-**Never rely on just one method!**
+**Never rely on informal methods!**
 
 ## Progress Check Strategy: Multi-Source Verification
 
@@ -292,7 +343,6 @@ See [references/progress-check.md](references/progress-check.md) for detailed ch
 | **sessions_spawn** ⭐️⭐️⭐️⭐️⭐️ | Highest | Background tasks, parallel processing | Auto result announce, timeout control, error handling, isolation |
 | **sessions_send** ⭐️⭐️⭐️⭐️ | High | Direct agent-to-agent messaging | Ping-pong up to 5 rounds, quick back-and-forth |
 | **Cron/Hook** ⭐️⭐️⭐️⭐️ | High | Scheduled/event-driven tasks | Automatic triggering, no manual intervention |
-| **Telegram @mention** ⭐️⭐️⭐️ | Medium | Group visibility, human awareness | Visible to all, but may be missed |
 
 ### Recommended: sessions_spawn Pattern
 
@@ -300,14 +350,14 @@ For critical tasks with deadline requirements, use **sessions_spawn** to create 
 
 ```javascript
 sessions_spawn({
-  agentId: "main",
-  label: "task-coordinator",
+  agentId: "data_bot",
+  label: "data-analysis-task",
   runTimeoutSeconds: 900,  // 15 min timeout
   cleanup: "keep",
   task: `
-    Coordinate with @guardian and @inspector.
-    Check progress every 5 minutes.
-    Report back in 15 minutes with status.
+    Execute data analysis.
+    Connect to database and run queries.
+    Report back with results.
   `
 })
 ```
@@ -323,31 +373,30 @@ See [references/communication-patterns.md](references/communication-patterns.md)
 
 ## Agent Directory
 
-| Agent | Telegram @ | Group Session Key | Primary Role |
-|-------|-----------|-------------------|--------------|
-| CodeCraft / 码匠 | @zhou_codecraft_bot | `agent:codecraft:telegram:group:-1003531397239` | Frontend/Backend Dev |
-| Data Assistant | @zhou_data_bot | `agent:data_bot:telegram:group:-1003531397239` | Data Analysis |
-| Guardian | @guardian | `agent:guardian:telegram:group:-1003531397239` | Security Review |
-| Inspector | @inspector | `agent:inspector:telegram:group:-1003531397239` | Quality Review |
-| Project Manager | @asurazhoubot | `agent:main:telegram:group:-1003531397239` | Coordination |
+| Agent | Group Session Key | Primary Role |
+|-------|-------------------|--------------|
+| CodeCraft / 码匠 | `agent:codecraft:telegram:group:-1003531397239` | Frontend/Backend Dev |
+| Data Assistant | `agent:data_bot:telegram:group:-1003531397239` | Data Analysis |
+| Guardian | `agent:guardian:telegram:group:-1003531397239` | Security Review |
+| Inspector | `agent:inspector:telegram:group:-1003531397239` | Quality Review |
+| Project Manager | `agent:main:telegram:group:-1003531397239` | Coordination |
 
 ### Agent Aliases (Name Mappings)
 
-| What User Says | Use This Telegram @ |
-|----------------|---------------------|
-| "码匠", "codecraft" | @zhou_codecraft_bot |
-| "数据助理", "data bot" | @zhou_data_bot |
-| "guardian", "安全审查" | @guardian |
-| "inspector", "质量审查" | @inspector |
-| "小d" | @asurazhoubot |
+| What User Says | Agent ID |
+|----------------|----------|
+| "码匠", "codecraft" | codecraft |
+| "数据助理", "data bot" | data_bot |
+| "guardian", "安全审查" | guardian |
+| "inspector", "质量审查" | inspector |
+| "小d" | main |
 
 See [references/naming-guide.md](references/naming-guide.md) for complete naming conventions.
 
 ## Communication Priority
 
-1. **Primary**: Direct @mention in Telegram group (visible to all)
-2. **Secondary**: Use `sessions_send` to group's session key
-3. **Avoid**: Using `agent:xxx:main` (won't post to Telegram group)
+1. **Primary**: Use `sessions_spawn` for independent task execution
+2. **Secondary**: Use `sessions_send` to group's session key for direct communication
 
 ### Session Key Patterns
 
@@ -364,7 +413,13 @@ agent:inspector:telegram:group:-1003531397239
 ## Task Assignment Template
 
 ```
-@[agent_name] Start [Phase X - Task Name]:
+Start [Phase X - Task Name] via sessions_spawn:
+
+**Agent**: [agent_id]
+**Label**: [task_label]
+
+**Task Details**:
+[Detailed task description]
 
 **Scope**:
 1. [Specific item 1]
@@ -378,22 +433,24 @@ agent:inspector:telegram:group:-1003531397239
 - [Criterion 1]
 - [Criterion 2]
 
-**Deadline**: [Time]
+**Timeout**: [seconds]
 
-Confirm receipt and provide estimated completion time!
+Execute and report results!
 ```
 
 ## 5-Minute Progress Check Template
 
 ```
-@[agent_name] ⏰ 5-minute progress check:
+sessions_send to agent: [agent_id]
+
+⏰ 5-minute progress check:
 
 **Current Task**: [Task name]
 
 Confirm:
 1. Current completion percentage?
 2. Any blockers?
-3. Can you meet the deadline?
+3. Estimated time to completion?
 
 Reply immediately!
 ```
@@ -433,9 +490,10 @@ See [references/response-times.md](references/response-times.md) for detailed ex
 | Wait for agent to report | Check every 5 minutes proactively |
 | Mix up different phases | Complete current phase before next |
 | Accept vague progress | Ask for specific percentage and deliverables |
-| Allow indefinite delay | Set clear deadline |
+| Allow indefinite delay | Set clear timeout |
 | Contact only one agent | Track all assigned agents simultaneously |
 | Use wrong session key | Use `telegram:group` ending keys |
+| Use informal methods (Telegram @) | Always use sessions_spawn or sessions_send |
 
 ## Group Chat Defaults
 

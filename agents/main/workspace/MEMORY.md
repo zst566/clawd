@@ -2,30 +2,68 @@
 
 ## Agent 联系方式 (重要)
 
-### 核心团队成员
+> 🚨 **重要变更 (2026-03-05)**: **已废除 Telegram @ 方式联系 Agent**。
+> 
+> 所有任务分配和正式沟通必须使用以下工具：
+> - ✅ `sessions_spawn` - 分配独立任务（首选）
+> - ✅ `sessions_send` - 日常沟通、询问进度
+> 
+> 表格中的 "@名称" 仅用于识别，不作为联系方式。
 
-| Agent | 正式名称 | 群组 @ | Session Key (内部) | 用途 |
-|-------|----------|--------|-------------------|------|
-| **我** | 小d / main | **@小d** / @asurazhoubot | `agent:main:telegram:group:-1003531397239` | 项目经理 |
-| **数据助理** | @zhou_data_bot | @zhou_data_bot | `agent:data_bot:telegram:group:-1003531397239` | 数据分析 |
-| **码匠** | @码匠 / codecraft / **@zhou_codecraft_bot** | **@zhou_codecraft_bot** (主) / @码匠 / @codecraft | `agent:codecraft:telegram:group:-1003531397239` | 前后端开发 |
-| **安全审查** | @guardian | @guardian | `agent:guardian:main` | 安全扫描 |
-| **质量审查** | @inspector | @inspector | `agent:inspector:main` | 代码审查 |
+### 核心团队成员 (7个)
+
+| Agent | 正式名称 | Session Key (内部) | 用途 |
+|-------|----------|-------------------|------|
+| **我** | 小d / main | **润德群**: `agent:main:telegram:group:-1003531397239`<br>**文旅群**: `agent:main:telegram:group:-5157029269` | 项目经理 |
+| **数据助理** | @zhou_data_bot | **润德群**: `agent:data_bot:telegram:group:-1003531397239`<br>**文旅群**: `agent:data_bot:telegram:group:-5157029269` | 数据分析 |
+| **码匠** | @码匠 / codecraft | **润德群**: `agent:codecraft:telegram:group:-1003531397239`<br>**文旅群**: `agent:codecraft:telegram:group:-5157029269` | 前后端开发 |
+| **安全审查** | @guardian | `agent:guardian:main` | 安全扫描 |
+| **质量审查** | @inspector | `agent:inspector:main` | 代码审查 |
+| **部署专员** | @deployer | `agent:deployer:main` | 部署运维 |
+| **测试专员** | @tester | `agent:tester:main` | 测试验证 |
+
+> ⚠️ **重要**: 不同群组使用不同的 Session Key 后缀！<br>
+> - 润德教育群: `-1003531397239`<br>
+> - 茂名文旅群: `-5157029269`<br>
+> - 商场促销群: `-5039017209`<br>
+> - dv项目群: `-5099457733`<br>
+> - 福禄英语群: `-5187551770`<br>
+> - 鹿状元群: `-5130812403`
 
 ### 联系规则与技能文档
+
+**Agent 跨群组 Session 建立方法**（2026-03-05 更新）：
+
+当 Agent 在新群组没有 Session 时，使用以下方法自动建立（无需人工干预）：
+
+```javascript
+// 步骤1: 通过 Agent 的 main session 让它自己去目标群组发消息
+sessions_send({
+  sessionKey: "agent:codecraft:main",
+  message: "请在目标群组（如茂名文旅群）发送消息建立 session"
+})
+
+// 步骤2: 等待 Agent 发送消息后，使用新 session 分配任务
+sessions_spawn({
+  agentId: "codecraft",
+  sessionKey: "agent:codecraft:telegram:group:-5157029269",
+  task: "开发任务..."
+})
+```
 
 **必读技能文档**：
 1. `SKILL_AGENT_NAMES.md` - Agent 名称使用规范
 2. `SKILL_CONTACT_AGENT.md` - **联系 Agent 完整方法指南（重要！）**
 
-**联系方法（4种）**：
+**联系方法（3种，已移除 Telegram @ 方式）**：
 
 | 方法 | 工具 | 场景 | 优先级 |
 |------|------|------|--------|
-| **Sessions Send** | `sessions_send` | 日常沟通、询问进度、获取结果 | ⭐ 首选 |
-| **Sessions Spawn** | `sessions_spawn` | 分配独立任务、需要隔离执行 | ⭐ 任务分配 |
-| Telegram 群组 @ | `message.send` | 简单消息、Agent 在线时 | 备用 |
+| **Sessions Spawn** | `sessions_spawn` | 分配独立任务、需要隔离执行 | ⭐ 首选 |
+| **Sessions Send** | `sessions_send` | 日常沟通、询问进度、获取结果 | ⭐ 次选 |
 | 用户中间人 | 人工转发 | 以上都失败时 | 最后手段 |
+
+> ⚠️ **重要更新 (2026-03-05)**: 已删除"Telegram 群组 @"方式。所有任务分配必须使用 `sessions_spawn` 或 `sessions_send` 工具。
 
 **配置要求**：
 - `sessions_spawn` 需要在 `agents.list[].subagents.allowAgents` 中配置允许的 Agent ID
@@ -45,6 +83,8 @@
 | **@zhou_data_bot** (数据助理) | 数据分析 | 数据核对、报表生成 | 我, 码匠 | 5分钟内 |
 | **@guardian** (安全审查) | 安全审查 | 合规检查、漏洞扫描 | 码匠, 我 | 即时 |
 | **@inspector** (质量审查) | 代码质量审查 | 最佳实践、性能优化 | 码匠, 我 | 即时 |
+| **@deployer** (部署专员) | 部署运维 | 环境配置、CI/CD | 码匠, 我 | 即时 |
+| **@tester** (测试专员) | 测试验证 | E2E测试、Bug验证 | 码匠, 我 | 5分钟内 |
 | **@小d** (我/项目经理) | 项目管理 | 任务协调、进度跟踪 | 所有Agent | 即时 |
 
 ### 自动化工作流
@@ -64,30 +104,30 @@
 2. **并行执行** - Guardian 和 Inspector 同时审查，节省时间
 3. **信息透明** - 所有结果抄送项目经理
 
-### 示例
+### 示例（已更新，移除 Telegram @ 方式）
 
 ```javascript
-// 日常沟通：询问进度
+// ✅ 日常沟通：询问进度
 sessions_send({
   sessionKey: "agent:data_bot:telegram:group:-1003531397239",
   message: "上次的数据分析完成了吗？",
   timeoutSeconds: 60
 })
 
-// 分配独立任务：让 data_bot 执行分析
+// ✅ 分配独立任务：让 data_bot 执行分析（推荐方式）
 sessions_spawn({
   agentId: "data_bot",
   task: "分析这个CSV文件并生成报告",
   label: "数据分析任务"
 })
 
-// 群组中 @ 码匠
-message.send({
-  action: "send",
-  message: "@zhou_codecraft_bot 请检查代码"
-})
+// ❌ 错误：使用 Telegram @ 分配任务（已废弃）
+// message.send({
+//   action: "send",
+//   message: "@zhou_data_bot 请检查代码"  // 不要使用！
+// })
 
-// 错误：使用 main session（不会发送到群组）
+// ❌ 错误：使用 main session（不会发送到群组）
 sessions_send({
   sessionKey: "agent:codecraft:main",  // ❌ 错
   message: "..."
@@ -759,4 +799,185 @@ CREATE TABLE example (
 
 ---
 
-*更新时间: 2026-03-02*
+## 🎯 任务执行规范 (重要 - 2026-03-05 确立)
+
+### 任务复杂度评估与执行模式
+
+**核心原则**：根据任务复杂度选择执行模式
+
+| 维度 | 简单任务 | 复杂任务 |
+|------|---------|---------|
+| **执行者** | 我自己直接执行 | 多智能体协作 |
+| **典型特征** | 单步骤、小数据量、快速完成 | 多步骤、大数据量、需要分析设计 |
+| **响应时间** | 立即执行 | 先设计方案再分配 |
+| **示例** | 查单条记录、修改单个文件、快速查询 | 数据分析、大型重构、多模块开发 |
+
+### 简单任务标准（直接执行）
+
+**适用条件**（满足以下任一）：
+- ✅ 单步骤可完成
+- ✅ 数据量小（< 1万条记录）
+- ✅ 执行时间 < 30 秒
+- ✅ 不需要复杂设计
+- ✅ 无需跨 Agent 协调
+
+**示例**：
+- 查询单条数据库记录
+- 修改单个配置文件
+- 查看某个表的结构
+- 简单的文件操作
+
+### 复杂任务标准（多智能体协作）
+
+**触发条件**（满足以下任一）：
+- 🔴 大数据量（> 10万条记录）
+- 🔴 需要多步骤分析
+- 🔴 涉及多个模块/系统
+- 🔴 需要专业领域知识（数据分析、安全审查等）
+- 🔴 执行时间 > 1 分钟
+- 🔴 需要导出报告或生成文件
+
+**执行流程**：
+```
+1. 任务分析 → 评估复杂度
+2. 方案设计 → 拆解子任务
+3. 分配执行 → 调用合适 Agent
+4. 结果汇总 → 整合输出
+5. 交付验收 → 汇报用户
+```
+
+### Agent 专业分工矩阵
+
+| Agent | 正式名称 | 专业领域 | 工作范围 | 响应时间 |
+|-------|---------|---------|---------|---------|
+| **@小d** | main | 项目管理、任务协调 | 任务分配、进度跟踪、跨Agent协调、方案设计 | 即时 |
+| **@zhou_data_bot** | 数据助理 | 数据分析、统计 | 大数据查询、报表生成、数据核对、Excel导出 | 5分钟内 |
+| **@zhou_codecraft_bot** | 码匠 | 前后端开发 | Vue3/Node.js开发、Bug修复、技术文档、单元测试 | 5分钟内 |
+| **@guardian** | 安全审查 | 安全审计 | 安全扫描、漏洞检查、合规检查、依赖分析 | 即时 |
+| **@inspector** | 质量审查 | 代码质量 | 代码审查、最佳实践、性能优化、架构建议 | 即时 |
+| **@deployer** | 部署专员 | 部署运维 | 服务器部署、环境配置、CI/CD、容器编排 | 即时 |
+| **@tester** | 测试专员 | 测试验证 | 功能测试、E2E测试、测试用例设计、Bug验证 | 5分钟内 |
+
+### 任务分配决策树
+
+```
+任务到来
+    ↓
+是否需要数据分析/统计？
+    ↓ 是 → sessions_spawn: data_bot
+    ↓ 否
+是否需要代码开发/修复？
+    ↓ 是 → sessions_spawn: codecraft
+    ↓ 否
+是否需要安全审查？
+    ↓ 是 → sessions_spawn: guardian
+    ↓ 否
+是否需要代码质量审查？
+    ↓ 是 → sessions_spawn: inspector
+    ↓ 否
+是否需要部署/运维？
+    ↓ 是 → sessions_spawn: deployer
+    ↓ 否
+是否需要测试验证？
+    ↓ 是 → sessions_spawn: tester
+    ↓ 否
+复杂任务需协调？
+    ↓ 是 → 我(小d)设计方案并分配
+    ↓ 否 → 我直接执行
+```
+
+### 实际操作模板
+
+**简单任务 - 直接执行**：
+```
+用户：查一下订单表的结构
+我：直接执行查询 → 返回结果 ✅
+```
+
+**复杂任务 - 多智能体协作**：
+```
+用户：分析一下商品价格的差异
+我：
+  1. 评估复杂度：🔴 高（大数据量分析）
+  2. 设计方案：
+     - 步骤1: @zhou_data_bot 执行统计分析
+     - 步骤2: @zhou_data_bot 导出异常数据
+     - 步骤3: 我汇总汇报
+  3. 分配任务 → 等待结果
+  4. 汇总输出 ✅
+```
+
+---
+
+## 📊 大数据查询处理经验 (2026-03-05)
+
+### 问题场景
+- **表**: `revenue_recognition_child`
+- **数据量**: 522,709,877 条（5.2亿）
+- **问题**: GROUP BY + COUNT(DISTINCT) 查询超时
+
+### 失败尝试
+1. ❌ 单次全表 GROUP BY → 超时
+2. ❌ mysql.connector → DNS解析问题
+3. ❌ 默认超时设置 → 连接hang住
+
+### 成功方案 - 分批处理
+```python
+# 1. 获取ID范围
+cursor.execute("SELECT MIN(goods_id), MAX(goods_id) FROM table WHERE ...")
+min_id, max_id = cursor.fetchone()
+
+# 2. 分批处理（每批1万条）
+batch_size = 10000
+for batch_start in range(min_id, max_id + 1, batch_size):
+    batch_end = batch_start + batch_size - 1
+    cursor.execute("""
+        SELECT ... FROM table 
+        WHERE goods_id BETWEEN %s AND %s
+        GROUP BY ...
+    """, (batch_start, batch_end))
+    results.extend(cursor.fetchall())
+```
+
+### 关键要点
+| 要点 | 说明 |
+|------|------|
+| **数据库连接** | 使用 PyMySQL，设置 connect/read/write_timeout |
+| **批大小** | 1万条商品ID/批（平衡速度与内存） |
+| **超时设置** | read_timeout=300秒（5分钟） |
+| **结果合并** | 每批结果合并后统一排序导出 |
+
+### Agent任务分配模板（大数据）
+```javascript
+sessions_spawn({
+  agentId: "data_bot",
+  label: "任务名-分批版",
+  mode: "run",
+  task: `
+    1. 获取ID范围
+    2. 分批处理（每批X条）
+    3. 合并结果并导出
+    4. 汇报统计信息
+  `,
+  timeoutSeconds: 1800  // 30分钟
+})
+```
+
+---
+
+### 项目管理原则更新
+
+**5. 任务执行规范**（新增）
+- 简单任务直接执行，复杂任务多智能体协作
+- 先评估复杂度，再选择执行模式
+- 专业任务分配给专业 Agent
+
+**6. 大数据查询规范**（新增）
+- 超过1亿条记录 → 必须分批处理
+- GROUP BY大表 → 按主键范围分批
+- 超时设置 → 至少300秒读超时
+- 失败处理 → 自主设计分批方案，不依赖用户解决
+
+---
+
+*更新时间: 2026-03-05*

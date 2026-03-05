@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1772550207938,
+      "updatedAtMs": 1772636491764,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,15 +21,14 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1772636400000,
-        "lastRunAtMs": 1772550000014,
+        "nextRunAtMs": 1772722800000,
+        "lastRunAtMs": 1772636400011,
         "lastStatus": "ok",
-        "lastDurationMs": 207924,
+        "lastDurationMs": 91753,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
-        "lastDelivered": true,
-        "runningAtMs": 1772636400006
+        "lastDelivered": true
       },
       "delivery": {
         "mode": "announce"
@@ -139,7 +138,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1771409593921,
-      "updatedAtMs": 1772578851439,
+      "updatedAtMs": 1772665255723,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -159,10 +158,10 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772665200000,
-        "lastRunAtMs": 1772578800016,
+        "nextRunAtMs": 1772751600000,
+        "lastRunAtMs": 1772665200014,
         "lastStatus": "ok",
-        "lastDurationMs": 51423,
+        "lastDurationMs": 55709,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
@@ -286,7 +285,7 @@
       "name": "lzy-ssl-cert-check",
       "enabled": true,
       "createdAtMs": 1772368077181,
-      "updatedAtMs": 1772586130004,
+      "updatedAtMs": 1772672436601,
       "schedule": {
         "expr": "0 9 * * *",
         "kind": "cron",
@@ -303,13 +302,48 @@
         "to": "http://127.0.0.1:18789/api/webhook/ssl-check"
       },
       "state": {
-        "nextRunAtMs": 1772672400000,
-        "lastRunAtMs": 1772586000018,
+        "nextRunAtMs": 1772758800000,
+        "lastRunAtMs": 1772672400019,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 129986,
+        "lastDurationMs": 36582,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "473e328d-4998-4fcd-94b2-20fa21954258",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:group:-5157029269",
+      "name": "ticket-backend-progress-check",
+      "enabled": true,
+      "createdAtMs": 1772682275921,
+      "updatedAtMs": 1772697585196,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 900000,
+        "anchorMs": 1772682275921
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "检查票根模块后端开发进度：\n1. 检查阶段3的3个并发子任务状态（3.1票根API/3.2商户API/3.3核销码API）\n2. 询问码匠当前进度百分比\n3. 确认是否有阻塞问题\n4. 如全部完成，触发阶段4（商户端API）\n5. 在群组汇报检查结果"
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "telegram:-5157029269"
+      },
+      "state": {
+        "nextRunAtMs": 1772698476110,
+        "lastRunAtMs": 1772697576110,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 9086,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "runningAtMs": 1772698476125
       }
     }
   ]
