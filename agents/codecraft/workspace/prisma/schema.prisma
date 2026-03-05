@@ -1,0 +1,78 @@
+/**
+ * Prisma Schema - 茂名文旅票根优惠模块
+ * 数据库模型定义
+ */
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ==================== 用户相关 ====================
+model User {
+  id          String   @id @default(uuid())
+  openid      String   @unique
+  phone       String?
+  phoneLast4  String?
+  nickname    String?
+  avatar      String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  tickets     Ticket[]
+  
+  @@index([openid])
+}
+
+// ==================== 票根模块 ====================
+model TicketType {
+  id          String   @id @default(uuid())
+  code        String   @unique
+  name        String
+  icon        String?
+  description String?
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  tickets     Ticket[]
+}
+
+model Ticket {
+  id              String   @id @default(uuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id])
+  typeId          String
+  type            TicketType @relation(fields: [typeId], references: [id])
+  name            String
+  imageUrl        String
+  ocrResult       Json?
+  ocrStatus       String   @default("pending")
+  ocrTaskId       String?
+  aiRecognized    Boolean  @default(false)
+  status          String   @default("valid")
+  validStart      DateTime?
+  validEnd        DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([userId, status])
+  @@index([typeId, status])
+  @@index([validEnd])
+  @@index([ocrTaskId])
+}
+
+// ==================== OCR任务队列 ====================
+model OcrTask {
+  id          String   @id @default(uuid())
+  ticketId    String?
+  imageUrl    String
+  status      String   @default("pending")
+  result      Json?
+  error       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([status, createdAt])
+}
