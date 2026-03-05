@@ -1,0 +1,17 @@
+{
+  "name": "ticket-backend-proposal",
+  "version": "1.0.0",
+  "description": "茂名文旅票根优惠模块后端",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "node test-verify-code-pool.js",
+    "test:redis": "node test-verify-code-pool.js"
+  },
+  "dependencies": {
+    "ioredis": "^5.3.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
