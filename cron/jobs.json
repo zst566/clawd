@@ -28,7 +28,8 @@
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
-        "lastDelivered": true
+        "lastDelivered": true,
+        "runningAtMs": 1772722800008
       },
       "delivery": {
         "mode": "announce"
@@ -316,9 +317,9 @@
       "agentId": "main",
       "sessionKey": "agent:main:telegram:group:-5157029269",
       "name": "ticket-backend-progress-check",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1772682275921,
-      "updatedAtMs": 1772697585196,
+      "updatedAtMs": 1772698817708,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
@@ -335,15 +336,15 @@
         "to": "telegram:-5157029269"
       },
       "state": {
-        "nextRunAtMs": 1772698476110,
-        "lastRunAtMs": 1772697576110,
+        "lastRunAtMs": 1772698476129,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 9086,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
+        "lastDurationMs": 280831,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "runningAtMs": 1772698476125
+        "lastError": "cron announce delivery failed",
+        "lastDeliveryError": "cron announce delivery failed"
       }
     }
   ]
