@@ -203,6 +203,12 @@ sessions_send({
 - **生产环境**: https://xiaolu.lantel.net
 - **准生产环境**: https://xiaolu-test.lantel.net
 - **技术栈**: Vue3 + Tailwind CSS + Node.js + Express + MySQL
+- **SSL证书自动更新** (2026-03-06配置):
+  - **脚本**: `check-and-renew-ssl.sh` (本机定时执行)
+  - **定时任务**: 每天9点 `0 9 * * * cd /Volumes/SanDisk2T/dv-codeBase/鹿状元 && ./check-and-renew-ssl.sh`
+  - **功能**: 自动检查证书有效期，≤30天时自动添加IP到白名单→申请证书→部署
+  - **当前证书到期**: 2026年8月30日
+  - **阿里云安全组ID**: `sg-7xv87ksctb1y8bwphjm1` (华南3-广州)
 
 ---
 
@@ -981,3 +987,38 @@ sessions_spawn({
 ---
 
 *更新时间: 2026-03-05*
+
+---
+
+## 🖥️ 开发环境 Docker 服务器
+
+### 局域网 Docker 服务器 (2026-03-05 新增)
+
+**服务器用途**: 专门运行 Docker 容器服务，部署本地开发项目的开发环境测试容器，减少本机（开发设备）CPU 和内存压力（替代 Docker Desktop 的 3GB 内存占用）
+
+**服务器配置**:
+| 项目 | 值 |
+|------|-----|
+| **系统** | Ubuntu 24+ |
+| **IP 地址** | `192.168.31.188` |
+| **用户名** | `zhou` |
+| **SSH** | 已配置免密登录 |
+| **用途** | Docker 容器服务、开发环境测试 |
+
+**快速连接**:
+```bash
+ssh zhou@192.168.31.188
+```
+
+**使用场景**:
+- 运行项目 Docker 开发环境（替代本地 Docker Desktop）
+- 部署测试容器
+- 运行数据库容器（MySQL、Redis 等）
+- 运行各类开发工具容器
+
+**已部署服务**:
+- 待定（根据项目需要部署）
+
+---
+
+*Docker 服务器添加时间: 2026-03-05*

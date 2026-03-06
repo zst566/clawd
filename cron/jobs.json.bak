@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1772636491764,
+      "updatedAtMs": 1772722829966,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,10 +21,10 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1772722800000,
-        "lastRunAtMs": 1772636400011,
+        "nextRunAtMs": 1772809200000,
+        "lastRunAtMs": 1772722800012,
         "lastStatus": "ok",
-        "lastDurationMs": 91753,
+        "lastDurationMs": 29954,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
@@ -101,7 +101,7 @@
       "name": "DV项目-百度统计Token自动维护",
       "enabled": true,
       "createdAtMs": 1771407245588,
-      "updatedAtMs": 1772035244737,
+      "updatedAtMs": 1772726444734,
       "schedule": {
         "kind": "cron",
         "expr": "0 0 */5 * *",
@@ -121,11 +121,11 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772726400000,
-        "lastRunAtMs": 1772035200023,
+        "nextRunAtMs": 1773158400000,
+        "lastRunAtMs": 1772726400035,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 44714,
+        "lastDurationMs": 44699,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -138,7 +138,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1771409593921,
-      "updatedAtMs": 1772665255723,
+      "updatedAtMs": 1772751735208,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -158,10 +158,10 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772751600000,
-        "lastRunAtMs": 1772665200014,
+        "nextRunAtMs": 1772838000000,
+        "lastRunAtMs": 1772751600006,
         "lastStatus": "ok",
-        "lastDurationMs": 55709,
+        "lastDurationMs": 135202,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
@@ -285,7 +285,7 @@
       "name": "lzy-ssl-cert-check",
       "enabled": true,
       "createdAtMs": 1772368077181,
-      "updatedAtMs": 1772672436601,
+      "updatedAtMs": 1772758880092,
       "schedule": {
         "expr": "0 9 * * *",
         "kind": "cron",
@@ -302,11 +302,11 @@
         "to": "http://127.0.0.1:18789/api/webhook/ssl-check"
       },
       "state": {
-        "nextRunAtMs": 1772758800000,
-        "lastRunAtMs": 1772672400019,
+        "nextRunAtMs": 1772845200000,
+        "lastRunAtMs": 1772758800005,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 36582,
+        "lastDurationMs": 80087,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0
       }

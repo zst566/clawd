@@ -4,6 +4,27 @@ Skills define *how* tools work. This file is for *your* specifics — the stuff 
 
 ## SSH 生产服务器
 
+### 鹿状元 (lantel.net)
+- **地址**: 8.138.192.106
+- **SSH 别名**: `lzy-pre-production` (配置在 ~/.ssh/config)
+- **用户名**: root
+- **端口**: 22
+- **生产环境**: https://xiaolu.lantel.net
+- **安全组ID**: `sg-7xv87ksctb1y8bwphjm1` (华南3-广州)
+
+**SSL证书自动更新**:
+- 脚本位置: `/Volumes/SanDisk2T/dv-codeBase/鹿状元/check-and-renew-ssl.sh`
+- 定时任务: 每天9点自动检查，≤30天时自动更新
+- 手动执行: `cd /Volumes/SanDisk2T/dv-codeBase/鹿状元 && ./check-and-renew-ssl.sh`
+- 当前证书到期: 2026年8月30日 (剩余177天)
+
+**快速连接**:
+```bash
+ssh lzy-pre-production
+```
+
+---
+
 ### 信宜文旅平台 (茂名文旅)
 - **地址**: 112.74.36.81
 - **用户名**: root
