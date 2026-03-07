@@ -39,6 +39,30 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - This is your curated memory — the distilled essence, not raw logs
 - Over time, review your daily files and update MEMORY.md with what's worth keeping
 
+### 📝 Content Allocation Rules (Critical!)
+
+**DO NOT put everything in MEMORY.md!** Follow these rules:
+
+| Content Type | Write To | Examples |
+|-------------|----------|----------|
+| Agent contacts, routing rules | `MEMORY.md` | Session keys, group configs |
+| **Project index (brief)** | `MEMORY.md` | Project name, path, status, link to rules |
+| **Active project details** | `project-rules/PROJECT-NAME-rules.md` | Tech stack, directory structure, commands |
+| **Completed projects** | `ARCHIVE.md` | Delivery checklist, historical data |
+| **Technical specs** | `REFERENCE.md` | Timezone rules, DB config, model settings |
+| **Daily work logs** | `memory/YYYY-MM-DD.md` | What happened today, decisions made |
+| **Project operations** | `WORKLOG.md` in project dir | Code changes, config updates |
+
+**❌ NEVER put in MEMORY.md:**
+- Detailed project directory structures
+- Tech stack details (go to project-rules/)
+- Script lists and their purposes
+- Historical project details (go to ARCHIVE.md)
+- Technical configuration details (go to REFERENCE.md)
+- Daily work details (go to memory/YYYY-MM-DD.md)
+
+**KEEP MEMORY.md under 10KB!** If it grows, move content to appropriate files.
+
 ### 📝 Write It Down - No "Mental Notes"!
 
 - **Memory is limited** — if you want to remember something, WRITE IT TO A FILE

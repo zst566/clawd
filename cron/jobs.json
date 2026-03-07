@@ -7,7 +7,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1770022633450,
-      "updatedAtMs": 1772722829966,
+      "updatedAtMs": 1772809220255,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *",
@@ -21,15 +21,15 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "state": {
-        "nextRunAtMs": 1772809200000,
-        "lastRunAtMs": 1772722800012,
+        "nextRunAtMs": 1772895600000,
+        "lastRunAtMs": 1772809200013,
         "lastStatus": "ok",
-        "lastDurationMs": 29954,
+        "lastDurationMs": 20242,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
         "lastDelivered": true,
-        "runningAtMs": 1772809200008
+        "runningAtMs": 1772895600008
       },
       "delivery": {
         "mode": "announce"
@@ -139,7 +139,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1771409593921,
-      "updatedAtMs": 1772751735208,
+      "updatedAtMs": 1772855616696,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -159,10 +159,10 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1772838000000,
-        "lastRunAtMs": 1772751600006,
+        "nextRunAtMs": 1772924400000,
+        "lastRunAtMs": 1772855575216,
         "lastStatus": "ok",
-        "lastDurationMs": 135202,
+        "lastDurationMs": 41480,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
@@ -286,10 +286,10 @@
       "name": "lzy-ssl-cert-check",
       "enabled": true,
       "createdAtMs": 1772368077181,
-      "updatedAtMs": 1772758880092,
+      "updatedAtMs": 1772848583956,
       "schedule": {
-        "expr": "0 9 * * *",
         "kind": "cron",
+        "expr": "0 9 * * 1",
         "tz": "Asia/Shanghai"
       },
       "sessionTarget": "main",
@@ -303,11 +303,11 @@
         "to": "http://127.0.0.1:18789/api/webhook/ssl-check"
       },
       "state": {
-        "nextRunAtMs": 1772845200000,
-        "lastRunAtMs": 1772758800005,
+        "nextRunAtMs": 1773018000000,
+        "lastRunAtMs": 1772845200017,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 80087,
+        "lastDurationMs": 49671,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0
       }
@@ -345,6 +345,39 @@
         "consecutiveErrors": 0,
         "lastError": "cron announce delivery failed",
         "lastDeliveryError": "cron announce delivery failed"
+      }
+    },
+    {
+      "id": "6f5f7b01-6208-40a0-91c6-d192ffeacd24",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:group:-5187551770",
+      "name": "福禄英语-任务检查",
+      "enabled": true,
+      "createdAtMs": 1772875131472,
+      "updatedAtMs": 1772895561389,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 300000,
+        "anchorMs": 1772875131472
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "检查福禄英语项目任务状态。读取 docs/TASK_PIPELINE.md，检查当前进行中的子代理任务状态。如果任务完成，立即推进下一步。如果任务超时20分钟，发送提醒。汇报当前状态。"
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {
+        "nextRunAtMs": 1772895832072,
+        "lastRunAtMs": 1772895532072,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 29317,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
       }
     }
   ]
