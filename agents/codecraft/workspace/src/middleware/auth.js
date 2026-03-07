@@ -2,8 +2,13 @@ const jwt = require('jsonwebtoken');
 const redis = require('../config/redis');
 
 // JWT配置
+const JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET) {
+  throw new Error('JWT_SECRET environment variable is required');
+}
+
 const JWT_CONFIG = {
-  secret: process.env.JWT_SECRET || 'your-secret-key',
+  secret: JWT_SECRET,
   expiresIn: '2h',  // 2小时过期
   refreshExpiresIn: '7d'  // 7天过期
 };

@@ -63,11 +63,9 @@ router.post('/', async (req, res) => {
       return res.status(400).json(error('图片格式无效，请上传jpg/png/webp格式的图片', 400));
     }
 
-    // 检查图片大小（Base64编码后约4/3倍原始大小，限制5MB）
-    const base64Size = imageBase64.length * 0.75; // 估算原始大小
-    const maxSize = 5 * 1024 * 1024; // 5MB
-    if (base64Size > maxSize) {
-      return res.status(400).json(error('图片大小不能超过5MB', 400));
+    // 检查图片大小（Base64字符串长度限制5MB）
+    if (imageBase64.length > 5 * 1024 * 1024) {
+      return res.status(400).json({ code: 400, message: '图片大小不能超过5MB' });
     }
 
     // 1. 上传图片到OSS
