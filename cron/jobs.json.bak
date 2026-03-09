@@ -141,7 +141,7 @@
       "name": "福禄英语-任务检查",
       "enabled": true,
       "createdAtMs": 1773037669677,
-      "updatedAtMs": 1773038655892,
+      "updatedAtMs": 1773068371359,
       "schedule": {
         "everyMs": 300000,
         "kind": "every",
@@ -157,11 +157,11 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1773038869764,
-        "lastRunAtMs": 1773038569764,
+        "nextRunAtMs": 1773068573634,
+        "lastRunAtMs": 1773068273634,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 86128,
+        "lastDurationMs": 97725,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
