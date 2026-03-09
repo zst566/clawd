@@ -1,0 +1,116 @@
+version: '3.8'
+
+# 开发环境 Docker Compose 配置
+# 基于本地构建 + Docker 挂载模式
+# - 前端：本地构建后挂载 dist 目录到 Nginx
+# - 后端：挂载源码目录，nodemon 自动重启
+
+name: {{PROJECT_NAME}}
+
+services:
+  # MySQL 数据库
+  mysql:
+    image: mysql:8.0
+    container_name: {{PROJECT_NAME}}-mysql
+    ports:
+      - "13306:3306"
+    volumes:
+      - ./mysql/init:/docker-entrypoint-initdb.d:ro
+      - ./mysql/data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-root123456}
+      - MYSQL_DATABASE={{PROJECT_NAME}}_dev
+      - MYSQL_CHARACTER_SET_SERVER=utf8mb4
+      - MYSQL_COLLATION_SERVER=utf8mb4_unicode_ci
+      - TZ=Asia/Shanghai
+    command: >
+      --default-time-zone='+08:00'
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+    networks:
+      - {{PROJECT_NAME}}-network
+    restart: always
+
+  # Redis 缓存
+  redis:
+    image: redis:7
+    container_name: {{PROJECT_NAME}}-redis
+    expose:
+      - "6379"
+    volumes:
+      - ./redis/data:/data
+    networks:
+      - {{PROJECT_NAME}}-network
+    restart: always
+
+  # 后端 API（挂载源码模式）
+  backend:
+    image: node:20
+    container_name: {{PROJECT_NAME}}-backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apps/backend:/app
+      - backend-node-modules:/app/node_modules
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=mysql://root:${MYSQL_ROOT_PASSWORD:-root123456}@mysql:3306/{{PROJECT_NAME}}_dev?charset=utf8mb4
+      - REDIS_URL=redis://redis:6379
+      - TZ=Asia/Shanghai
+    command: >
+      sh -c "npm install && 
+             npx prisma generate && 
+             npm start"
+    depends_on:
+      - mysql
+      - redis
+    networks:
+      - {{PROJECT_NAME}}-network
+    restart: always
+
+  # PC 管理端（Nginx 挂载 dist）
+  pc-admin:
+    image: nginx:alpine
+    container_name: {{PROJECT_NAME}}-pc-admin
+    volumes:
+      - ./apps/pc-admin/dist:/usr/share/nginx/html:ro
+      - ./nginx/conf.d/pc-admin.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - {{PROJECT_NAME}}-network
+    restart: always
+
+  # 移动端 H5（Nginx 挂载 dist）
+  mobile-h5:
+    image: nginx:alpine
+    container_name: {{PROJECT_NAME}}-mobile-h5
+    volumes:
+      - ./apps/mobile-h5/dist:/usr/share/nginx/html:ro
+      - ./nginx/conf.d/mobile-h5.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - {{PROJECT_NAME}}-network
+    restart: always
+
+  # Nginx 反向代理
+  nginx:
+    image: nginx:alpine
+    container_name: {{PROJECT_NAME}}-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    depends_on:
+      - backend
+      - pc-admin
+      - mobile-h5
+    networks:
+      - {{PROJECT_NAME}}-network
+    restart: always
+
+volumes:
+  backend-node-modules:
+
+networks:
+  {{PROJECT_NAME}}-network:
+    driver: bridge

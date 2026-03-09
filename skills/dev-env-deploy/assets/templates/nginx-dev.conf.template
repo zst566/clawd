@@ -1,0 +1,46 @@
+# Nginx 开发环境配置
+# 前端服务：挂载 dist 目录
+# 后端服务：反向代理到 API
+
+# PC 管理端
+server {
+    listen 80;
+    server_name localhost;
+    
+    location /pc-admin/ {
+        proxy_pass http://pc-admin:80/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+    
+    location / {
+        root /usr/share/nginx/html;
+        try_files $uri $uri/ /index.html;
+    }
+}
+
+# 移动端 H5
+server {
+    listen 80;
+    server_name h5.localhost;
+    
+    location / {
+        proxy_pass http://mobile-h5:80/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+# API 反向代理
+server {
+    listen 80;
+    
+    location /api/ {
+        proxy_pass http://backend:3000/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
