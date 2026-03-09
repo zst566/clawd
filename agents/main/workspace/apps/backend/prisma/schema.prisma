@@ -1,0 +1,261 @@
+// ==================== 加密工具配置 ====================
+// 敏感字段使用应用层AES加密存储
+// 加密密钥通过环境变量注入: ENCRYPTION_KEY
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ==================== 用户相关 ====================
+model User {
+  id          String   @id @default(uuid())
+  openid      String   @unique // AES加密存储
+  phone       String?  // AES加密存储，格式: "enc:xxx"
+  phoneLast4  String?  // 明文存储最后4位，用于显示
+  nickname    String?
+  avatar      String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  tickets     Ticket[]
+  
+  @@index([openid])
+}
+
+// ==================== 票根模块 ====================
+model TicketType {
+  id          String   @id @default(uuid())
+  code        String   @unique // movie, train, flight...
+  name        String
+  icon        String
+  description String?
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  tickets     Ticket[]
+}
+
+model Ticket {
+  id              String   @id @default(uuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id])
+  typeId          String
+  type            TicketType @relation(fields: [typeId], references: [id])
+  name            String   // 票根名称
+  imageUrl        String   // 票根图片URL
+  ocrResult       Json?    // 原始OCR数据
+  ocrStatus       String   @default("pending") // pending/processing/success/failed/manual
+  ocrTaskId       String?  // OCR任务ID，用于异步查询
+  aiRecognized    Boolean  @default(false)
+  status          String   @default("valid") // valid/used/expired
+  validStart      DateTime?
+  validEnd        DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  verifications   Verification[]
+  
+  @@index([userId, status])
+  @@index([typeId, status])
+  @@index([validEnd])  // 过期清理索引
+  @@index([ocrTaskId]) // 异步查询索引
+}
+
+// ==================== OCR任务队列 ====================
+model OcrTask {
+  id          String   @id @default(uuid())
+  ticketId    String?  // 关联的票根ID
+  imageUrl    String   // 图片URL
+  status      String   @default("pending") // pending/processing/success/failed
+  result      Json?    // OCR识别结果
+  error       String?  // 错误信息
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([status, createdAt])
+}
+
+// ==================== 商户模块 ====================
+model MerchantCategory {
+  id          String   @id @default(uuid())
+  code        String   @unique // catering, scenic...
+  name        String
+  icon        String?
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  merchants   Merchant[]
+}
+
+model Merchant {
+  id              String   @id @default(uuid())
+  name            String
+  logo            String?
+  coverImage      String?
+  description     String?
+  address         String
+  phone           String   // 商户联系电话（公开）
+  longitude       Float?
+  latitude        Float?
+  businessHours   String?
+  categoryId      String
+  category        MerchantCategory @relation(fields: [categoryId], references: [id])
+  status          String   @default("active")
+  isRecommended   Boolean  @default(false)
+  rating          Float    @default(5.0)
+  supportTicketTypes Json    // ["movie", "train"] - 支持的票根类型数组
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  staff           MerchantStaff[]
+  discountRules   DiscountRule[]
+  images          MerchantImage[]
+  verifications   Verification[]
+  
+  @@index([categoryId, status])
+  @@index([isRecommended, status])
+  @@index([latitude, longitude]) // 地理位置索引（需手动添加空间索引）
+}
+
+model MerchantImage {
+  id          String   @id @default(uuid())
+  merchantId  String
+  merchant    Merchant @relation(fields: [merchantId], references: [id], onDelete: Cascade)
+  imageUrl    String
+  sortOrder   Int      @default(0)
+}
+
+model MerchantStaff {
+  id          String   @id @default(uuid())
+  merchantId  String
+  merchant    Merchant @relation(fields: [merchantId], references: [id], onDelete: Cascade)
+  username    String   @unique
+  password    String   // bcrypt加密，cost=12
+  role        String   @default("staff") // manager(店长)/staff(店员)
+  name        String?
+  phone       String?  // 员工手机号（AES加密）
+  isActive    Boolean  @default(true)
+  lastLoginAt DateTime?
+  createdAt   DateTime @default(now())
+  verifications   Verification[]
+  revocations     Revocation[]
+  
+  @@index([merchantId, isActive])
+}
+
+// ==================== 优惠规则 ====================
+model DiscountRule {
+  id              String   @id @default(uuid())
+  merchantId      String
+  merchant        Merchant @relation(fields: [merchantId], references: [id], onDelete: Cascade)
+  type            String   // percentage/fixed/buy_one_get_one
+  value           Float    // 折扣率或金额
+  minAmount       Float?   // 最低消费
+  maxDiscount     Float?   // 最高优惠
+  title           String   // 展示标题
+  description     String   // 详细说明
+  applyTicketTypes  Json    // 适用票根类型数组
+  isActive        Boolean  @default(true)
+}
+
+// ==================== 核销码池（高并发方案） ====================
+model VerificationCodePool {
+  id          String   @id @default(uuid())
+  code        String   @unique // 预生成的8位核销码
+  status      String   @default("available") // available/used/expired
+  createdAt   DateTime @default(now())
+  
+  @@index([status])
+}
+
+// ==================== 核销模块 ====================
+model VerificationCode {
+  id              String   @id @default(uuid())
+  code            String   @unique // 8位核销码
+  qrCodeUrl       String?
+  ticketId        String
+  merchantId      String
+  amount          Float
+  discountAmount  Float
+  actualPay       Float
+  createdAt       DateTime @default(now())
+  expireAt        DateTime // 5分钟后
+  status          String   @default("pending") // pending/verified/expired
+  verification    Verification?
+  
+  @@index([code, status])     // 核销验证高频查询
+  @@index([expireAt])         // 过期清理
+  @@index([ticketId])         // 票根关联查询
+}
+
+model Verification {
+  id              String   @id @default(uuid())
+  codeId          String   @unique
+  code            VerificationCode @relation(fields: [codeId], references: [id])
+  ticketId        String
+  ticket          Ticket   @relation(fields: [ticketId], references: [id])
+  merchantId      String
+  merchant        Merchant @relation(fields: [merchantId], references: [id])
+  staffId         String
+  staff           MerchantStaff @relation(fields: [staffId], references: [id])
+  amount          Float
+  discountAmount  Float
+  actualPay       Float
+  verifiedAt      DateTime @default(now())
+  revocation      Revocation?
+  
+  @@index([merchantId, verifiedAt])
+  @@index([staffId, verifiedAt])
+}
+
+model Revocation {
+  id              String   @id @default(uuid())
+  verificationId  String   @unique
+  verification    Verification @relation(fields: [verificationId], references: [id])
+  staffId         String   // 执行撤销的员工
+  staff           MerchantStaff @relation(fields: [staffId], references: [id])
+  reason          String?
+  createdAt       DateTime @default(now()) // 使用后端服务器时间
+  
+  @@index([staffId])
+  @@index([createdAt])
+}
+
+// ==================== 内容管理 ====================
+model Banner {
+  id          String   @id @default(uuid())
+  imageUrl    String
+  title       String?
+  link        String?
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  position    String   @default("ticket_home")
+  createdAt   DateTime @default(now())
+}
+
+model Article {
+  id          String   @id @default(uuid())
+  title       String
+  coverImage  String?
+  content     String?  @db.Text
+  summary     String?
+  category    String   @default("news")
+  isHot       Boolean  @default(false)
+  viewCount   Int      @default(0)
+  isActive    Boolean  @default(true)
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ==================== 管理员 ====================
+model Admin {
+  id          String   @id @default(uuid())
+  username    String   @unique
+  password    String   // bcrypt加密，cost=12
+  name        String?
+  role        String   @default("admin") // admin/super_admin
+  isActive    Boolean  @default(true)
+  lastLoginAt DateTime?
+  createdAt   DateTime @default(now())
+}

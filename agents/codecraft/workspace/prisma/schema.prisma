@@ -1,0 +1,190 @@
+// Prisma Schema - 茂名文旅票根优惠模块
+// 数据库模型定义
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ==================== 用户相关 ====================
+model User {
+  id          String   @id @default(uuid())
+  openid      String   @unique
+  phone       String?
+  phoneLast4  String?
+  nickname    String?
+  avatar      String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  tickets     Ticket[]
+  
+  @@index([openid])
+}
+
+// ==================== 票根模块 ====================
+model TicketType {
+  id          String   @id @default(uuid())
+  code        String   @unique
+  name        String
+  icon        String?
+  description String?
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  tickets     Ticket[]
+}
+
+model Ticket {
+  id              String   @id @default(uuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id])
+  typeId          String
+  type            TicketType @relation(fields: [typeId], references: [id])
+  name            String
+  imageUrl        String
+  ocrResult       Json?
+  ocrStatus       String   @default("pending")
+  ocrTaskId       String?
+  aiRecognized    Boolean  @default(false)
+  status          String   @default("valid")
+  validStart      DateTime?
+  validEnd        DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  verifyRecords   VerifyRecord[]
+  
+  @@index([userId, status])
+  @@index([typeId, status])
+  @@index([validEnd])
+  @@index([ocrTaskId])
+}
+
+// ==================== OCR任务队列 ====================
+model OcrTask {
+  id          String   @id @default(uuid())
+  ticketId    String?
+  imageUrl    String
+  status      String   @default("pending")
+  result      Json?
+  error       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([status, createdAt])
+}
+
+// ==================== Banner轮播图 ====================
+model Banner {
+  id          String   @id @default(uuid())
+  title       String
+  imageUrl    String
+  linkUrl     String?
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  startTime   DateTime?
+  endTime     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([isActive, sortOrder])
+  @@index([startTime, endTime])
+}
+
+// ==================== 热点资讯 ====================
+model News {
+  id          String   @id @default(uuid())
+  title       String
+  summary     String?
+  content     String?  @db.Text
+  imageUrl    String?
+  linkUrl     String?
+  source      String?
+  viewCount   Int      @default(0)
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  publishTime DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([isActive, sortOrder])
+  @@index([publishTime])
+}
+
+// ==================== 核销记录 ====================
+model VerifyRecord {
+  id          String   @id @default(uuid())
+  ticketId    String
+  ticket      Ticket   @relation(fields: [ticketId], references: [id])
+  verifyCode  String   @unique
+  discountAmount Decimal @db.Decimal(10, 2)
+  status      String   @default("pending") // pending, used, expired
+  expireAt    DateTime
+  usedAt      DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([verifyCode])
+  @@index([ticketId])
+  @@index([status, expireAt])
+}
+
+// ==================== 商户模块 ====================
+model MerchantCategory {
+  id          String    @id @default(uuid())
+  name        String
+  icon        String?
+  sortOrder   Int       @default(0)
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  merchants   Merchant[]
+  
+  @@index([isActive, sortOrder])
+}
+
+model Merchant {
+  id            String    @id @default(uuid())
+  categoryId    String
+  category      MerchantCategory @relation(fields: [categoryId], references: [id])
+  name          String
+  logo          String?
+  description   String?   @db.Text
+  address       String?
+  phone         String?
+  longitude     Float?
+  latitude      Float?
+  businessHours String?
+  rating        Float     @default(5.0)
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  discountRules DiscountRule[]
+  
+  @@index([categoryId, isActive])
+  @@index([isActive, rating])
+  @@index([longitude, latitude])
+  @@index([name])
+}
+
+model DiscountRule {
+  id            String    @id @default(uuid())
+  merchantId    String
+  merchant      Merchant  @relation(fields: [merchantId], references: [id], onDelete: Cascade)
+  title         String
+  description   String?   @db.Text
+  discountType  String    // percentage-百分比, fixed-固定金额, special-特价
+  discountValue Float     // 折扣值（如80表示8折，或30表示减30元）
+  minAmount     Float?    // 最低消费金额
+  maxDiscount   Float?    // 最高优惠金额
+  validStart    DateTime?
+  validEnd      DateTime?
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  @@index([merchantId, isActive])
+  @@index([isActive, validEnd])
+}
