@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "safe-battery-reminder-2026-06-01",
+      "name": "保险箱电池更换提醒",
+      "schedule": {
+        "type": "at",
+        "at": "2026-06-01T01:00:00.000Z",
+        "kind": "at"
+      },
+      "payload": {
+        "text": "🔋 保险箱电池更换提醒",
+        "kind": "systemEvent"
+      },
+      "sessionTarget": "main",
+      "enabled": true,
+      "state": {
+        "nextRunAtMs": 1780275600000
+      },
+      "wakeMode": "now"
+    },
+    {
+      "id": "443433c2-be13-4dfb-a6d7-2af341419057",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "daily-push-23",
+      "enabled": true,
+      "createdAtMs": 1773037635862,
+      "updatedAtMs": 1773037635862,
+      "schedule": {
+        "expr": "0 23 * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "运行每日推送脚本: cd /Users/asura.zhou/clawd && python3 scripts/daily_push.py",
+        "model": "minimax/MiniMax-M2.1"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773068400000
+      }
+    },
+    {
+      "id": "9f3d67c1-bc12-4df1-8723-c7afbd26d99f",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "DV项目-百度统计Token自动维护",
+      "enabled": true,
+      "createdAtMs": 1773037649860,
+      "updatedAtMs": 1773037649860,
+      "schedule": {
+        "expr": "0 0 */5 * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行 DV 项目百度统计 Token 自动维护检查：\n\n**执行步骤：**\n1. 先执行检查脚本：`node scripts/checkBaiduToken.js`\n2. 如果 Token 剩余有效期 >= 7 天：\n   - 无需更新，记录当前状态\n3. 如果 Token 剩余有效期 < 7 天：\n   - 执行更新脚本：`node scripts/fetchBaiduToken.js --headless`\n   - 记录更新结果\n\n**执行后必须向用户报告：**\n\n📊 **Token 检查报告**\n━━━━━━━━━━━━━━━━━━━━\n✅ 检查时间：[当前时间]\n\n🔍 检查结果：\n• Token 是否更新：[是/否]\n• 更新原因：[Token即将过期（剩余X天）/ Token状态正常，无需更新]\n\n📋 最终状态：\n• 过期时间：[YYYY-MM-DD HH:mm:ss]\n• 剩余天数：[X] 天\n• Token前30位：[eyJhbGci...]",
+        "model": "kimi-coding/k2p5",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "channel": "telegram",
+        "mode": "announce",
+        "to": "-5099457733"
+      },
+      "state": {
+        "nextRunAtMs": 1773158400000
+      }
+    },
+    {
+      "id": "64d77e4d-fbea-4f1b-88f0-cdecce0a2e1b",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "DV项目-Balance重跑每日执行",
+      "enabled": true,
+      "createdAtMs": 1773037658536,
+      "updatedAtMs": 1773037658536,
+      "schedule": {
+        "expr": "0 7 * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行 DV 项目 Balance 重跑自动化脚本：/Volumes/SanDisk2T/dv-codeBase/dv_mall/DVMALL-NODE/scripts/balanceRerunAuto.js\n\n请：\n1. 执行该脚本\n2. 获取执行结果（日期范围、截图路径、是否成功）\n3. **优先使用 message 工具推送报告到 Telegram 群组 (-5099457733)**\n4. **如果 Telegram 推送失败，立即发送邮件到：asura.zhou@qq.com**\n\n报告必须包含：\n- 执行日期范围\n- 是否成功点击重跑按钮\n- 截图保存路径\n- 执行时间\n\n邮件标题格式：[DV项目] Balance重跑日报 - YYYY-MM-DD",
+        "model": "kimi-coding/k2p5",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "channel": "telegram",
+        "mode": "announce",
+        "to": "-5099457733"
+      },
+      "state": {
+        "nextRunAtMs": 1773097200000
+      }
+    },
+    {
+      "id": "93976c25-8161-4338-ae31-3b5acd3111a9",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "lzy-ssl-cert-check",
+      "enabled": true,
+      "createdAtMs": 1773037664971,
+      "updatedAtMs": 1773037664971,
+      "schedule": {
+        "expr": "0 9 * * 1",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "[SSL证书检查] 鹿状元SSL证书每日自动检查 - 请立即执行检查任务\n检查脚本: /Volumes/SanDisk2T/dv-codeBase/鹿状元/check-ssl-expiry.sh"
+      },
+      "delivery": {
+        "mode": "webhook",
+        "to": "http://127.0.0.1:18789/api/webhook/ssl-check"
+      },
+      "state": {
+        "nextRunAtMs": 1773622800000
+      }
+    },
+    {
+      "id": "c32fea43-3a36-4441-938c-30321663c238",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "福禄英语-任务检查",
+      "enabled": true,
+      "createdAtMs": 1773037669677,
+      "updatedAtMs": 1773038655892,
+      "schedule": {
+        "everyMs": 300000,
+        "kind": "every",
+        "anchorMs": 1773037669677
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "检查福禄英语项目任务状态。读取 docs/TASK_PIPELINE.md，检查当前进行中的子代理任务状态。如果任务完成，立即推进下一步。如果任务超时20分钟，发送提醒。汇报当前状态。"
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {
+        "nextRunAtMs": 1773038869764,
+        "lastRunAtMs": 1773038569764,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 86128,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "e02badc9-3eb6-4f1e-8e85-7aaf52c65b9b",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "openclaw-skills-daily-check",
+      "enabled": true,
+      "createdAtMs": 1773037675531,
+      "updatedAtMs": 1773037675531,
+      "schedule": {
+        "everyMs": 86400000,
+        "kind": "every",
+        "anchorMs": 1773037675531
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行 OpenClaw Skills 每日检查：\n\n1. 访问 https://github.com/VoltAgent/awesome-openclaw-skills 查看更新\n2. 重点关注 Browser & Automation 分类的新技能\n3. 特别查找：playwright testing、regression testing、e2e 测试相关的技能\n4. 对发现的技能进行深度分析：\n   - 读取技能详细文档\n   - 搜索其他来源的使用反馈和评价\n   - 对比实际效果与描述是否一致\n5. 整理分析结果到 ~/clawd/skills-research/ 目录\n6. 如有重大发现，及时汇报",
+        "model": "kimi-coding/k2p5"
+      },
+      "delivery": {
+        "channel": "telegram",
+        "mode": "announce",
+        "to": "-5180367638"
+      },
+      "state": {
+        "nextRunAtMs": 1773124075531
+      }
+    }
+  ]
+}
