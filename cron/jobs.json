@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1773068494271,
+      "updatedAtMs": 1773154879706,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -44,15 +44,15 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1773154800000,
-        "lastRunAtMs": 1773068400005,
+        "nextRunAtMs": 1773241200000,
+        "lastRunAtMs": 1773154800006,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 94266,
+        "lastDurationMs": 79700,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "runningAtMs": 1773154800003
+        "runningAtMs": 1773241200005
       }
     },
     {
@@ -62,7 +62,7 @@
       "name": "DV项目-百度统计Token自动维护",
       "enabled": true,
       "createdAtMs": 1773037649860,
-      "updatedAtMs": 1773037649860,
+      "updatedAtMs": 1773158990368,
       "schedule": {
         "expr": "0 0 */5 * *",
         "kind": "cron",
@@ -72,7 +72,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "执行 DV 项目百度统计 Token 自动维护检查：\n\n**执行步骤：**\n1. 先执行检查脚本：`node scripts/checkBaiduToken.js`\n2. 如果 Token 剩余有效期 >= 7 天：\n   - 无需更新，记录当前状态\n3. 如果 Token 剩余有效期 < 7 天：\n   - 执行更新脚本：`node scripts/fetchBaiduToken.js --headless`\n   - 记录更新结果\n\n**执行后必须向用户报告：**\n\n📊 **Token 检查报告**\n━━━━━━━━━━━━━━━━━━━━\n✅ 检查时间：[当前时间]\n\n🔍 检查结果：\n• Token 是否更新：[是/否]\n• 更新原因：[Token即将过期（剩余X天）/ Token状态正常，无需更新]\n\n📋 最终状态：\n• 过期时间：[YYYY-MM-DD HH:mm:ss]\n• 剩余天数：[X] 天\n• Token前30位：[eyJhbGci...]",
+        "message": "执行 DV 项目百度统计 Token 自动维护检查：\n\n**执行步骤：**\n1. 先执行检查脚本：`cd /Volumes/SanDisk2T/dv-codeBase/dv_mall/DVMALL-NODE && node scripts/checkBaiduToken.js`\n2. 如果 Token 剩余有效期 >= 7 天：\n   - 无需更新，记录当前状态\n3. 如果 Token 剩余有效期 < 7 天：\n   - 执行更新脚本：`cd /Volumes/SanDisk2T/dv-codeBase/dv_mall/DVMALL-NODE && node scripts/fetchBaiduToken.js`\n   - 记录更新结果\n\n**执行后必须向用户报告：**\n\n📊 **Token 检查报告**\n━━━━━━━━━━━━━━━━━━━━\n✅ 检查时间：[当前时间]\n\n🔍 检查结果：\n• Token 是否更新：[是/否]\n• 更新原因：[Token即将过期（剩余X天）/ Token状态正常，无需更新]\n\n📋 最终状态：\n• 过期时间：[YYYY-MM-DD HH:mm:ss]\n• 剩余天数：[X] 天\n• Token前30位：[eyJhbGci...]",
         "model": "kimi-coding/k2p5",
         "timeoutSeconds": 180
       },
@@ -82,7 +82,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773158400000
+        "nextRunAtMs": 1773590400000,
+        "lastRunAtMs": 1773158400024,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 60787,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
       }
     },
     {
@@ -92,7 +99,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1773097380032,
+      "updatedAtMs": 1773183772129,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -112,14 +119,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773183600000,
-        "lastRunAtMs": 1773097200012,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 180020,
-        "lastError": "cron: job execution timed out",
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1
+        "nextRunAtMs": 1773270000000,
+        "lastRunAtMs": 1773183600007,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 172122,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -190,7 +197,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1773124174590,
+      "updatedAtMs": 1773210588799,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -209,11 +216,11 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1773210475537,
-        "lastRunAtMs": 1773124075537,
+        "nextRunAtMs": 1773296875544,
+        "lastRunAtMs": 1773210475544,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 99053,
+        "lastDurationMs": 113255,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
