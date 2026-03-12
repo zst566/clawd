@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1773154879706,
+      "updatedAtMs": 1773331733080,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -41,17 +41,19 @@
         "model": "minimax/MiniMax-M2.1"
       },
       "delivery": {
-        "mode": "announce"
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773241200000,
-        "lastRunAtMs": 1773154800006,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 79700,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1773414000000,
+        "lastRunAtMs": 1773327600015,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 49487,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "Delivering to Telegram requires target <chatId>"
       }
     },
     {
@@ -98,7 +100,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1773183772129,
+      "updatedAtMs": 1773270180033,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -118,14 +120,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773270000000,
-        "lastRunAtMs": 1773183600007,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 172122,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "nextRunAtMs": 1773356400000,
+        "lastRunAtMs": 1773270000011,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 180022,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "cron: job execution timed out"
       }
     },
     {
@@ -196,7 +198,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1773210588799,
+      "updatedAtMs": 1773298728167,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -206,7 +208,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "执行 OpenClaw Skills 每日检查：\n\n1. 访问 https://github.com/VoltAgent/awesome-openclaw-skills 查看更新\n2. 重点关注 Browser & Automation 分类的新技能\n3. 特别查找：playwright testing、regression testing、e2e 测试相关的技能\n4. 对发现的技能进行深度分析：\n   - 读取技能详细文档\n   - 搜索其他来源的使用反馈和评价\n   - 对比实际效果与描述是否一致\n5. 整理分析结果到 ~/clawd/skills-research/ 目录\n6. 如有重大发现，及时汇报",
+        "message": "执行 OpenClaw Skills 每日检查（缓存优化版）：\n\n**核心原则：减少请求量，使用缓存对比，只抓取差异**\n\n**执行步骤：**\n\n1. **检查本地缓存文件** (`~/clawd/agents/main/workspace/memory/skills-cache.json`)\n   - 如果不存在，则创建\n\n2. **获取远程分类列表**（只抓1个文件）\n   - URL: `https://raw.githubusercontent.com/VoltAgent/awesome-openclaw-skills/main/categories/browser-and-automation.md`\n   - 解析技能列表（名称 + URL）\n\n3. **对比差异**\n   - 对比本地缓存和远程列表，找出：\n     - 新增的技能\n     - 已删除的技能\n\n4. **分批抓取策略（关键！）**\n   - **优先抓取**：新发现的技能（最多5个/次）\n   - **轮询抓取**：从上次未抓取的技能中，选择 3-5 个/次 进行分析\n   - 使用随机或轮询方式，避免总是抓取列表前面的技能\n   - 记录每个技能的\"最后分析时间\"到缓存文件\n\n5. **更新本地缓存**\n   - 更新技能列表\n   - 更新每个技能的最后分析时间戳\n   - 保存到 `~/clawd/agents/main/workspace/memory/skills-cache.json`\n\n6. **生成简要报告**\n   - 本次新增/删除技能数量\n   - 本次分析了哪些技能\n   - 下次建议分析的技能\n\n**重要约束：**\n- 每次执行最多只抓取 10 个技能的详情页\n- 两次执行之间使用缓存对比，不要重复抓取相同的技能\n- 如果需要搜索更多信息，优先使用缓存数据而不是重新抓取\n\n**缓存文件格式：**\n```json\n{\n  \"lastUpdated\": \"2026-03-12T14:00:00Z\",\n  \"skills\": {\n    \"agent-browser\": {\n      \"url\": \"https://github.com/...\",\n      \"lastAnalyzed\": \"2026-03-10T14:00:00Z\",\n      \"status\": \"analyzed|pending|new\"\n    }\n  },\n  \"pendingSkills\": [\"skill1\", \"skill2\"],\n  \"analyzedCount\": 50,\n  \"totalCount\": 335\n}\n```",
         "model": "kimi-coding/k2p5"
       },
       "delivery": {
@@ -215,13 +217,13 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1773296875544,
-        "lastRunAtMs": 1773210475544,
+        "nextRunAtMs": 1773383275554,
+        "lastRunAtMs": 1773296875554,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 113255,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
+        "lastDurationMs": 39096,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
       }
     }
