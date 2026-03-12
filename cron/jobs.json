@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1773331733080,
+      "updatedAtMs": 1773331928025,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -37,7 +37,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "运行每日推送脚本: cd /Users/asura.zhou/clawd && python3 scripts/daily_push.py",
+        "message": "运行每日推送脚本: cd /Users/asura.zhou/clawd/agents/main/workspace && python3 scripts/daily_push.py",
         "model": "minimax/MiniMax-M2.1"
       },
       "delivery": {
@@ -47,13 +47,14 @@
       },
       "state": {
         "nextRunAtMs": 1773414000000,
-        "lastRunAtMs": 1773327600015,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 49487,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "runningAtMs": 1773331736381
+        "lastRunAtMs": 1773331736381,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 21744,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true,
+        "runningAtMs": 1773332415635
       }
     },
     {
@@ -137,7 +138,7 @@
       "name": "lzy-ssl-cert-check",
       "enabled": true,
       "createdAtMs": 1773037664971,
-      "updatedAtMs": 1773037664971,
+      "updatedAtMs": 1773332180940,
       "schedule": {
         "expr": "0 9 * * 1",
         "kind": "cron",
@@ -147,7 +148,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "systemEvent",
-        "text": "[SSL证书检查] 鹿状元SSL证书每日自动检查 - 请立即执行检查任务\n检查脚本: /Volumes/SanDisk2T/dv-codeBase/鹿状元/check-ssl-expiry.sh"
+        "text": "[SSL证书检查] 鹿状元SSL证书每日自动检查 - 请立即执行检查任务\n检查脚本: /Volumes/SanDisk2T/dv-codeBase/鹿状元/check-and-renew-ssl.sh"
       },
       "delivery": {
         "mode": "webhook",
