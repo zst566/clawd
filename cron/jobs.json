@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1773331928025,
+      "updatedAtMs": 1773332434852,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -47,14 +47,14 @@
       },
       "state": {
         "nextRunAtMs": 1773414000000,
-        "lastRunAtMs": 1773331736381,
+        "lastRunAtMs": 1773332415635,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 21744,
+        "lastDurationMs": 19217,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true,
-        "runningAtMs": 1773332415635
+        "runningAtMs": 1773414000004
       }
     },
     {
@@ -101,7 +101,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1773270180033,
+      "updatedAtMs": 1773361200604,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -113,7 +113,7 @@
         "kind": "agentTurn",
         "message": "执行 DV 项目 Balance 重跑自动化脚本：/Volumes/SanDisk2T/dv-codeBase/dv_mall/DVMALL-NODE/scripts/balanceRerunAuto.js\n\n请：\n1. 执行该脚本\n2. 获取执行结果（日期范围、截图路径、是否成功）\n3. **优先使用 message 工具推送报告到 Telegram 群组 (-5099457733)**\n4. **如果 Telegram 推送失败，立即发送邮件到：asura.zhou@qq.com**\n\n报告必须包含：\n- 执行日期范围\n- 是否成功点击重跑按钮\n- 截图保存路径\n- 执行时间\n\n邮件标题格式：[DV项目] Balance重跑日报 - YYYY-MM-DD",
         "model": "kimi-coding/k2p5",
-        "timeoutSeconds": 180
+        "timeoutSeconds": 300
       },
       "delivery": {
         "channel": "telegram",
@@ -121,14 +121,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773356400000,
-        "lastRunAtMs": 1773270000011,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 180022,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "lastError": "cron: job execution timed out"
+        "nextRunAtMs": 1773442800000,
+        "lastRunAtMs": 1773361188790,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 8155,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -199,7 +199,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1773298728167,
+      "updatedAtMs": 1773383315839,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -218,11 +218,11 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1773383275554,
-        "lastRunAtMs": 1773296875554,
+        "nextRunAtMs": 1773469675563,
+        "lastRunAtMs": 1773383275563,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 39096,
+        "lastDurationMs": 40276,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
