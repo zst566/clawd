@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1773414112679,
+      "updatedAtMs": 1773500507695,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -46,15 +46,15 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773500400000,
-        "lastRunAtMs": 1773414000013,
+        "nextRunAtMs": 1773586800000,
+        "lastRunAtMs": 1773500400010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 112666,
+        "lastDurationMs": 107685,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true,
-        "runningAtMs": 1773500400006
+        "runningAtMs": 1773586800005
       }
     },
     {
@@ -101,7 +101,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1773454073980,
+      "updatedAtMs": 1773529479397,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -121,16 +121,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773529200000,
-        "lastRunAtMs": 1773454046755,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 27225,
+        "nextRunAtMs": 1773615600000,
+        "lastRunAtMs": 1773529200013,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 279384,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 4,
-        "lastErrorReason": "rate_limit",
-        "lastDelivered": true,
-        "lastError": "⚠️ API rate limit reached. Please try again later."
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -201,7 +199,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1773469714930,
+      "updatedAtMs": 1773556115591,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -220,11 +218,11 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1773556075579,
-        "lastRunAtMs": 1773469675579,
+        "nextRunAtMs": 1773642475587,
+        "lastRunAtMs": 1773556075587,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 39351,
+        "lastDurationMs": 40004,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0

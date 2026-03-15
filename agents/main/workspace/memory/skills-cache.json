@@ -1,63 +1,48 @@
 {
-  "lastUpdated": "2026-03-14T06:29:08.454Z",
+  "lastUpdated": "2026-03-15T06:32:14.660377Z",
   "skills": {
     "1p-shortlink": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/tuanpmt/1p-shortlink/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
+      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
+      "status": "analyzed"
     },
     "2captcha": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/adinvadim/2captcha/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
+      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
+      "status": "analyzed"
     },
     "a-share-real-time-data": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/wangdinglu/a-share-real-time-data/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "aavegotchi-traits": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/aaigotchi/aavegotchi-traits/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
+      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
+      "status": "analyzed"
     },
     "abm-outbound": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/dru-ca/abm-outbound/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
+      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
+      "status": "analyzed"
     },
     "accessibility-toolkit": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/cgtreadw/accessibility-toolkit/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "acp": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/chris6970barbarian-hue/acp/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
+      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
+      "status": "analyzed"
     },
     "activecampaign": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/kesslerio/activecampaign/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
+      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
+      "status": "analyzed"
     },
     "adcp-advertising": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/edyyy62/adcp-advertising/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
+      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
+      "status": "analyzed"
     },
     "admet-prediction": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/huifer/admet-prediction/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
+      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
+      "status": "analyzed"
     },
     "Agent Browser": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/thesethrose/agent-browser/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "agent-browser": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/murphykobe/agent-browser-2/SKILL.md",
       "lastAnalyzed": null,
       "status": "pending"
     },
@@ -271,11 +256,6 @@
       "lastAnalyzed": null,
       "status": "pending"
     },
-    "basecred": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/callmedas69/basecred/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
     "bitaxe-monitor": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/pietro395/bitaxe-monitor/SKILL.md",
       "lastAnalyzed": null,
@@ -283,11 +263,6 @@
     },
     "bits": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/robbiethompson18/bits/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "book-brain-visual-reader": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/deepseekoracle/book-brain-visual-reader/SKILL.md",
       "lastAnalyzed": null,
       "status": "pending"
     },
@@ -406,11 +381,6 @@
       "lastAnalyzed": null,
       "status": "pending"
     },
-    "cocod": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/egge21m/cocod/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
     "coda-io": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/simonfunk/coda-io/SKILL.md",
       "lastAnalyzed": null,
@@ -418,11 +388,6 @@
     },
     "code-stats": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/autogame-17/code-stats/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "code-stats-2": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wanng-ide/code-stats/SKILL.md",
       "lastAnalyzed": null,
       "status": "pending"
     },
@@ -466,11 +431,6 @@
       "lastAnalyzed": null,
       "status": "pending"
     },
-    "db-readonly-2": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ryanhong666/db-readonly/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
     "desearch-x-search": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/okradze/desearch-x-search/SKILL.md",
       "lastAnalyzed": null,
@@ -498,11 +458,6 @@
     },
     "entity-optimizer": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/aaron-he-zhu/entity-optimizer/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "epstein-emails": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/blockboy32/epstein-emails/SKILL.md",
       "lastAnalyzed": null,
       "status": "pending"
     },
@@ -618,11 +573,6 @@
     },
     "goldenseed": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/beanapologist/goldenseed/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "gotchi-finder": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/aaigotchi/gotchi-finder/SKILL.md",
       "lastAnalyzed": null,
       "status": "pending"
     },
@@ -1031,11 +981,6 @@
       "lastAnalyzed": null,
       "status": "pending"
     },
-    "openkrill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/emilankerwiik/openkrill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
     "openrouter-usage": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/rosseyre/openrouter-usage/SKILL.md",
       "lastAnalyzed": null,
@@ -1126,11 +1071,6 @@
       "lastAnalyzed": null,
       "status": "pending"
     },
-    "pinets": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/alaa-eddine/pinets/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
     "pipelock": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/luckypipewrench/pipelock/SKILL.md",
       "lastAnalyzed": null,
@@ -1153,11 +1093,6 @@
     },
     "poker-agent": {
       "url": "https://github.com/openclaw/skills/tree/main/skills/clementsutjiatma/poker-agent/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "pond3r-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/fabriziogianni7/pond3r-skill/SKILL.md",
       "lastAnalyzed": null,
       "status": "pending"
     },
@@ -1368,18 +1303,7 @@
     }
   },
   "pendingSkills": [
-    "1p-shortlink",
-    "2captcha",
-    "a-share-real-time-data",
-    "aavegotchi-traits",
-    "abm-outbound",
-    "accessibility-toolkit",
-    "acp",
-    "activecampaign",
-    "adcp-advertising",
-    "admet-prediction",
     "Agent Browser",
-    "agent-browser",
     "agent-daily-planner",
     "agent-device",
     "agent-step-sequencer",
@@ -1387,8 +1311,19 @@
     "agent-zero",
     "agentapi",
     "agentapi-hub",
-    "agentaudit"
+    "agentaudit",
+    "agentaudit-skill",
+    "agentmail-integration",
+    "agresource",
+    "ai-hunter-pro",
+    "ai-meeting-scheduling",
+    "ai-news-oracle",
+    "airtable-automation",
+    "airtable-participants",
+    "ak-rss-24h-brief",
+    "amazon-product-search-api-skill",
+    "amazon-reviews-api-skill"
   ],
-  "analyzedCount": 9,
-  "totalCount": 273
+  "analyzedCount": 17,
+  "totalCount": 260
 }
