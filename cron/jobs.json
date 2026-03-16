@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1773500507695,
+      "updatedAtMs": 1773586898724,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -46,15 +46,15 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773586800000,
-        "lastRunAtMs": 1773500400010,
+        "nextRunAtMs": 1773673200000,
+        "lastRunAtMs": 1773586800009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 107685,
+        "lastDurationMs": 98715,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true,
-        "runningAtMs": 1773586800005
+        "runningAtMs": 1773673200005
       }
     },
     {
@@ -64,7 +64,7 @@
       "name": "DV项目-百度统计Token自动维护",
       "enabled": true,
       "createdAtMs": 1773037649860,
-      "updatedAtMs": 1773158990368,
+      "updatedAtMs": 1773590580051,
       "schedule": {
         "expr": "0 0 */5 * *",
         "kind": "cron",
@@ -84,14 +84,15 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773590400000,
-        "lastRunAtMs": 1773158400024,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 60787,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1774022400000,
+        "lastRunAtMs": 1773590400029,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 180022,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "cron: job execution timed out",
+        "lastErrorReason": "timeout"
       }
     },
     {
@@ -101,7 +102,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1773529479397,
+      "updatedAtMs": 1773615900032,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -121,14 +122,15 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773615600000,
-        "lastRunAtMs": 1773529200013,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 279384,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "nextRunAtMs": 1773702000000,
+        "lastRunAtMs": 1773615600012,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 300020,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "cron: job execution timed out",
+        "lastErrorReason": "timeout"
       }
     },
     {
@@ -138,7 +140,7 @@
       "name": "lzy-ssl-cert-check",
       "enabled": true,
       "createdAtMs": 1773037664971,
-      "updatedAtMs": 1773332180940,
+      "updatedAtMs": 1773622813413,
       "schedule": {
         "expr": "0 9 * * 1",
         "kind": "cron",
@@ -155,7 +157,13 @@
         "to": "http://127.0.0.1:18789/api/webhook/ssl-check"
       },
       "state": {
-        "nextRunAtMs": 1773622800000
+        "nextRunAtMs": 1774227600000,
+        "lastRunAtMs": 1773622800013,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 13400,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
       }
     },
     {
@@ -199,7 +207,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1773556115591,
+      "updatedAtMs": 1773642519249,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -218,11 +226,11 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1773642475587,
-        "lastRunAtMs": 1773556075587,
+        "nextRunAtMs": 1773728875600,
+        "lastRunAtMs": 1773642475600,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 40004,
+        "lastDurationMs": 43649,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
