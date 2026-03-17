@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1773586898724,
+      "updatedAtMs": 1773673309779,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -46,15 +46,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773673200000,
-        "lastRunAtMs": 1773586800009,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 98715,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true,
-        "runningAtMs": 1773673200005
+        "nextRunAtMs": 1773759600000,
+        "lastRunAtMs": 1773673200010,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 109769,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "runningAtMs": 1773759600005
       }
     },
     {
@@ -102,7 +101,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1773615900032,
+      "updatedAtMs": 1773702208745,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -122,15 +121,16 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773702000000,
-        "lastRunAtMs": 1773615600012,
+        "nextRunAtMs": 1773788400000,
+        "lastRunAtMs": 1773702000011,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 300020,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "lastError": "cron: job execution timed out",
-        "lastErrorReason": "timeout"
+        "lastDurationMs": 208734,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 2,
+        "lastErrorReason": "rate_limit",
+        "lastError": "⚠️ API rate limit reached. Please try again later.",
+        "lastDelivered": true
       }
     },
     {
@@ -207,7 +207,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1773642519249,
+      "updatedAtMs": 1773728922359,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -226,13 +226,13 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1773728875600,
-        "lastRunAtMs": 1773642475600,
+        "nextRunAtMs": 1773815275609,
+        "lastRunAtMs": 1773728875609,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 43649,
-        "lastDelivered": false,
-        "lastDeliveryStatus": "not-delivered",
+        "lastDurationMs": 46750,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
       }
     }
