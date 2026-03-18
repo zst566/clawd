@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1773673309779,
+      "updatedAtMs": 1773759633927,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -46,14 +46,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773759600000,
-        "lastRunAtMs": 1773673200010,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 109769,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "lastError": "HttpError: Network request for 'sendMessage' failed!"
+        "nextRunAtMs": 1773846000000,
+        "lastRunAtMs": 1773759600014,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 33913,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -101,7 +101,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1773702208745,
+      "updatedAtMs": 1773788563585,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -121,16 +121,16 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773788400000,
-        "lastRunAtMs": 1773702000011,
+        "nextRunAtMs": 1773874800000,
+        "lastRunAtMs": 1773788400009,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 208734,
+        "lastDurationMs": 163576,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 2,
+        "consecutiveErrors": 3,
         "lastErrorReason": "rate_limit",
-        "lastError": "⚠️ API rate limit reached. Please try again later.",
-        "lastDelivered": true
+        "lastDelivered": true,
+        "lastError": "⚠️ API rate limit reached. Please try again later."
       }
     },
     {
@@ -207,7 +207,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1773728922359,
+      "updatedAtMs": 1773815317739,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -226,13 +226,13 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1773815275609,
-        "lastRunAtMs": 1773728875609,
+        "nextRunAtMs": 1773901675616,
+        "lastRunAtMs": 1773815275616,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 46750,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
+        "lastDurationMs": 42123,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
       }
     }
