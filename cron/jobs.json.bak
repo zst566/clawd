@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1773846107655,
+      "updatedAtMs": 1773932526502,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -46,11 +46,11 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773932400000,
-        "lastRunAtMs": 1773846000007,
+        "nextRunAtMs": 1774018800000,
+        "lastRunAtMs": 1773932400011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 107648,
+        "lastDurationMs": 126491,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -101,7 +101,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1773874907593,
+      "updatedAtMs": 1773961360355,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -121,14 +121,16 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1773961200000,
-        "lastRunAtMs": 1773874800015,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 107578,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": false
+        "nextRunAtMs": 1774047600000,
+        "lastRunAtMs": 1773961200014,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 160341,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 1,
+        "lastDelivered": true,
+        "lastError": "⚠️ API rate limit reached. Please try again later.",
+        "lastErrorReason": "rate_limit"
       }
     },
     {
@@ -205,7 +207,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1773902291854,
+      "updatedAtMs": 1773988112690,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -224,11 +226,11 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1773988075625,
-        "lastRunAtMs": 1773901675625,
+        "nextRunAtMs": 1774074475636,
+        "lastRunAtMs": 1773988075636,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 616229,
+        "lastDurationMs": 37054,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
