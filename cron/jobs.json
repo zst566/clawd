@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1774105240925,
+      "updatedAtMs": 1774191694335,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -46,14 +46,15 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774191600000,
-        "lastRunAtMs": 1774105200011,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 40914,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "runningAtMs": 1774191600007
+        "nextRunAtMs": 1774278000000,
+        "lastRunAtMs": 1774191600014,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 94321,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true,
+        "runningAtMs": 1774278000008
       }
     },
     {
@@ -101,7 +102,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1774134160295,
+      "updatedAtMs": 1774220554974,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -121,11 +122,11 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774220400000,
-        "lastRunAtMs": 1774134000020,
+        "nextRunAtMs": 1774306800000,
+        "lastRunAtMs": 1774220400018,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 160275,
+        "lastDurationMs": 154956,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
@@ -138,7 +139,7 @@
       "name": "lzy-ssl-cert-check",
       "enabled": true,
       "createdAtMs": 1773037664971,
-      "updatedAtMs": 1773622813413,
+      "updatedAtMs": 1774227614515,
       "schedule": {
         "expr": "0 9 * * 1",
         "kind": "cron",
@@ -155,11 +156,11 @@
         "to": "http://127.0.0.1:18789/api/webhook/ssl-check"
       },
       "state": {
-        "nextRunAtMs": 1774227600000,
-        "lastRunAtMs": 1773622800013,
+        "nextRunAtMs": 1774832400000,
+        "lastRunAtMs": 1774227600012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 13400,
+        "lastDurationMs": 14503,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0
       }
@@ -205,7 +206,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1774161477177,
+      "updatedAtMs": 1774247877119,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -224,11 +225,11 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1774247275654,
-        "lastRunAtMs": 1774160875654,
+        "nextRunAtMs": 1774333675665,
+        "lastRunAtMs": 1774247275665,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 601523,
+        "lastDurationMs": 601454,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
