@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1774191694335,
+      "updatedAtMs": 1774278013808,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -46,11 +46,11 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774278000000,
-        "lastRunAtMs": 1774191600014,
+        "nextRunAtMs": 1774364400000,
+        "lastRunAtMs": 1774278000012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 94321,
+        "lastDurationMs": 13796,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -101,7 +101,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1774220554974,
+      "updatedAtMs": 1774306991463,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -121,14 +121,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774306800000,
-        "lastRunAtMs": 1774220400018,
+        "nextRunAtMs": 1774393200000,
+        "lastRunAtMs": 1774306800014,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 154956,
-        "lastDeliveryStatus": "not-delivered",
+        "lastDurationMs": 191449,
+        "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": false
+        "lastDelivered": true
       }
     },
     {
@@ -205,7 +205,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1774247877119,
+      "updatedAtMs": 1774333985765,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -224,11 +224,11 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1774333675665,
-        "lastRunAtMs": 1774247275665,
+        "nextRunAtMs": 1774420075673,
+        "lastRunAtMs": 1774333675673,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 601454,
+        "lastDurationMs": 310092,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
