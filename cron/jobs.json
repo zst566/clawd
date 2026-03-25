@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1774278013808,
+      "updatedAtMs": 1774364619099,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -46,15 +46,15 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774364400000,
-        "lastRunAtMs": 1774278000012,
+        "nextRunAtMs": 1774450800000,
+        "lastRunAtMs": 1774364400009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 13796,
+        "lastDurationMs": 219090,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true,
-        "runningAtMs": 1774364400003
+        "runningAtMs": 1774450800008
       }
     },
     {
@@ -64,7 +64,7 @@
       "name": "DV项目-百度统计Token自动维护",
       "enabled": true,
       "createdAtMs": 1773037649860,
-      "updatedAtMs": 1774022580045,
+      "updatedAtMs": 1774420696374,
       "schedule": {
         "expr": "0 0 */5 * *",
         "kind": "cron",
@@ -85,14 +85,13 @@
       },
       "state": {
         "nextRunAtMs": 1774454400000,
-        "lastRunAtMs": 1774022400014,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 180031,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 2,
-        "lastErrorReason": "timeout",
-        "lastError": "cron: job execution timed out"
+        "lastRunAtMs": 1774420535199,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 161175,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -102,7 +101,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1774306991463,
+      "updatedAtMs": 1774420761777,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -122,11 +121,11 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774393200000,
-        "lastRunAtMs": 1774306800014,
+        "nextRunAtMs": 1774479600000,
+        "lastRunAtMs": 1774420696395,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 191449,
+        "lastDurationMs": 65382,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -206,7 +205,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1774333985765,
+      "updatedAtMs": 1774420677194,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -225,11 +224,11 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1774420075673,
-        "lastRunAtMs": 1774333675673,
+        "nextRunAtMs": 1774506475680,
+        "lastRunAtMs": 1774420075680,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 310092,
+        "lastDurationMs": 601514,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
