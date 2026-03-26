@@ -1,1549 +1,358 @@
 {
-  "lastUpdated": "2026-03-19T06:30:00Z",
+  "lastUpdated": "2026-03-26T06:35:00Z",
   "skills": {
-    "1p-shortlink": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/tuanpmt/1p-shortlink/SKILL.md",
-      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
-      "status": "analyzed"
-    },
-    "2captcha": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/adinvadim/2captcha/SKILL.md",
-      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
-      "status": "analyzed"
-    },
-    "a-share-real-time-data": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wangdinglu/a-share-real-time-data/SKILL.md",
-      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
-      "status": "analyzed"
-    },
-    "abm-outbound": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/dru-ca/abm-outbound/SKILL.md",
-      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
-      "status": "analyzed"
-    },
-    "accessibility-toolkit": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/cgtreadw/accessibility-toolkit/SKILL.md",
-      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
-      "status": "analyzed"
-    },
-    "activecampaign": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/kesslerio/activecampaign/SKILL.md",
-      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
-      "status": "analyzed"
-    },
-    "adcp-advertising": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/edyyy62/adcp-advertising/SKILL.md",
-      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
-      "status": "analyzed"
-    },
-    "admet-prediction": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/huifer/admet-prediction/SKILL.md",
-      "lastAnalyzed": "2026-03-15T06:32:14.660377Z",
-      "status": "analyzed"
-    },
-    "agent-browser": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/murphykobe/agent-browser-2/SKILL.md",
-      "lastAnalyzed": "2026-03-19T06:30:00Z",
-      "status": "analyzed"
-    },
-    "agent-daily-planner": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/gpunter/agent-daily-planner/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "agent-device": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/okwasniewski/agent-device/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "agent-step-sequencer": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/gostlightai/agent-step-sequencer/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "agent-task-tracker": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/rikouu/agent-task-tracker/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "agent-zero": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/dowingard/agent-zero-bridge/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "agentapi": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/gizmo-dev/agentapi/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "agentapi-hub": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/gizmo-dev/agentapi-hub/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "agentaudit": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/starbuck100/agentaudit/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "agentaudit-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/starbuck100/agentaudit-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "agentmail-integration": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/synesthesia-wav/agentmail-integration/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "agresource": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/brianppetty/agresource/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ai-hunter-pro": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/traprapitalianazional-dev/ai-hunter-pro/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ai-meeting-scheduling": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/dheerg/ai-meeting-scheduling/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ai-news-oracle": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/swimmingkiim/ai-news-oracle/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "airtable-automation": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/sohamganatra/airtable-automation/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "airtable-participants": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/austinmao/airtable-participants/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ak-rss-24h-brief": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/seandong/ak-rss-24h-brief/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "amazon-product-search-api-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/phheng/amazon-product-search-api-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "amazon-reviews-api-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/phheng/amazon-reviews-api-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "amazon-shopper": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/brennerspear/amazon-shopper/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "android-adb": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/staticai/android-adb/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "anycrawl": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/techlaai/anycrawl/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "aoi-hackathon-scout-lite": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/edmonddantesj/aoi-hackathon-scout-lite/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "api-tester": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wanng-ide/api-tester/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "apify-lead-generation": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/jirispilka/apify-lead-generation/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "apiosk": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/obcraft/apiosk/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "appstore-rating-pulse": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/aligurelli/appstore-rating-pulse/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "arxiv-1-0-1": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/tariqsumatri82/arxiv-1-0-1/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "arxiv-skill-learning": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wanng-ide/arxiv-skill-learning/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "asr": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ilyakam/asr/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "atl-mobile": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/jordancoin/atl-mobile/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "audiomind": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wells1137/audiomind/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "auto-context-manager": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/imraxy/auto-context-manager/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "auto-dealer-marketing": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/lazralabs-eng/auto-dealer-marketing/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "auto-updater": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/maximeprades/auto-updater/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "autofillin": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/leohan123123/autofillin/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "automation-workflows": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/jk-0001/automation-workflows/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "autonomy-windowed": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/luciusrockwing/autonomy-windowed/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "babyconnect": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/kesslerio/babyconnect/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "bamboohr-automation": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/sohamganatra/bamboohr-automation/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "baseball": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/khaney64/baseball/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "basecamp-automation": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/sohamganatra/basecamp-automation/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "bitaxe-monitor": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/pietro395/bitaxe-monitor/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "bits": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/robbiethompson18/bits/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "book-fetch": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/zerone0x/book-fetch/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "bookmark-intelligence": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/bkrigmo1/bookmark-intelligence/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "box-automation": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/sohamganatra/box-automation/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "brain-search": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ryandeangraves/brain-search/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "browser-ladder": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ktpriyatham/browser-ladder/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "browser-use": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/shawnpana/browser-use/SKILL.md",
-      "lastAnalyzed": "2026-03-14T06:29:08.454Z",
-      "status": "analyzed"
-    },
-    "browsh": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/gumadeiras/browsh/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "brw-linkedin-authority-builder": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/brianrwagner/brw-linkedin-authority-builder/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "brw-linkedin-authority-builder-1-0-0": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/rezcarbon/brw-linkedin-authority-builder-1-0-0/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "btc-analyzer": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/newbienodes/btc-analyzer/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "bybit-order-book": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/davidm413/bybit-order-book/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "cal-com-automation": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/sohamganatra/cal-com-automation/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "camoufox": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/goodgoodjm/camoufox/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "catime": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/yazelin/catime/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ccxt": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/pcriadoperez/ccxt/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "cdp-browser": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/gostlightai/cdp-browser/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "claude-cost-cli": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/cyberash-dev/claude-cost-cli/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "claude-usage-cli": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/cyberash-dev/claude-usage-cli/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "client-communication-engine": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/satoshistackalotto/client-communication-engine/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "client-data-management": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/satoshistackalotto/client-data-management/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "client-flow": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ariktulcha/client-flow/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "cls-news-scraper": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ningjingzhiyuande/cls-news-scraper/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "cn-ecommerce-search": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/shopmeskills/cn-ecommerce-search/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "coda-io": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/simonfunk/coda-io/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "code-stats": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/autogame-17/code-stats/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "code-tester": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/frhn9/code-tester/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "coingecko": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/olisim02/coingecko/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "comonyx-admin": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/waqas-orcalo/comonyx-admin/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "cputemp": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/rhcit/cputemp/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "curlship": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/marcindudekdev/curlship/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "daily-dev-agentic": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/idoshamun/daily-dev-agentic/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "daily-news": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ym2760184260/daily-news/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "db-readonly": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/reed1898/db-readonly/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "desearch-x-search": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/okradze/desearch-x-search/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "doro-command-creator": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/a2mus/doro-command-creator/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "dune-analytics-api": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/lz-web3/dune-analytics-api/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "echo-repeater": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/theeightt/echo-repeater/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "edstem": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/axel5o5/edstem/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "entity-optimizer": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/aaron-he-zhu/entity-optimizer/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "erpnext-frappe": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ravana-indus/erpnext-frappe/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "error-driven-evolution": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/marsnavi/error-driven-evolution/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "evomap": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/segasonicye/evomap/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "exa-tool": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/claireaicodes/exa-tool/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "external-ki-integration-backup": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/konscious0beast/external-ki-integration-backup/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "fastfold-ai-fold": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/juliocesar-io/fastfold-ai-fold/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "fatsecret": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/f-liva/fatsecret/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "feed-digest": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/odysseus0/feed-digest/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "feishu-bitable-creator": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/gaowanqi08141999/feishu-bitable-creator/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "feishu-meeting-assistant": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/autogame-17/feishu-meeting-assistant/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "feishu-sheets": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wesley138cn/feishu-sheets/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "feishu-sheets-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wesley138cn/feishu-sheets-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "fin-cog": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/nitishgargiitd/fin-cog/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "firefly": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/codes71/firefly/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "free-a-share-real-time-data": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wangdinglu/free-a-share-real-time-data/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ft-reader": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/zhouziyue233/ft-reader/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "fxtwitter": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/namphamdev/fxtwitter/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "geo-content-optimizer": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/aaron-he-zhu/geo-content-optimizer/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "geometry": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/geometrydotsh/geometry/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "get-kalshi-live-games": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/kanakamedalasumanth/get-kalshi-live-games/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "glm-image": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/chunhualiao/glm-image/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "goal-tracker": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/alti-systems/goal-tracker/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "goldenseed": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/beanapologist/goldenseed/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "goyfiles-epstein": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/davfd/goyfiles-epstein/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "grago": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/solsuk/grago/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "grok-browser": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/easonc13/grok-browser/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "guicountrol": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/dreamtraveler13/guicountrol/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "hfnews": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/huberteff/hfnews/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "hi": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/roman181/hi/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "hive-mind": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/lilyjazz/hive-mind/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "hle-benchmark-evolver": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wanng-ide/hle-benchmark-evolver/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "huggingface-trends": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/tianxingleo/huggingface-trends/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "image-enhancer": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wells1137/image-enhancer/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "imprettyamazing": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/macksmind/imprettyamazing/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "index-cards": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/jonwheatley/index-cards/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "input-classification-v1": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/omprasad122007-rgb/input-classification-v1/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "instagram-scraper": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/arulmozhiv/instagram-scraper/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "interesting-finding": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/zerone0x/interesting-finding/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "invoice-collector": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/mintannn/invoice-collector/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ipfs-client": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/apexfork/ipfs-client/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "iserv": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/finnbusse/iserv/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "itinerary-carousel-post": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/psyduckler/itinerary-carousel-post/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "itinerary-carousel-post-topaz": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/psyduckler/itinerary-carousel-post-topaz/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "iyeque-device-control": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/iyeque/iyeque-device-control/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "jarvis-api-contract-guard-01": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-api-contract-guard-01/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "jarvis-bug-triage-01": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-bug-triage-01/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "jarvis-ci-flake-hunter-01": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-ci-flake-hunter-01/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "jarvis-db-query-doctor-01": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-db-query-doctor-01/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "jarvis-migration-risk-radar-01": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-migration-risk-radar-01/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "jarvis-persona-style-calibrator-01": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-persona-style-calibrator-01/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "jarvis-test-gap-finder-01": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-test-gap-finder-01/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "jobs-ive": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/stubbi/jobs-ive/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "jup-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/lifeofpavs/jup-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "level-design-patterns": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/cryptorabea/level-design-patterns/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "lifi-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/fabriziogianni7/lifi-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "lightningprox": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/unixlamadev-spec/lightningprox/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "line-oa": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/picseeinc/line-oa/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "link-digest": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/zerone0x/link-digest/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "linux-desktop": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ouyangabel/linux-desktop/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "linz-public-transport": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/fjrevoredo/linz-public-transport/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "lnget": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/roasbeef/lnget/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "lofy-fitness": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/harrey401/lofy-fitness/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "logistics-tracking": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/shopmeskills/logistics-tracking/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "lygo-guardian-p0-stack": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/deepseekoracle/lygo-guardian-p0-stack/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "lyrical-fable": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/sanzgiri/lyrical-fable/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "mac-control": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/easonc13/mac-control/SKILL.md",
-      "lastAnalyzed": "2026-03-14T06:29:08.454Z",
-      "status": "analyzed"
-    },
-    "mac-use": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/kekejun/mac-use/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "macos-calendar": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/lucaperret/macos-calendar/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "macos-reminders": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/lucaperret/macos-reminders/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "map-grabber": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/qrost/map-grabber/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "market-pulse": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/lopushok9/market-pulse/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "market-snapshot": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/nicholasoxford/market-snapshot/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "market-test-price": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/li-zoe-x/market-test-price/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "math-worksheets": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/trondw/math-worksheets/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "mcp-chrome": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/femto/mcp-chrome/SKILL.md",
-      "lastAnalyzed": "2026-03-14T06:29:08.454Z",
-      "status": "analyzed"
-    },
-    "mealie": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/g1mb01d/mealie/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "meeting-notes-pro": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/olivermonneke/meeting-notes-pro/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "memberstack-cli": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/bensabic/memberstack-cli/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "meta-fb-inbox": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/picseeinc/meta-fb-inbox/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "metengine-data-agent": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/saviour1001/metengine-data-agent/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "mh-notion": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/mohdalhashemi98-hue/mh-notion/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "minimal-memory": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/zencrust-ai/minimal-memory/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "minimax-speech": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wingchiu/minimax-speech/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "mukt": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/hgosansn/mukt/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "multilogin": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/glebkazachinskiy/multilogin/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "multiloginx": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/multilogincom/multiloginx/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "mupibox-media-db": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/tomquist/mupibox-media-db/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "my-nano-image": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/namebekc/my-nano-image/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "native-airtable": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/codeninja23/native-airtable/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "naverstock-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/seungdols/naverstock-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "nba-data-analytics": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/project-aeris-disaster-agent/nba-data-analytics/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "nblm": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/magicseek/nblm/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "near-qr-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ussyalfaks/near-qr-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ned-analytics": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/matt998759/ned-analytics/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "neynar-inbox": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/rishavmukherji/neynar-inbox/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "norman-manage-clients": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/stanlee000/norman-manage-clients/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "nova": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/synthluvr/nova/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "nova-act": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/zouchaoqun/nova-act/SKILL.md",
-      "lastAnalyzed": "2026-03-14T06:29:08.454Z",
-      "status": "analyzed"
-    },
-    "nso-macro-monitor": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ndtchan/nso-macro-monitor/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "obverse-payments": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ofuzorchukwuemeke/obverse-payments/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ogment-agentic-cli": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/asoviche/ogment-agentic-cli/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ohio-state-api": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/sichengchen/ohio-state-api/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ontario-course-planning": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/icej/ontario-course-planning/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "open-chrome-tabs": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/mindsocket/open-chrome-tabs/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "openrouter-usage": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/rosseyre/openrouter-usage/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ordiscan": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/t4t5/ordiscan/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ore-miner": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/jusscubs/ore-miner/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "org-memory": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/dcprevere/org-memory/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "osv-scanner": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/moenassi/osv-scanner/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "otta-cli": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/mekedron/otta-cli/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "outsmart-lp-sniping": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/outsmartchad/outsmart-lp-sniping/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "paper-notion-summarizer": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/lococaeco/paper-notion-summarizer/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "paperpod": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/shassingh09/paperpod/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "paylock": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/kgnvsk/paylock/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "payment-gateway-payram": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/buddhasource/payment-gateway-payram/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "paymentsdb": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ramonverse/paymentsdb/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "pc-master": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/amirgu/pc-master/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "perpetua": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/danielkillenberger/perpetua/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "personal-goals": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/gekacross/personal-goals/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "personal-sleep": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/gekacross/personal-sleep/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "phantombuster": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/capt-marbles/phantombuster/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "pharma-pharmacology-agent": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/cheminem/pharma-pharmacology-agent/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "pipelock": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/luckypipewrench/pipelock/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "pocket-lens": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/edenjw/pocket-lens/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "pocketlens": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/edenjw/pocketlens/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "podcast-to-substack": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/danielfoch/podcast-to-substack/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "poker-agent": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/clementsutjiatma/poker-agent/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "portfolio-tracker": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/vachanalaviswanath/portfolio-tracker/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "postcraft": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/theoking63/postcraft/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "postcraft-t3": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/theoking63/postcraft-t3/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "powerdrill-data-analysis-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/javainthinking/powerdrill-data-analysis-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "powerdrill-skills": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/javainthinking/powerdrill-skills/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "printpal-3d": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/plebbyd/printpal-3d/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "qdrant-advanced": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/yoder-bawt/qdrant-advanced/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "questions-form": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/edonadei/questions-form/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "raiffeisen-elba": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/odrobnik/raiffeisen-elba/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "reasonlayer-app-access": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/tiger01tgr/reasonlayer-app-access/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "research-reprompter": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/dorukardahan/research-reprompter/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "rss-digest": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/odysseus0/rss-digest/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "saas-worker": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/juniorxcoder/saas-worker/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "sap-integration": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/highlander89/sap-integration/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "scrapbook-illustrator": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/chunhualiao/scrapbook-illustrator/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "scrapyard": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/aetosset/scrapyard/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "sentry-issues": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/dave-b-b/sentry-issues/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "sergei-mikhailov-tg-channel-reader": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/bzsega/sergei-mikhailov-tg-channel-reader/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "sg-property-scraper": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/5kbpers/sg-property-scraper/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "shellmail": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/aaronbatchelder/shellmail/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "shopping-list": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ajeenkya/shopping-list/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "shortcut-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/incognos/shortcut-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "silk": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/silostack/silk/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "silkyway": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/silostack/silkyway/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "siyuan-task-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/zhhkheaven/siyuan-task-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "skilldevelop": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/raghuraam25/skilldevelop/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "slashbot": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/alphabot-ai/slashbot/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "smart-linkedin-inbox": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/vdybenko/smart-linkedin-inbox/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "smb-sales-boost-leads": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/tomsonx232/smb-sales-boost-leads/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "snail-mail": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/dvdegenz/snail-mail/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "snailmail": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/dvdegenz/snailmail/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "snapbyte-digest-api": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/onatm/snapbyte-digest-api/SKILL.md",
-      "lastAnalyzed": "2026-03-14T06:29:08.454Z",
-      "status": "analyzed"
-    },
-    "social-data": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/arrmlet/social-data/SKILL.md",
-      "lastAnalyzed": "2026-03-14T06:29:08.454Z",
-      "status": "analyzed"
-    },
-    "solanaprox": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/unixlamadev-spec/solanaprox/SKILL.md",
-      "lastAnalyzed": "2026-03-14T06:29:08.454Z",
-      "status": "analyzed"
-    },
-    "sota-tracker-mcp": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/romancircus/sota-tracker-mcp/SKILL.md",
-      "lastAnalyzed": "2026-03-14T06:29:08.454Z",
-      "status": "analyzed"
-    },
-    "sovereign-roast-coach": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ryudi84/sovereign-roast-coach/SKILL.md",
-      "lastAnalyzed": "2026-03-14T06:29:08.454Z",
-      "status": "analyzed"
-    },
-    "sports-betting": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/skinnynoizze/sports-betting/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "stability-ai": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/1999azzar/stability-ai/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "stakingverse-lukso": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/luksoagent/stakingverse-lukso/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "stealth-proxy": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/h4gen/stealth-proxy/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "stealthy-google-search": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/itzsubhadip/stealthy-google-search/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "stock-picker-orchestrator": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ndtchan/stock-picker-orchestrator/SKILL.md",
-      "lastAnalyzed": "2026-03-19T06:30:00Z",
-      "status": "analyzed"
-    },
-    "stock-prices": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/anthonylee1994/stock-prices/SKILL.md",
-      "lastAnalyzed": "2026-03-19T06:30:00Z",
-      "status": "analyzed"
-    },
-    "storj-agent": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/nightcode112/storj-agent/SKILL.md",
-      "lastAnalyzed": "2026-03-19T06:30:00Z",
-      "status": "analyzed"
-    },
-    "strapi": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ilya-ryzhov/strapi/SKILL.md",
-      "lastAnalyzed": "2026-03-19T06:30:00Z",
-      "status": "analyzed"
-    },
-    "student-timetable": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/extraterrest/student-timetable/SKILL.md",
-      "lastAnalyzed": "2026-03-19T06:30:00Z",
-      "status": "analyzed"
-    },
-    "substack-writer": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/shivak11/substack-writer/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "subwayskill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/nyluke/subwayskill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "super-browser": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/heldinhow/super-browser/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "table-mountain-status": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/zopyx/table-mountain-status/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "tageblatt-headlines": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/zopyx/tageblatt-headlines/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "taskline": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/brettburbidge/taskline/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "tbot-controller": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/plusgenie/tbot-controller/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "teams-hack": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/globalcaos/teams-hack/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "teamwork": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/chenxinbest/teamwork/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "telegram-context": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/fourthdensity/telegram-context/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "telegram-history": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/rhlsthrm/telegram-history/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "testskillx": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/natx223/testskillx/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "tg-history": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ls18166407597-design/tg-history/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "tg-mtproto-cli": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/cyberash-dev/tg-mtproto-cli/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "theswarm": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/marketingax/theswarm/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "tiktok-crawling": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/romneyda/tiktok-crawling/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "trending-skills": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/hjw21century/trending-skills/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "trendyol-admin": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/awelab/trendyol-admin/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "truenas-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/anotb/truenas-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "tushare-base": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/wdblink/tushare-base/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "twit-mcp": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/etherlect/twit-mcp/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "ub2-markdown-report-generator": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/underbench2-gif/ub2-markdown-report-generator/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "url2pdf": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/guoqiao/url2pdf/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "url2png": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/guoqiao/url2png/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "user-briefing": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/sai-sh/user-briefing/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "using-superpowers": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/zlc000190/using-superpowers/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "valiron-trust-layer": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/vatsashah45/valiron-trust-layer/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "vibe-notion": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/devxoul/vibe-notion/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "virtual-reading-group": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/isonaei/virtual-reading-group/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "vnstock-free-expert": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/ndtchan/vnstock-free-expert/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "wakapi-sync-skill": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/cosformula/wakapi-sync-skill/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "wallabag": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/fbrandel/wallabag/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "weibo-manager": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/hmyaoyuan/weibo-manager/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "wilma": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/aikarjal/wilma/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "wilma-triage": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/aikarjal/wilma-triage/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    },
-    "windsensei": {
-      "url": "https://github.com/openclaw/skills/tree/main/skills/jamesdwright/windsensei/SKILL.md",
-      "lastAnalyzed": null,
-      "status": "pending"
-    }
+    "1p-shortlink": { "url": "https://github.com/openclaw/skills/tree/main/skills/tuanpmt/1p-shortlink/SKILL.md", "lastAnalyzed": "2026-03-15T06:32:14.660377Z", "status": "analyzed" },
+    "2captcha": { "url": "https://github.com/openclaw/skills/tree/main/skills/adinvadim/2captcha/SKILL.md", "lastAnalyzed": "2026-03-15T06:32:14.660377Z", "status": "analyzed" },
+    "a-share-real-time-data": { "url": "https://github.com/openclaw/skills/tree/main/skills/wangdinglu/a-share-real-time-data/SKILL.md", "lastAnalyzed": "2026-03-15T06:32:14.660377Z", "status": "analyzed" },
+    "abm-outbound": { "url": "https://github.com/openclaw/skills/tree/main/skills/dru-ca/abm-outbound/SKILL.md", "lastAnalyzed": "2026-03-15T06:32:14.660377Z", "status": "analyzed" },
+    "accessibility-toolkit": { "url": "https://github.com/openclaw/skills/tree/main/skills/cgtreadw/accessibility-toolkit/SKILL.md", "lastAnalyzed": "2026-03-15T06:32:14.660377Z", "status": "analyzed" },
+    "activecampaign": { "url": "https://github.com/openclaw/skills/tree/main/skills/kesslerio/activecampaign/SKILL.md", "lastAnalyzed": "2026-03-15T06:32:14.660377Z", "status": "analyzed" },
+    "adcp-advertising": { "url": "https://github.com/openclaw/skills/tree/main/skills/edyyy62/adcp-advertising/SKILL.md", "lastAnalyzed": "2026-03-15T06:32:14.660377Z", "status": "analyzed" },
+    "admet-prediction": { "url": "https://github.com/openclaw/skills/tree/main/skills/huifer/admet-prediction/SKILL.md", "lastAnalyzed": "2026-03-15T06:32:14.660377Z", "status": "analyzed" },
+    "agent-browser": { "url": "https://github.com/openclaw/skills/tree/main/skills/murphykobe/agent-browser-2/SKILL.md", "lastAnalyzed": "2026-03-19T06:30:00Z", "status": "analyzed" },
+    "agent-daily-planner": { "url": "https://github.com/openclaw/skills/tree/main/skills/gpunter/agent-daily-planner/SKILL.md", "lastAnalyzed": "2026-03-26T06:35:00Z", "status": "analyzed", "description": "Daily planning system for AI agents with persisted task state across sessions" },
+    "agent-device": { "url": "https://github.com/openclaw/skills/tree/main/skills/okwasniewski/agent-device/SKILL.md", "lastAnalyzed": "2026-03-26T06:35:00Z", "status": "analyzed", "description": "Automates iOS/Android simulators and devices - tap, type, scroll, screenshots" },
+    "agent-step-sequencer": { "url": "https://github.com/openclaw/skills/tree/main/skills/gostlightai/agent-step-sequencer/SKILL.md", "lastAnalyzed": "2026-03-26T06:35:00Z", "status": "analyzed", "description": "Multi-step scheduler with persistence across gateway resets" },
+    "agent-task-tracker": { "url": "https://github.com/openclaw/skills/tree/main/skills/rikouu/agent-task-tracker/SKILL.md", "lastAnalyzed": "2026-03-26T06:35:00Z", "status": "analyzed", "description": "Maintains live task state file for resuming context after session resets" },
+    "agent-zero": { "url": "https://github.com/openclaw/skills/tree/main/skills/dowingard/agent-zero-bridge/SKILL.md", "lastAnalyzed": "2026-03-26T06:35:00Z", "status": "analyzed", "description": "Bidirectional bridge to Agent Zero for autonomous task delegation" },
+    "agentapi": { "url": "https://github.com/openclaw/skills/tree/main/skills/gizmo-dev/agentapi/SKILL.md", "lastAnalyzed": "2026-03-26T06:35:00Z", "status": "analyzed", "description": "Browsable directory of 50+ MCP-compatible APIs for AI agents" },
+    "agentapi-hub": { "url": "https://github.com/openclaw/skills/tree/main/skills/gizmo-dev/agentapi-hub/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "agentaudit": { "url": "https://github.com/openclaw/skills/tree/main/skills/starbuck100/agentaudit/SKILL.md", "lastAnalyzed": "2026-03-26T06:35:00Z", "status": "analyzed", "description": "Security gate for package installs with CVE correlation" },
+    "agentaudit-skill": { "url": "https://github.com/openclaw/skills/tree/main/skills/starbuck100/agentaudit-skill/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "agentmail-integration": { "url": "https://github.com/openclaw/skills/tree/main/skills/synesthesia-wav/agentmail-integration/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "agresource": { "url": "https://github.com/openclaw/skills/tree/main/skills/brianppetty/agresource/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ai-hunter-pro": { "url": "https://github.com/openclaw/skills/tree/main/skills/traprapitalianazional-dev/ai-hunter-pro/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ai-meeting-scheduling": { "url": "https://github.com/openclaw/skills/tree/main/skills/dheerg/ai-meeting-scheduling/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ai-news-oracle": { "url": "https://github.com/openclaw/skills/tree/main/skills/swimmingkiim/ai-news-oracle/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "airtable-automation": { "url": "https://github.com/openclaw/skills/tree/main/skills/sohamganatra/airtable-automation/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "airtable-participants": { "url": "https://github.com/openclaw/skills/tree/main/skills/austinmao/airtable-participants/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ak-rss-24h-brief": { "url": "https://github.com/openclaw/skills/tree/main/skills/seandong/ak-rss-24h-brief/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "amazon-product-search-api-skill": { "url": "https://github.com/openclaw/skills/tree/main/skills/phheng/amazon-product-search-api-skill/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "amazon-reviews-api-skill": { "url": "https://github.com/openclaw/skills/tree/main/skills/phheng/amazon-reviews-api-skill/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "amazon-shopper": { "url": "https://github.com/openclaw/skills/tree/main/skills/brennerspear/amazon-shopper/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "android-adb": { "url": "https://github.com/openclaw/skills/tree/main/skills/staticai/android-adb/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "anycrawl": { "url": "https://github.com/openclaw/skills/tree/main/skills/techlaai/anycrawl/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "aoi-hackathon-scout-lite": { "url": "https://github.com/openclaw/skills/tree/main/skills/edmonddantesj/aoi-hackathon-scout-lite/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "api-tester": { "url": "https://github.com/openclaw/skills/tree/main/skills/wanng-ide/api-tester/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "apify-lead-generation": { "url": "https://github.com/openclaw/skills/tree/main/skills/jirispilka/apify-lead-generation/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "apiosk": { "url": "https://github.com/openclaw/skills/tree/main/skills/obcraft/apiosk/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "appstore-rating-pulse": { "url": "https://github.com/openclaw/skills/tree/main/skills/aligurelli/appstore-rating-pulse/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "arxiv-1-0-1": { "url": "https://github.com/openclaw/skills/tree/main/skills/tariqsumatri82/arxiv-1-0-1/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "arxiv-skill-learning": { "url": "https://github.com/openclaw/skills/tree/main/skills/wanng-ide/arxiv-skill-learning/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "asr": { "url": "https://github.com/openclaw/skills/tree/main/skills/ilyakam/asr/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "atl-mobile": { "url": "https://github.com/openclaw/skills/tree/main/skills/jordancoin/atl-mobile/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "audiomind": { "url": "https://github.com/openclaw/skills/tree/main/skills/wells1137/audiomind/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "auto-context-manager": { "url": "https://github.com/openclaw/skills/tree/main/skills/imraxy/auto-context-manager/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "auto-dealer-marketing": { "url": "https://github.com/openclaw/skills/tree/main/skills/lazralabs-eng/auto-dealer-marketing/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "auto-updater": { "url": "https://github.com/openclaw/skills/tree/main/skills/maximeprades/auto-updater/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "autofillin": { "url": "https://github.com/openclaw/skills/tree/main/skills/leohan123123/autofillin/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "automation-workflows": { "url": "https://github.com/openclaw/skills/tree/main/skills/jk-0001/automation-workflows/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "autonomy-windowed": { "url": "https://github.com/openclaw/skills/tree/main/skills/luciusrockwing/autonomy-windowed/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "babyconnect": { "url": "https://github.com/openclaw/skills/tree/main/skills/kesslerio/babyconnect/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "bamboohr-automation": { "url": "https://github.com/openclaw/skills/tree/main/skills/sohamganatra/bamboohr-automation/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "baseball": { "url": "https://github.com/openclaw/skills/tree/main/skills/khaney64/baseball/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "basecamp-automation": { "url": "https://github.com/openclaw/skills/tree/main/skills/sohamganatra/basecamp-automation/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "bitaxe-monitor": { "url": "https://github.com/openclaw/skills/tree/main/skills/pietro395/bitaxe-monitor/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "bits": { "url": "https://github.com/openclaw/skills/tree/main/skills/robbiethompson18/bits/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "book-fetch": { "url": "https://github.com/openclaw/skills/tree/main/skills/zerone0x/book-fetch/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "bookmark-intelligence": { "url": "https://github.com/openclaw/skills/tree/main/skills/bkrigmo1/bookmark-intelligence/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "box-automation": { "url": "https://github.com/openclaw/skills/tree/main/skills/sohamganatra/box-automation/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "brain-search": { "url": "https://github.com/openclaw/skills/tree/main/skills/ryandeangraves/brain-search/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "browser-ladder": { "url": "https://github.com/openclaw/skills/tree/main/skills/ktpriyatham/browser-ladder/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "browser-use": { "url": "https://github.com/openclaw/skills/tree/main/skills/shawnpana/browser-use/SKILL.md", "lastAnalyzed": "2026-03-14T06:29:08.454Z", "status": "analyzed" },
+    "browsh": { "url": "https://github.com/openclaw/skills/tree/main/skills/gumadeiras/browsh/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "brw-linkedin-authority-builder": { "url": "https://github.com/openclaw/skills/tree/main/skills/brianrwagner/brw-linkedin-authority-builder/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "brw-linkedin-authority-builder-1-0-0": { "url": "https://github.com/openclaw/skills/tree/main/skills/rezcarbon/brw-linkedin-authority-builder-1-0-0/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "btc-analyzer": { "url": "https://github.com/openclaw/skills/tree/main/skills/newbienodes/btc-analyzer/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "bybit-order-book": { "url": "https://github.com/openclaw/skills/tree/main/skills/davidm413/bybit-order-book/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "cal-com-automation": { "url": "https://github.com/openclaw/skills/tree/main/skills/sohamganatra/cal-com-automation/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "camoufox": { "url": "https://github.com/openclaw/skills/tree/main/skills/goodgoodjm/camoufox/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "catime": { "url": "https://github.com/openclaw/skills/tree/main/skills/yazelin/catime/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ccxt": { "url": "https://github.com/openclaw/skills/tree/main/skills/pcriadoperez/ccxt/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "cdp-browser": { "url": "https://github.com/openclaw/skills/tree/main/skills/gostlightai/cdp-browser/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "claude-cost-cli": { "url": "https://github.com/openclaw/skills/tree/main/skills/cyberash-dev/claude-cost-cli/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "claude-usage-cli": { "url": "https://github.com/openclaw/skills/tree/main/skills/cyberash-dev/claude-usage-cli/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "client-communication-engine": { "url": "https://github.com/openclaw/skills/tree/main/skills/satoshistackalotto/client-communication-engine/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "client-data-management": { "url": "https://github.com/openclaw/skills/tree/main/skills/satoshistackalotto/client-data-management/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "client-flow": { "url": "https://github.com/openclaw/skills/tree/main/skills/ariktulcha/client-flow/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "cls-news-scraper": { "url": "https://github.com/openclaw/skills/tree/main/skills/ningjingzhiyuande/cls-news-scraper/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "cn-ecommerce-search": { "url": "https://github.com/openclaw/skills/tree/main/skills/shopmeskills/cn-ecommerce-search/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "coda-io": { "url": "https://github.com/openclaw/skills/tree/main/skills/simonfunk/coda-io/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "code-stats": { "url": "https://github.com/openclaw/skills/tree/main/skills/autogame-17/code-stats/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "code-tester": { "url": "https://github.com/openclaw/skills/tree/main/skills/frhn9/code-tester/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "coingecko": { "url": "https://github.com/openclaw/skills/tree/main/skills/olisim02/coingecko/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "comonyx-admin": { "url": "https://github.com/openclaw/skills/tree/main/skills/waqas-orcalo/comonyx-admin/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "cputemp": { "url": "https://github.com/openclaw/skills/tree/main/skills/rhcit/cputemp/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "curlship": { "url": "https://github.com/openclaw/skills/tree/main/skills/marcindudekdev/curlship/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "daily-dev-agentic": { "url": "https://github.com/openclaw/skills/tree/main/skills/idoshamun/daily-dev-agentic/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "daily-news": { "url": "https://github.com/openclaw/skills/tree/main/skills/ym2760184260/daily-news/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "db-readonly": { "url": "https://github.com/openclaw/skills/tree/main/skills/reed1898/db-readonly/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "desearch-x-search": { "url": "https://github.com/openclaw/skills/tree/main/skills/okradze/desearch-x-search/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "doro-command-creator": { "url": "https://github.com/openclaw/skills/tree/main/skills/a2mus/doro-command-creator/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "dune-analytics-api": { "url": "https://github.com/openclaw/skills/tree/main/skills/lz-web3/dune-analytics-api/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "echo-repeater": { "url": "https://github.com/openclaw/skills/tree/main/skills/theeightt/echo-repeater/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "edstem": { "url": "https://github.com/openclaw/skills/tree/main/skills/axel5o5/edstem/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "entity-optimizer": { "url": "https://github.com/openclaw/skills/tree/main/skills/aaron-he-zhu/entity-optimizer/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "erpnext-frappe": { "url": "https://github.com/openclaw/skills/tree/main/skills/ravana-indus/erpnext-frappe/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "error-driven-evolution": { "url": "https://github.com/openclaw/skills/tree/main/skills/marsnavi/error-driven-evolution/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "evomap": { "url": "https://github.com/openclaw/skills/tree/main/skills/segasonicye/evomap/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "exa-tool": { "url": "https://github.com/openclaw/skills/tree/main/skills/claireaicodes/exa-tool/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "external-ki-integration-backup": { "url": "https://github.com/openclaw/skills/tree/main/skills/konscious0beast/external-ki-integration-backup/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "fastfold-ai-fold": { "url": "https://github.com/openclaw/skills/tree/main/skills/juliocesar-io/fastfold-ai-fold/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "fatsecret": { "url": "https://github.com/openclaw/skills/tree/main/skills/f-liva/fatsecret/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "feed-digest": { "url": "https://github.com/openclaw/skills/tree/main/skills/odysseus0/feed-digest/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "feishu-bitable-creator": { "url": "https://github.com/openclaw/skills/tree/main/skills/gaowanqi08141999/feishu-bitable-creator/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "feishu-meeting-assistant": { "url": "https://github.com/openclaw/skills/tree/main/skills/autogame-17/feishu-meeting-assistant/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "feishu-sheets": { "url": "https://github.com/openclaw/skills/tree/main/skills/wesley138cn/feishu-sheets/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "feishu-sheets-skill": { "url": "https://github.com/openclaw/skills/tree/main/skills/wesley138cn/feishu-sheets-skill/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "fin-cog": { "url": "https://github.com/openclaw/skills/tree/main/skills/nitishgargiitd/fin-cog/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "firefly": { "url": "https://github.com/openclaw/skills/tree/main/skills/codes71/firefly/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "free-a-share-real-time-data": { "url": "https://github.com/openclaw/skills/tree/main/skills/wangdinglu/free-a-share-real-time-data/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ft-reader": { "url": "https://github.com/openclaw/skills/tree/main/skills/zhouziyue233/ft-reader/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "fxtwitter": { "url": "https://github.com/openclaw/skills/tree/main/skills/namphamdev/fxtwitter/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "geo-content-optimizer": { "url": "https://github.com/openclaw/skills/tree/main/skills/aaron-he-zhu/geo-content-optimizer/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "geometry": { "url": "https://github.com/openclaw/skills/tree/main/skills/geometrydotsh/geometry/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "get-kalshi-live-games": { "url": "https://github.com/openclaw/skills/tree/main/skills/kanakamedalasumanth/get-kalshi-live-games/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "glm-image": { "url": "https://github.com/openclaw/skills/tree/main/skills/chunhualiao/glm-image/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "goal-tracker": { "url": "https://github.com/openclaw/skills/tree/main/skills/alti-systems/goal-tracker/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "goldenseed": { "url": "https://github.com/openclaw/skills/tree/main/skills/beanapologist/goldenseed/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "goyfiles-epstein": { "url": "https://github.com/openclaw/skills/tree/main/skills/davfd/goyfiles-epstein/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "grago": { "url": "https://github.com/openclaw/skills/tree/main/skills/solsuk/grago/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "grok-browser": { "url": "https://github.com/openclaw/skills/tree/main/skills/easonc13/grok-browser/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "guicountrol": { "url": "https://github.com/openclaw/skills/tree/main/skills/dreamtraveler13/guicountrol/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "hfnews": { "url": "https://github.com/openclaw/skills/tree/main/skills/huberteff/hfnews/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "hi": { "url": "https://github.com/openclaw/skills/tree/main/skills/roman181/hi/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "hive-mind": { "url": "https://github.com/openclaw/skills/tree/main/skills/lilyjazz/hive-mind/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "hle-benchmark-evolver": { "url": "https://github.com/openclaw/skills/tree/main/skills/wanng-ide/hle-benchmark-evolver/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "huggingface-trends": { "url": "https://github.com/openclaw/skills/tree/main/skills/tianxingleo/huggingface-trends/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "image-enhancer": { "url": "https://github.com/openclaw/skills/tree/main/skills/wells1137/image-enhancer/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "imprettyamazing": { "url": "https://github.com/openclaw/skills/tree/main/skills/macksmind/imprettyamazing/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "index-cards": { "url": "https://github.com/openclaw/skills/tree/main/skills/jonwheatley/index-cards/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "input-classification-v1": { "url": "https://github.com/openclaw/skills/tree/main/skills/omprasad122007-rgb/input-classification-v1/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "instagram-scraper": { "url": "https://github.com/openclaw/skills/tree/main/skills/arulmozhiv/instagram-scraper/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "interesting-finding": { "url": "https://github.com/openclaw/skills/tree/main/skills/zerone0x/interesting-finding/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "invoice-collector": { "url": "https://github.com/openclaw/skills/tree/main/skills/mintannn/invoice-collector/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ipfs-client": { "url": "https://github.com/openclaw/skills/tree/main/skills/apexfork/ipfs-client/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "iserv": { "url": "https://github.com/openclaw/skills/tree/main/skills/finnbusse/iserv/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "itinerary-carousel-post": { "url": "https://github.com/openclaw/skills/tree/main/skills/psyduckler/itinerary-carousel-post/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "itinerary-carousel-post-topaz": { "url": "https://github.com/openclaw/skills/tree/main/skills/psyduckler/itinerary-carousel-post-topaz/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "iyeque-device-control": { "url": "https://github.com/openclaw/skills/tree/main/skills/iyeque/iyeque-device-control/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "jarvis-api-contract-guard-01": { "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-api-contract-guard-01/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "jarvis-bug-triage-01": { "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-bug-triage-01/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "jarvis-ci-flake-hunter-01": { "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-ci-flake-hunter-01/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "jarvis-db-query-doctor-01": { "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-db-query-doctor-01/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "jarvis-migration-risk-radar-01": { "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-migration-risk-radar-01/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "jarvis-persona-style-calibrator-01": { "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-persona-style-calibrator-01/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "jarvis-test-gap-finder-01": { "url": "https://github.com/openclaw/skills/tree/main/skills/xammarie/jarvis-test-gap-finder-01/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "jobs-ive": { "url": "https://github.com/openclaw/skills/tree/main/skills/stubbi/jobs-ive/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "jup-skill": { "url": "https://github.com/openclaw/skills/tree/main/skills/lifeofpavs/jup-skill/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "level-design-patterns": { "url": "https://github.com/openclaw/skills/tree/main/skills/cryptorabea/level-design-patterns/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "lifi-skill": { "url": "https://github.com/openclaw/skills/tree/main/skills/fabriziogianni7/lifi-skill/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "lightningprox": { "url": "https://github.com/openclaw/skills/tree/main/skills/unixlamadev-spec/lightningprox/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "line-oa": { "url": "https://github.com/openclaw/skills/tree/main/skills/picseeinc/line-oa/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "link-digest": { "url": "https://github.com/openclaw/skills/tree/main/skills/zerone0x/link-digest/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "linux-desktop": { "url": "https://github.com/openclaw/skills/tree/main/skills/ouyangabel/linux-desktop/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "linz-public-transport": { "url": "https://github.com/openclaw/skills/tree/main/skills/fjrevoredo/linz-public-transport/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "lnget": { "url": "https://github.com/openclaw/skills/tree/main/skills/roasbeef/lnget/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "lofy-fitness": { "url": "https://github.com/openclaw/skills/tree/main/skills/harrey401/lofy-fitness/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "logistics-tracking": { "url": "https://github.com/openclaw/skills/tree/main/skills/shopmeskills/logistics-tracking/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "lygo-guardian-p0-stack": { "url": "https://github.com/openclaw/skills/tree/main/skills/deepseekoracle/lygo-guardian-p0-stack/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "lyrical-fable": { "url": "https://github.com/openclaw/skills/tree/main/skills/sanzgiri/lyrical-fable/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "mac-control": { "url": "https://github.com/openclaw/skills/tree/main/skills/easonc13/mac-control/SKILL.md", "lastAnalyzed": "2026-03-14T06:29:08.454Z", "status": "analyzed" },
+    "mac-use": { "url": "https://github.com/openclaw/skills/tree/main/skills/kekejun/mac-use/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "macos-calendar": { "url": "https://github.com/openclaw/skills/tree/main/skills/lucaperret/macos-calendar/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "macos-reminders": { "url": "https://github.com/openclaw/skills/tree/main/skills/lucaperret/macos-reminders/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "map-grabber": { "url": "https://github.com/openclaw/skills/tree/main/skills/qrost/map-grabber/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "market-pulse": { "url": "https://github.com/openclaw/skills/tree/main/skills/lopushok9/market-pulse/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "market-snapshot": { "url": "https://github.com/openclaw/skills/tree/main/skills/nicholasoxford/market-snapshot/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "market-test-price": { "url": "https://github.com/openclaw/skills/tree/main/skills/li-zoe-x/market-test-price/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "math-worksheets": { "url": "https://github.com/openclaw/skills/tree/main/skills/trondw/math-worksheets/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "mcp-chrome": { "url": "https://github.com/openclaw/skills/tree/main/skills/femto/mcp-chrome/SKILL.md", "lastAnalyzed": "2026-03-14T06:29:08.454Z", "status": "analyzed" },
+    "mealie": { "url": "https://github.com/openclaw/skills/tree/main/skills/g1mb01d/mealie/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "meeting-notes-pro": { "url": "https://github.com/openclaw/skills/tree/main/skills/olivermonneke/meeting-notes-pro/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "memberstack-cli": { "url": "https://github.com/openclaw/skills/tree/main/skills/bensabic/memberstack-cli/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "menews": { "url": "https://clawskills.sh/skills/jamesmenews-menews", "lastAnalyzed": null, "status": "new" },
+    "meta-fb-inbox": { "url": "https://github.com/openclaw/skills/tree/main/skills/picseeinc/meta-fb-inbox/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "metengine-data-agent": { "url": "https://github.com/openclaw/skills/tree/main/skills/saviour1001/metengine-data-agent/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "mh-notion": { "url": "https://github.com/openclaw/skills/tree/main/skills/mohdalhashemi98-hue/mh-notion/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "minimal-memory": { "url": "https://github.com/openclaw/skills/tree/main/skills/zencrust-ai/minimal-memory/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "minimax-speech": { "url": "https://github.com/openclaw/skills/tree/main/skills/wingchiu/minimax-speech/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "mukt": { "url": "https://github.com/openclaw/skills/tree/main/skills/hgosansn/mukt/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "multilogin": { "url": "https://github.com/openclaw/skills/tree/main/skills/glebkazachinskiy/multilogin/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "multiloginx": { "url": "https://github.com/openclaw/skills/tree/main/skills/multilogincom/multiloginx/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "mupibox-media-db": { "url": "https://github.com/openclaw/skills/tree/main/skills/tomquist/mupibox-media-db/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "my-nano-image": { "url": "https://github.com/openclaw/skills/tree/main/skills/namebekc/my-nano-image/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "native-airtable": { "url": "https://github.com/openclaw/skills/tree/main/skills/codeninja23/native-airtable/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "naverstock-skill": { "url": "https://github.com/openclaw/skills/tree/main/skills/seungdols/naverstock-skill/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "nba-data-analytics": { "url": "https://github.com/openclaw/skills/tree/main/skills/project-aeris-disaster-agent/nba-data-analytics/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "nblm": { "url": "https://github.com/openclaw/skills/tree/main/skills/magicseek/nblm/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "near-qr-skill": { "url": "https://github.com/openclaw/skills/tree/main/skills/ussyalfaks/near-qr-skill/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ned-analytics": { "url": "https://github.com/openclaw/skills/tree/main/skills/matt998759/ned-analytics/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "neynar-inbox": { "url": "https://github.com/openclaw/skills/tree/main/skills/rishavmukherji/neynar-inbox/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "norman-manage-clients": { "url": "https://github.com/openclaw/skills/tree/main/skills/stanlee000/norman-manage-clients/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "nova": { "url": "https://github.com/openclaw/skills/tree/main/skills/synthluvr/nova/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "nova-act": { "url": "https://github.com/openclaw/skills/tree/main/skills/zouchaoqun/nova-act/SKILL.md", "lastAnalyzed": "2026-03-14T06:29:08.454Z", "status": "analyzed" },
+    "nso-macro-monitor": { "url": "https://github.com/openclaw/skills/tree/main/skills/ndtchan/nso-macro-monitor/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "obverse-payments": { "url": "https://github.com/openclaw/skills/tree/main/skills/ofuzorchukwuemeke/obverse-payments/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ogment-agentic-cli": { "url": "https://github.com/openclaw/skills/tree/main/skills/asoviche/ogment-agentic-cli/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ohio-state-api": { "url": "https://github.com/openclaw/skills/tree/main/skills/sichengchen/ohio-state-api/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ontario-course-planning": { "url": "https://github.com/openclaw/skills/tree/main/skills/icej/ontario-course-planning/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "open-chrome-tabs": { "url": "https://github.com/openclaw/skills/tree/main/skills/mindsocket/open-chrome-tabs/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "openrouter-usage": { "url": "https://clawskills.sh/skills/rosseyre-openrouter-usage", "lastAnalyzed": "2026-03-26T06:35:00Z", "status": "analyzed", "description": "Fetches real-time and historical cost data from OpenRouter API" },
+    "ordiscan": { "url": "https://github.com/openclaw/skills/tree/main/skills/t4t5/ordiscan/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "ore-miner": { "url": "https://github.com/openclaw/skills/tree/main/skills/jusscubs/ore-miner/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "org-memory": { "url": "https://clawskills.sh/skills/dcprevere-org-memory", "lastAnalyzed": null, "status": "new" },
+    "osv-scanner": { "url": "https://clawskills.sh/skills/moenassi-osv-scanner", "lastAnalyzed": null, "status": "new" },
+    "otta-cli": { "url": "https://clawskills.sh/skills/mekedron-otta-cli", "lastAnalyzed": null, "status": "new" },
+    "outsmart-lp-sniping": { "url": "https://github.com/openclaw/skills/tree/main/skills/outsmartchad/outsmart-lp-sniping/SKILL.md", "lastAnalyzed": null, "status": "pending" },
+    "paper-notion-summarizer": { "url": "https://clawskills.sh/skills/lococaeco-paper-notion-summarizer", "lastAnalyzed": null, "status": "new" },
+    "paperpod": { "url": "https://clawskills.sh/skills/shassingh09-paperpod", "lastAnalyzed": null, "status": "new" },
+    "paylock": { "url": "https://clawskills.sh/skills/kgnvsk-paylock", "lastAnalyzed": null, "status": "new" },
+    "payment-gateway-payram": { "url": "https://clawskills.sh/skills/buddhasource-payment-gateway-payram", "lastAnalyzed": null, "status": "new" },
+    "paymentsdb": { "url": "https://clawskills.sh/skills/ramonverse-paymentsdb", "lastAnalyzed": null, "status": "new" },
+    "pc-master": { "url": "https://clawskills.sh/skills/amirgu-pc-master", "lastAnalyzed": null, "status": "new" },
+    "perpetua": { "url": "https://clawskills.sh/skills/danielkillenberger-perpetua", "lastAnalyzed": null, "status": "new" },
+    "personal-goals": { "url": "https://clawskills.sh/skills/gekacross-personal-goals", "lastAnalyzed": null, "status": "new" },
+    "personal-sleep": { "url": "https://clawskills.sh/skills/gekacross-personal-sleep", "lastAnalyzed": null, "status": "new" },
+    "phantombuster": { "url": "https://clawskills.sh/skills/capt-marbles-phantombuster", "lastAnalyzed": null, "status": "new" },
+    "pharma-pharmacology-agent": { "url": "https://clawskills.sh/skills/cheminem-pharma-pharmacology-agent", "lastAnalyzed": null, "status": "new" },
+    "pipelock": { "url": "https://clawskills.sh/skills/luckypipewrench-pipelock", "lastAnalyzed": null, "status": "new" },
+    "pocket-lens": { "url": "https://clawskills.sh/skills/edenjw-pocket-lens", "lastAnalyzed": null, "status": "new" },
+    "pocketlens": { "url": "https://clawskills.sh/skills/edenjw-pocketlens", "lastAnalyzed": null, "status": "new" },
+    "podcast-to-substack": { "url": "https://clawskills.sh/skills/danielfoch-podcast-to-substack", "lastAnalyzed": null, "status": "new" },
+    "poker-agent": { "url": "https://clawskills.sh/skills/clementsutjiatma-poker-agent", "lastAnalyzed": null, "status": "new" },
+    "portfolio-tracker": { "url": "https://clawskills.sh/skills/vachanalaviswanath-portfolio-tracker", "lastAnalyzed": null, "status": "new" },
+    "postcraft": { "url": "https://clawskills.sh/skills/theoking63-postcraft", "lastAnalyzed": null, "status": "new" },
+    "postcraft-t3": { "url": "https://clawskills.sh/skills/theoking63-postcraft-t3", "lastAnalyzed": null, "status": "new" },
+    "powerdrill-data-analysis-skill": { "url": "https://clawskills.sh/skills/javainthinking-powerdrill-data-analysis-skill", "lastAnalyzed": null, "status": "new" },
+    "powerdrill-skills": { "url": "https://clawskills.sh/skills/javainthinking-powerdrill-skills", "lastAnalyzed": null, "status": "new" },
+    "printpal-3d": { "url": "https://clawskills.sh/skills/plebbyd-printpal-3d", "lastAnalyzed": null, "status": "new" },
+    "qdrant-advanced": { "url": "https://clawskills.sh/skills/yoder-bawt-qdrant-advanced", "lastAnalyzed": null, "status": "new" },
+    "questions-form": { "url": "https://clawskills.sh/skills/edonadei-questions-form", "lastAnalyzed": null, "status": "new" },
+    "raiffeisen-elba": { "url": "https://clawskills.sh/skills/odrobnik-raiffeisen-elba", "lastAnalyzed": null, "status": "new" },
+    "reasonlayer-app-access": { "url": "https://clawskills.sh/skills/tiger01tgr-reasonlayer-app-access", "lastAnalyzed": null, "status": "new" },
+    "research-reprompter": { "url": "https://clawskills.sh/skills/dorukardahan-research-reprompter", "lastAnalyzed": null, "status": "new" },
+    "rss-digest": { "url": "https://clawskills.sh/skills/odysseus0-rss-digest", "lastAnalyzed": null, "status": "new" },
+    "saas-worker": { "url": "https://clawskills.sh/skills/juniorxcoder-saas-worker", "lastAnalyzed": null, "status": "new" },
+    "sap-integration": { "url": "https://clawskills.sh/skills/highlander89-sap-integration", "lastAnalyzed": null, "status": "new" },
+    "scrapbook-illustrator": { "url": "https://clawskills.sh/skills/chunhualiao-scrapbook-illustrator", "lastAnalyzed": null, "status": "new" },
+    "scrapyard": { "url": "https://clawskills.sh/skills/aetosset-scrapyard", "lastAnalyzed": null, "status": "new" },
+    "sentry-issues": { "url": "https://clawskills.sh/skills/dave-b-b-sentry-issues", "lastAnalyzed": null, "status": "new" },
+    "sergei-mikhailov-tg-channel-reader": { "url": "https://clawskills.sh/skills/bzsega-sergei-mikhailov-tg-channel-reader", "lastAnalyzed": null, "status": "new" },
+    "sg-property-scraper": { "url": "https://clawskills.sh/skills/5kbpers-sg-property-scraper", "lastAnalyzed": null, "status": "new" },
+    "shellmail": { "url": "https://clawskills.sh/skills/aaronbatchelder-shellmail", "lastAnalyzed": null, "status": "new" },
+    "shopping-list": { "url": "https://clawskills.sh/skills/ajeenkya-shopping-list", "lastAnalyzed": null, "status": "new" },
+    "shortcut-skill": { "url": "https://clawskills.sh/skills/incognos-shortcut-skill", "lastAnalyzed": null, "status": "new" },
+    "siyuan-task-skill": { "url": "https://clawskills.sh/skills/zhhkheaven-siyuan-task-skill", "lastAnalyzed": null, "status": "new" },
+    "skilldevelop": { "url": "https://clawskills.sh/skills/raghuraam25-skilldevelop", "lastAnalyzed": null, "status": "new" },
+    "slashbot": { "url": "https://clawskills.sh/skills/alphabot-ai-slashbot", "lastAnalyzed": null, "status": "new" },
+    "smart-linkedin-inbox": { "url": "https://clawskills.sh/skills/vdybenko-smart-linkedin-inbox", "lastAnalyzed": null, "status": "new" },
+    "smb-sales-boost-leads": { "url": "https://clawskills.sh/skills/tomsonx232-smb-sales-boost-leads", "lastAnalyzed": null, "status": "new" },
+    "snail-mail": { "url": "https://clawskills.sh/skills/dvdegenz-snail-mail", "lastAnalyzed": null, "status": "new" },
+    "snailmail": { "url": "https://clawskills.sh/skills/dvdegenz-snailmail", "lastAnalyzed": null, "status": "new" },
+    "snapbyte-digest-api": { "url": "https://github.com/openclaw/skills/tree/main/skills/onatm/snapbyte-digest-api/SKILL.md", "lastAnalyzed": "2026-03-14T06:29:08.454Z", "status": "analyzed" },
+    "social-data": { "url": "https://github.com/openclaw/skills/tree/main/skills/arrmlet/social-data/SKILL.md", "lastAnalyzed": "2026-03-14T06:29:08.454Z", "status": "analyzed" },
+    "solanaprox": { "url": "https://github.com/openclaw/skills/tree/main/skills/unixlamadev-spec/solanaprox/SKILL.md", "lastAnalyzed": "2026-03-14T06:29:08.454Z", "status": "analyzed" },
+    "sota-tracker-mcp": { "url": "https://github.com/openclaw/skills/tree/main/skills/romancircus/sota-tracker-mcp/SKILL.md", "lastAnalyzed": "2026-03-14T06:29:08.454Z", "status": "analyzed" },
+    "sovereign-roast-coach": { "url": "https://github.com/openclaw/skills/tree/main/skills/ryudi84/sovereign-roast-coach/SKILL.md", "lastAnalyzed": "2026-03-14T06:29:08.454Z", "status": "analyzed" },
+    "sports-betting": { "url": "https://clawskills.sh/skills/skinnynoizze-sports-betting", "lastAnalyzed": null, "status": "new" },
+    "stability-ai": { "url": "https://clawskills.sh/skills/1999azzar-stability-ai", "lastAnalyzed": null, "status": "new" },
+    "stakingverse-lukso": { "url": "https://clawskills.sh/skills/luksoagent-stakingverse-lukso", "lastAnalyzed": null, "status": "new" },
+    "stealth-proxy": { "url": "https://clawskills.sh/skills/h4gen-stealth-proxy", "lastAnalyzed": null, "status": "new" },
+    "stealthy-google-search": { "url": "https://clawskills.sh/skills/itzsubhadip-stealthy-google-search", "lastAnalyzed": null, "status": "new" },
+    "stock-picker-orchestrator": { "url": "https://github.com/openclaw/skills/tree/main/skills/ndtchan/stock-picker-orchestrator/SKILL.md", "lastAnalyzed": "2026-03-19T06:30:00Z", "status": "analyzed" },
+    "stock-prices": { "url": "https://github.com/openclaw/skills/tree/main/skills/anthonylee1994/stock-prices/SKILL.md", "lastAnalyzed": "2026-03-19T06:30:00Z", "status": "analyzed" },
+    "storj-agent": { "url": "https://github.com/openclaw/skills/tree/main/skills/nightcode112/storj-agent/SKILL.md", "lastAnalyzed": "2026-03-19T06:30:00Z", "status": "analyzed" },
+    "strapi": { "url": "https://github.com/openclaw/skills/tree/main/skills/ilya-ryzhov/strapi/SKILL.md", "lastAnalyzed": "2026-03-19T06:30:00Z", "status": "analyzed" },
+    "student-timetable": { "url": "https://github.com/openclaw/skills/tree/main/skills/extraterrest/student-timetable/SKILL.md", "lastAnalyzed": "2026-03-19T06:30:00Z", "status": "analyzed" },
+    "substack-writer": { "url": "https://clawskills.sh/skills/shivak11-substack-writer", "lastAnalyzed": null, "status": "new" },
+    "subwayskill": { "url": "https://clawskills.sh/skills/nyluke-subwayskill", "lastAnalyzed": null, "status": "new" },
+    "super-browser": { "url": "https://clawskills.sh/skills/heldinhow-super-browser", "lastAnalyzed": null, "status": "new" },
+    "table-mountain-status": { "url": "https://clawskills.sh/skills/zopyx-table-mountain-status", "lastAnalyzed": null, "status": "new" },
+    "tageblatt-headlines": { "url": "https://clawskills.sh/skills/zopyx-tageblatt-headlines", "lastAnalyzed": null, "status": "new" },
+    "taskline": { "url": "https://clawskills.sh/skills/brettburbidge-taskline", "lastAnalyzed": null, "status": "new" },
+    "tbot-controller": { "url": "https://clawskills.sh/skills/plusgenie-tbot-controller", "lastAnalyzed": null, "status": "new" },
+    "teams-hack": { "url": "https://clawskills.sh/skills/globalcaos-teams-hack", "lastAnalyzed": null, "status": "new" },
+    "teamwork": { "url": "https://clawskills.sh/skills/chenxinbest-teamwork", "lastAnalyzed": null, "status": "new" },
+    "telegram-context": { "url": "https://clawskills.sh/skills/fourthdensity-telegram-context", "lastAnalyzed": null, "status": "new" },
+    "telegram-history": { "url": "https://clawskills.sh/skills/rhlsthrm-telegram-history", "lastAnalyzed": null, "status": "new" },
+    "testskillx": { "url": "https://clawskills.sh/skills/natx223-testskillx", "lastAnalyzed": null, "status": "new" },
+    "tg-history": { "url": "https://clawskills.sh/skills/ls18166407597-design-tg-history", "lastAnalyzed": null, "status": "new" },
+    "tg-mtproto-cli": { "url": "https://clawskills.sh/skills/cyberash-dev-tg-mtproto-cli", "lastAnalyzed": null, "status": "new" },
+    "theswarm": { "url": "https://clawskills.sh/skills/marketingax-theswarm", "lastAnalyzed": null, "status": "new" },
+    "tiktok-crawling": { "url": "https://clawskills.sh/skills/romneyda-tiktok-crawling", "lastAnalyzed": null, "status": "new" },
+    "trending-skills": { "url": "https://clawskills.sh/skills/hjw21century-trending-skills", "lastAnalyzed": null, "status": "new" },
+    "trendyol-admin": { "url": "https://clawskills.sh/skills/awelab-trendyol-admin", "lastAnalyzed": null, "status": "new" },
+    "truenas-skill": { "url": "https://clawskills.sh/skills/anotb-truenas-skill", "lastAnalyzed": null, "status": "new" },
+    "tushare-base": { "url": "https://clawskills.sh/skills/wdblink-tushare-base", "lastAnalyzed": null, "status": "new" },
+    "twit-mcp": { "url": "https://clawskills.sh/skills/etherlect-twit-mcp", "lastAnalyzed": null, "status": "new" },
+    "ub2-markdown-report-generator": { "url": "https://clawskills.sh/skills/underbench2-gif-ub2-markdown-report-generator", "lastAnalyzed": null, "status": "new" },
+    "url2pdf": { "url": "https://clawskills.sh/skills/guoqiao-url2pdf", "lastAnalyzed": null, "status": "new" },
+    "url2png": { "url": "https://clawskills.sh/skills/guoqiao-url2png", "lastAnalyzed": null, "status": "new" },
+    "user-briefing": { "url": "https://clawskills.sh/skills/sai-sh-user-briefing", "lastAnalyzed": null, "status": "new" },
+    "using-superpowers": { "url": "https://clawskills.sh/skills/zlc000190-using-superpowers", "lastAnalyzed": null, "status": "new" },
+    "valiron-trust-layer": { "url": "https://clawskills.sh/skills/vatsashah45-valiron-trust-layer", "lastAnalyzed": null, "status": "new" },
+    "vibe-notion": { "url": "https://clawskills.sh/skills/devxoul-vibe-notion", "lastAnalyzed": null, "status": "new" },
+    "virtual-reading-group": { "url": "https://clawskills.sh/skills/isonaei-virtual-reading-group", "lastAnalyzed": null, "status": "new" },
+    "vnstock-free-expert": { "url": "https://clawskills.sh/skills/ndtchan-vnstock-free-expert", "lastAnalyzed": null, "status": "new" },
+    "wakapi-sync-skill": { "url": "https://clawskills.sh/skills/cosformula-wakapi-sync-skill", "lastAnalyzed": null, "status": "new" },
+    "wallabag": { "url": "https://clawskills.sh/skills/fbrandel-wallabag", "lastAnalyzed": null, "status": "new" },
+    "weibo-manager": { "url": "https://clawskills.sh/skills/hmyaoyuan-weibo-manager", "lastAnalyzed": null, "status": "new" },
+    "wilma": { "url": "https://clawskills.sh/skills/aikarjal-wilma", "lastAnalyzed": null, "status": "new" },
+    "wilma-triage": { "url": "https://clawskills.sh/skills/aikarjal-wilma-triage", "lastAnalyzed": null, "status": "new" },
+    "windsensei": { "url": "https://clawskills.sh/skills/jamesdwright-windsensei", "lastAnalyzed": null, "status": "new" },
+    "wisediag-medocr": { "url": "https://clawskills.sh/skills/wisediag-wisediag-medocr", "lastAnalyzed": null, "status": "new" },
+    "wiseocr": { "url": "https://clawskills.sh/skills/wiseocr-wiseocr", "lastAnalyzed": null, "status": "new" },
+    "x-automation": { "url": "https://clawskills.sh/skills/nickcarroll-x-automation", "lastAnalyzed": null, "status": "new" },
+    "x-bookmarks": { "url": "https://clawskills.sh/skills/brianppetty-x-bookmarks", "lastAnalyzed": null, "status": "new" },
+    "x-smart-read": { "url": "https://clawskills.sh/skills/bkrigmo1-x-smart-read", "lastAnalyzed": null, "status": "new" },
+    "x-trends": { "url": "https://clawskills.sh/skills/brennerspear-x-trends", "lastAnalyzed": null, "status": "new" },
+    "x-trends-dev": { "url": "https://clawskills.sh/skills/brennerspear-x-trends-dev", "lastAnalyzed": null, "status": "new" },
+    "x-tweet-fetcher": { "url": "https://clawskills.sh/skills/guibibi99-x-tweet-fetcher", "lastAnalyzed": null, "status": "new" },
+    "xdotool-control": { "url": "https://clawskills.sh/skills/ouyangabel-xdotool-control", "lastAnalyzed": null, "status": "new" },
+    "xmd": { "url": "https://clawskills.sh/skills/guibibi99-xmd", "lastAnalyzed": null, "status": "new" },
+    "yandex-tracker-cli": { "url": "https://clawskills.sh/skills/glebkazachinskiy-yandex-tracker-cli", "lastAnalyzed": null, "status": "new" },
+    "youtube-scrapper": { "url": "https://clawskills.sh/skills/jeremy-youtube-scrapper", "lastAnalyzed": null, "status": "new" },
+    "yr-no-weather": { "url": "https://clawskills.sh/skills/zopyx-yr-no-weather", "lastAnalyzed": null, "status": "new" },
+    "zen-founder-agent": { "url": "https://clawskills.sh/skills/stefan-g-zen-founder-agent", "lastAnalyzed": null, "status": "new" },
+    "zhive": { "url": "https://clawskills.sh/skills/zhivehq-zhive", "lastAnalyzed": null, "status": "new" },
+    "ztm-tunnel": { "url": "https://clawskills.sh/skills/julien-ztm-tunnel", "lastAnalyzed": null, "status": "new" }
   },
   "pendingSkills": [
-    "agent-daily-planner",
-    "agent-device",
-    "agent-step-sequencer",
-    "agent-task-tracker",
-    "agent-zero",
-    "agentapi",
-    "agentapi-hub",
-    "agentaudit",
-    "agentaudit-skill",
-    "agentmail-integration",
-    "agresource",
-    "ai-hunter-pro",
-    "ai-meeting-scheduling",
-    "ai-news-oracle",
-    "airtable-automation",
-    "airtable-participants",
-    "ak-rss-24h-brief",
-    "amazon-product-search-api-skill",
-    "amazon-reviews-api-skill",
-    "amazon-shopper",
-    "android-adb"
+    "agentapi-hub", "agentaudit-skill", "agentmail-integration", "agresource", "ai-hunter-pro",
+    "ai-meeting-scheduling", "ai-news-oracle", "airtable-automation", "airtable-participants",
+    "ak-rss-24h-brief", "amazon-product-search-api-skill", "amazon-reviews-api-skill",
+    "amazon-shopper", "android-adb", "anycrawl", "aoi-hackathon-scout-lite", "api-tester",
+    "apify-lead-generation", "apiosk", "appstore-rating-pulse"
   ],
-  "analyzedCount": 24,
-  "totalCount": 320,
+  "newSkills": [
+    "menews", "org-memory", "osv-scanner", "otta-cli", "paper-notion-summarizer", "paperpod",
+    "paylock", "payment-gateway-payram", "paymentsdb", "pc-master", "perpetua", "personal-goals",
+    "personal-sleep", "phantombuster", "pharma-pharmacology-agent", "pipelock", "pocket-lens",
+    "pocketlens", "podcast-to-substack", "poker-agent", "portfolio-tracker", "postcraft",
+    "postcraft-t3", "powerdrill-data-analysis-skill", "powerdrill-skills", "printpal-3d",
+    "qdrant-advanced", "questions-form", "raiffeisen-elba", "reasonlayer-app-access",
+    "research-reprompter", "rss-digest", "saas-worker", "sap-integration", "scrapbook-illustrator",
+    "scrapyard", "sentry-issues", "sergei-mikhailov-tg-channel-reader", "sg-property-scraper",
+    "shellmail", "shopping-list", "shortcut-skill", "siyuan-task-skill", "skilldevelop",
+    "slashbot", "smart-linkedin-inbox", "smb-sales-boost-leads", "snail-mail", "snailmail",
+    "sports-betting", "stability-ai", "stakingverse-lukso", "stealth-proxy", "stealthy-google-search",
+    "substack-writer", "subwayskill", "super-browser", "table-mountain-status", "tageblatt-headlines",
+    "taskline", "tbot-controller", "teams-hack", "teamwork", "telegram-context", "telegram-history",
+    "testskillx", "tg-history", "tg-mtproto-cli", "theswarm", "tiktok-crawling", "trending-skills",
+    "trendyol-admin", "truenas-skill", "tushare-base", "twit-mcp", "ub2-markdown-report-generator",
+    "url2pdf", "url2png", "user-briefing", "using-superpowers", "valiron-trust-layer",
+    "vibe-notion", "virtual-reading-group", "vnstock-free-expert", "wakapi-sync-skill",
+    "wallabag", "weibo-manager", "wilma", "wilma-triage", "windsensei", "wisediag-medocr",
+    "wiseocr", "x-automation", "x-bookmarks", "x-smart-read", "x-trends", "x-trends-dev",
+    "x-tweet-fetcher", "xdotool-control", "xmd", "yandex-tracker-cli", "youtube-scrapper",
+    "yr-no-weather", "zen-founder-agent", "zhive", "ztm-tunnel"
+  ],
+  "analyzedCount": 32,
+  "totalCount": 339,
   "checkHistory": [
-    {
-      "date": "2026-03-15T06:32:14Z",
-      "added": 0,
-      "removed": 0,
-      "analyzed": 17
-    },
-    {
-      "date": "2026-03-19T06:30:00Z",
-      "added": 60,
-      "removed": 0,
-      "analyzed": 7
-    }
+    { "date": "2026-03-15T06:32:14Z", "added": 0, "removed": 0, "analyzed": 17 },
+    { "date": "2026-03-19T06:30:00Z", "added": 60, "removed": 0, "analyzed": 7 },
+    { "date": "2026-03-26T06:35:00Z", "added": 19, "removed": 0, "analyzed": 8 }
   ]
 }
