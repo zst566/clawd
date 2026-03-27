@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1774450982913,
+      "updatedAtMs": 1774537359508,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -46,15 +46,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774537200000,
-        "lastRunAtMs": 1774450800014,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 182899,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true,
-        "runningAtMs": 1774537200007
+        "nextRunAtMs": 1774623600000,
+        "lastRunAtMs": 1774537200015,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 159493,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "runningAtMs": 1774623600007
       }
     },
     {
@@ -101,7 +100,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1774489565863,
+      "updatedAtMs": 1774566159469,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -121,15 +120,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774566000000,
-        "lastRunAtMs": 1774489265811,
+        "nextRunAtMs": 1774652400000,
+        "lastRunAtMs": 1774566000008,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 300052,
+        "lastDurationMs": 159461,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "lastError": "Error: cron: job execution timed out",
-        "lastErrorReason": "timeout"
+        "consecutiveErrors": 2,
+        "lastError": "HttpError: Network request for 'sendMessage' failed!"
       }
     },
     {
@@ -206,7 +204,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1774506886773,
+      "updatedAtMs": 1774593478827,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -225,14 +223,16 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1774592875695,
-        "lastRunAtMs": 1774506475695,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 411078,
+        "nextRunAtMs": 1774679275705,
+        "lastRunAtMs": 1774592875705,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 603122,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "consecutiveErrors": 1,
+        "lastError": "Request timed out before a response was generated. Please try again, or increase `agents.defaults.timeoutSeconds` in your config.",
+        "lastErrorReason": "timeout"
       }
     }
   ]
