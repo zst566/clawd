@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1774623624219,
+      "updatedAtMs": 1774710267802,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -46,11 +46,11 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774710000000,
-        "lastRunAtMs": 1774623600012,
+        "nextRunAtMs": 1774796400000,
+        "lastRunAtMs": 1774710000015,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 24207,
+        "lastDurationMs": 267787,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -100,7 +100,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1774652603804,
+      "updatedAtMs": 1774738893064,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -120,16 +120,14 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774738800000,
-        "lastRunAtMs": 1774652400017,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 203787,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 3,
-        "lastError": "⚠️ API rate limit reached. Please try again later.",
-        "lastErrorReason": "rate_limit",
-        "lastDelivered": true
+        "nextRunAtMs": 1774825200000,
+        "lastRunAtMs": 1774738800030,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 93034,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
       }
     },
     {
@@ -206,7 +204,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1774679880612,
+      "updatedAtMs": 1774766280948,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -225,14 +223,14 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1774765675715,
-        "lastRunAtMs": 1774679275715,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 604897,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1774852075737,
+        "lastRunAtMs": 1774765675737,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 605211,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "HttpError: Network request for 'sendMessage' failed!"
       }
     }
   ]
