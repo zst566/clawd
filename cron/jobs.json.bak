@@ -27,7 +27,7 @@
       "name": "daily-push-23",
       "enabled": true,
       "createdAtMs": 1773037635862,
-      "updatedAtMs": 1774710267802,
+      "updatedAtMs": 1774796595371,
       "schedule": {
         "expr": "0 23 * * *",
         "kind": "cron",
@@ -46,11 +46,11 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774796400000,
-        "lastRunAtMs": 1774710000015,
+        "nextRunAtMs": 1774882800000,
+        "lastRunAtMs": 1774796400016,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 267787,
+        "lastDurationMs": 195355,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -100,7 +100,7 @@
       "name": "DV项目-Balance重跑每日执行",
       "enabled": true,
       "createdAtMs": 1773037658536,
-      "updatedAtMs": 1774738893064,
+      "updatedAtMs": 1774825364787,
       "schedule": {
         "expr": "0 7 * * *",
         "kind": "cron",
@@ -120,14 +120,16 @@
         "to": "-5099457733"
       },
       "state": {
-        "nextRunAtMs": 1774825200000,
-        "lastRunAtMs": 1774738800030,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 93034,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": false
+        "nextRunAtMs": 1774911600000,
+        "lastRunAtMs": 1774825200028,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 164759,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 1,
+        "lastDelivered": true,
+        "lastError": "⚠️ API rate limit reached. Please try again later.",
+        "lastErrorReason": "rate_limit"
       }
     },
     {
@@ -137,7 +139,7 @@
       "name": "lzy-ssl-cert-check",
       "enabled": true,
       "createdAtMs": 1773037664971,
-      "updatedAtMs": 1774227614515,
+      "updatedAtMs": 1774832415742,
       "schedule": {
         "expr": "0 9 * * 1",
         "kind": "cron",
@@ -154,11 +156,11 @@
         "to": "http://127.0.0.1:18789/api/webhook/ssl-check"
       },
       "state": {
-        "nextRunAtMs": 1774832400000,
-        "lastRunAtMs": 1774227600012,
+        "nextRunAtMs": 1775437200000,
+        "lastRunAtMs": 1774832400037,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 14503,
+        "lastDurationMs": 15705,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0
       }
@@ -204,7 +206,7 @@
       "name": "openclaw-skills-daily-check",
       "enabled": true,
       "createdAtMs": 1773037675531,
-      "updatedAtMs": 1774766280948,
+      "updatedAtMs": 1774852136704,
       "schedule": {
         "everyMs": 86400000,
         "kind": "every",
@@ -223,14 +225,14 @@
         "to": "-5180367638"
       },
       "state": {
-        "nextRunAtMs": 1774852075737,
-        "lastRunAtMs": 1774765675737,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 605211,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "lastError": "HttpError: Network request for 'sendMessage' failed!"
+        "nextRunAtMs": 1774938475749,
+        "lastRunAtMs": 1774852075749,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 60955,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
       }
     }
   ]
